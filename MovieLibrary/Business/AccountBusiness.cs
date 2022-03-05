@@ -53,5 +53,23 @@ namespace Business
                 }
             }
         }
+
+        /// <summary>
+        /// Check if this recoveryKey already exists in the Database
+        /// True - Already exists
+        /// False - Doesn't exists
+        /// </summary>
+        public bool DoesThisRecoveryKeyAlreadyExists(int recoveryKey)
+        {
+            using (accountContext = new AccountContext())
+            {
+                Account account = accountContext.Accounts.Where(a => a.RecoveryKey == recoveryKey).FirstOrDefault();
+                if(account == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
     }
 }

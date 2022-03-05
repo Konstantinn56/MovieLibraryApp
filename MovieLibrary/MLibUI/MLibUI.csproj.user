@@ -10,7 +10,13 @@
     <Compile Update="PassRecovery\ForgottenPassPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SignUp\RecoveryKeyPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SignUp\SignUpPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignUp\SuccessfulCreatedAcc.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

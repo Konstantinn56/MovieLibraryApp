@@ -63,6 +63,16 @@ namespace MLibUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bfgbgn {
+            get {
+                object obj = ResourceManager.GetObject("bfgbgn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Border {
             get {
                 object obj = ResourceManager.GetObject("Border", resourceCulture);
@@ -136,6 +146,16 @@ namespace MLibUI.Properties {
         internal static System.Drawing.Bitmap external_content5 {
             get {
                 object obj = ResourceManager.GetObject("external-content5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap external_content6 {
+            get {
+                object obj = ResourceManager.GetObject("external-content6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
