@@ -6,17 +6,20 @@ using MLibUI.PassRecovery;
 
 namespace MLibUI
 {
+    /// <summary>
+    /// Login UI
+    /// </summary>
     public partial class LoginPage : Form
     {
-        public LoginPage()
-        {
-            InitializeComponent();
-        }
-
         /// <summary>
         /// Creates account business
         /// </summary>
         private AccountBusiness accountBusiness = new AccountBusiness();
+
+        public LoginPage()
+        {
+            InitializeComponent();
+        }
 
         /// <summary>
         /// Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
