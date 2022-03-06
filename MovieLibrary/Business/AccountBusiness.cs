@@ -71,5 +71,18 @@ namespace Business
                 return true;
             }
         }
+
+        /// <summary>
+        /// Change the password of the current account with the given username
+        /// The account isnt possible to be null
+        /// </summary>
+        public void ChangePassword(string usr, string newPass)
+        {
+            using (accountContext = new AccountContext())
+            {
+                //Its not possible to be null, because its already logged in.
+                accountContext.Accounts.Where(a => a.Username.Equals(usr)).FirstOrDefault().Password = newPass;
+            }
+        }
     }
 }
