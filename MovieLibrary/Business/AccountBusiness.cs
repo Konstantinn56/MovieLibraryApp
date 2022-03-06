@@ -13,7 +13,7 @@ namespace Business
     /// </summary>
     public class AccountBusiness
     {
-        private AccountContext accountContext;
+        private AccountContext accountContext = new AccountContext();
 
         /// <summary>
         /// Get single account from the database by Username

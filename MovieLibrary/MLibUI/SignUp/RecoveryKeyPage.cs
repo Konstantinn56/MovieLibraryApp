@@ -16,5 +16,18 @@ namespace MLibUI.SignUp
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Recovery key of the created Account
+        /// </summary>
+        public int currentAccountRecoveryKey { get; set; }
+
+        /// <summary>
+        /// Set the lblRecoveryKey to currentAccountRecoveryKey
+        /// </summary>
+        private void RecoveryKeyPage_Load(object sender, EventArgs e)
+        {
+            lblRecoveryKey.Text = currentAccountRecoveryKey.ToString();
+        }
     }
 }

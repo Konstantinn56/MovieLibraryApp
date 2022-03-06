@@ -23,7 +23,15 @@ namespace Data
         /// </summary>
         public AccountContext()
         {
-            //Create the database automaticly
+            // Create the database automaticly
+            Database.EnsureCreated();
+        }
+
+        /// <summary>
+        /// Overloaded Constructor
+        /// </summary>
+        public AccountContext(DbContextOptions<AccountContext> options) : base(options)
+        {
             Database.EnsureCreated();
         }
 

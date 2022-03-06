@@ -295,6 +295,7 @@ namespace MLibUI.SignUp
                     }
                     accountBusiness.Add(account);
                     RecoveryKeyPage rkp = new RecoveryKeyPage();
+                    rkp.currentAccountRecoveryKey = account.RecoveryKey;
                     rkp.Show();
                     this.Hide();
                 }

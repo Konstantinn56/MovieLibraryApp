@@ -28,6 +28,14 @@ namespace Data
         }
 
         /// <summary>
+        /// Overloaded Constructor
+        /// </summary>
+        public SeriesContext(DbContextOptions<SeriesContext> options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
+
+        /// <summary>
         /// Connection string to Microsoft SQL Server
         /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

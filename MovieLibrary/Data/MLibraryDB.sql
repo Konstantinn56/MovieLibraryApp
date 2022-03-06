@@ -27,9 +27,6 @@ CREATE TABLE Films
 	StarsForFilms INT NOT NULL,
 	RateForFilms DECIMAL NOT NULL
 );
- INSERT INTO Films
- VALUES('Encanto', 'USA','2021','Animation',5,7.3);
-
 
  CREATE TABLE Series
 (
@@ -41,10 +38,12 @@ CREATE TABLE Films
 	StarsForSeries INT NOT NULL,
 	RateForSeries DECIMAL NOT NULL
 );
- INSERT INTO Series
+
+
+ INSERT INTO Films
+ VALUES('Encanto', 'USA','2021','Animation',5,7.3);
+
+  INSERT INTO Series
  VALUES('Castle',8,'2009','Criminal',5,8.2);
-
-
-
 
 
