@@ -3,6 +3,7 @@ GO
  USE MLibraryDB
  GO
 
+
  CREATE TABLE Accounts
  (
 	Id INT IDENTITY PRIMARY KEY,
@@ -12,6 +13,9 @@ GO
 	LastName VARCHAR(50) NOT NULL,
 	RecoveryKey INT NOT NULL
  );
+  INSERT INTO Accounts
+ VALUES('Admin','Admin','Konstantin', 'Balabanov',123456);
+
 
 CREATE TABLE Films
 (
@@ -23,6 +27,9 @@ CREATE TABLE Films
 	StarsForFilms INT NOT NULL,
 	RateForFilms DECIMAL NOT NULL
 );
+ INSERT INTO Films
+ VALUES('Encanto', 'USA','2021','Animation',5,7.3);
+
 
  CREATE TABLE Series
 (
@@ -34,12 +41,10 @@ CREATE TABLE Films
 	StarsForSeries INT NOT NULL,
 	RateForSeries DECIMAL NOT NULL
 );
-
- INSERT INTO Accounts
- VALUES('Admin','Admin','Konstantin', 'Balabanov',123456);
-
- INSERT INTO Films
- VALUES('Encanto', 'USA','2021','Animation',5,7.3);
-
  INSERT INTO Series
  VALUES('Castle',8,'2009','Criminal',5,8.2);
+
+
+
+
+

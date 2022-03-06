@@ -52,7 +52,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblExit = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -285,7 +285,7 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lblExit);
             this.panel4.Location = new System.Drawing.Point(-1, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1087, 19);
@@ -328,17 +328,18 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Sign In";
             // 
-            // label6
+            // lblExit
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label6.Location = new System.Drawing.Point(1070, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "X";
+            this.lblExit.AutoSize = true;
+            this.lblExit.BackColor = System.Drawing.Color.Black;
+            this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExit.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblExit.Location = new System.Drawing.Point(1070, 2);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(14, 15);
+            this.lblExit.TabIndex = 0;
+            this.lblExit.Text = "X";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click_1);
             // 
             // panel6
             // 
@@ -440,7 +441,7 @@
         private Panel panel7;
         private PictureBox pictureBox6;
         private Label label4;
-        private Label label6;
+        private Label lblExit;
         private Panel panel2;
         private Panel panel3;
         private Panel panel6;

@@ -100,14 +100,6 @@ namespace MLibUI
         }
 
         /// <summary>
-        /// Close the application
-        /// </summary>
-        private void lblExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        /// <summary>
         /// Identify the account, and login into application, throws MessageBow if the user or pass is incorrect
         /// </summary>
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -145,6 +137,14 @@ namespace MLibUI
             ForgottenPassPage fpp = new ForgottenPassPage();
             fpp.Show();
             this.Hide();
+        }
+
+        /// <summary>
+        /// Close the application
+        /// </summary>
+        private void lblExit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
