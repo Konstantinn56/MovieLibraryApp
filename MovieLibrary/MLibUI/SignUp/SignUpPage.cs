@@ -270,7 +270,7 @@ namespace MLibUI.SignUp
         {
             if(lblUsrException.Text.Equals("") && lblPassEx.Text.Equals(""))
             {
-                if (IsThereIsEmptyTextBox())
+                if (IsThereAEmptyTextBox())
                 {
                     MessageBox.Show("The fields must not be empty!");
                 }
@@ -281,10 +281,10 @@ namespace MLibUI.SignUp
                     account.LastName = txtBoxLastName.Text;
                     account.Username = txtBoxUsr.Text;
                     account.Password = txtBoxPass.Text;
-                    account.RecoveryKey = 100000;
+                    account.RecoveryKey = 0;
 
                     //if the random recovery key already exists it will create new one
-                    while (account.RecoveryKey == 100000)
+                    while (account.RecoveryKey == 0)
                     {
                         int recoveryKey = GenerateRandomKey();
                         if (!accountBusiness.DoesThisRecoveryKeyAlreadyExists(recoveryKey))
@@ -306,7 +306,7 @@ namespace MLibUI.SignUp
         /// If there is empty text box it will change the panel color
         /// </summary>
         /// <returns>True(Yes)/False(No)</returns>
-        private bool IsThereIsEmptyTextBox()
+        private bool IsThereAEmptyTextBox()
         {
             bool isThere = false;
             if (txtBoxFirstName.Text.Equals("First Name"))
@@ -363,7 +363,5 @@ namespace MLibUI.SignUp
             Random rnd = new Random();
             return rnd.Next(100001,999999);
         }
-
-        
     }
 }

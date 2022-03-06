@@ -59,6 +59,7 @@ namespace MLibUI.SignUp
             if(seconds < 0)
             {
                 countdownTimer.Stop();
+                btnContinue.Cursor = Cursors.Hand;
                 btnContinue.Text = "Continue";
             }
         }

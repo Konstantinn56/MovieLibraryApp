@@ -98,8 +98,11 @@ namespace MLibUI
         /// </summary>
         private void lblEye_Click(object sender, EventArgs e)
         {
-            bool currentStatus = txtBoxPass.UseSystemPasswordChar;
-            txtBoxPass.UseSystemPasswordChar = !currentStatus;
+            if (!txtBoxPass.Text.Equals("Password"))
+            {
+                bool currentStatus = txtBoxPass.UseSystemPasswordChar;
+                txtBoxPass.UseSystemPasswordChar = !currentStatus;
+            }
         }
 
         /// <summary>

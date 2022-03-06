@@ -16,5 +16,15 @@ namespace MLibUI.SignUp
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Close current widnows, and opens new Login page
+        /// </summary>
+        private void btnGetStarted_Click(object sender, EventArgs e)
+        {
+            LoginPage lp = new LoginPage();
+            lp.Show();
+            this.Hide();
+        }
     }
 }
