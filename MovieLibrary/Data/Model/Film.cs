@@ -44,6 +44,6 @@ namespace Data.Model
         /// <summary>
         /// The rating of the film 
         /// </summary>
-        public double RateForFilm { get; set; }
+        public decimal RateForFilm { get; set; }
     }
 }

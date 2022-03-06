@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MovieLibrary"
   ],
-  "SelectedNode": "\\MovieLibrary.sln",
+  "SelectedNode": "\\MovieLibrary\\MovieLibrary.sln",
   "PreviewInSolutionExplorer": false
 }
