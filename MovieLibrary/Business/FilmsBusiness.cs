@@ -7,11 +7,17 @@ using Data;
 using Data.Model;
 
 namespace Business
-{
+
+{   /// <summary>
+    /// Business Logic of the Film
+    /// </summary>
     public class FilmsBusiness
     {
         private FilmContext filmContext = new FilmContext();
 
+        /// <summary>
+        /// Get a film from the database by Id
+        /// </summary>
         public Film FilmGet(int id)
         {
             using (filmContext = new FilmContext())
@@ -20,6 +26,9 @@ namespace Business
             }
         }
 
+        /// <summary>
+        /// Add a film to the database
+        /// </summary>
         public void FilmAdd(Film film)
         {
             using (filmContext = new FilmContext())
@@ -29,6 +38,9 @@ namespace Business
             }
         }
 
+        /// <summary>
+        /// Update a film in the database by Id.
+        /// </summary>
         public void FilmUpdate(Film film)
         {
             using (filmContext = new FilmContext())
@@ -42,6 +54,9 @@ namespace Business
             }
         }
 
+        /// <summary>
+        /// Deleate a film from the database by Id
+        /// </summary>
         public void FilmDelete(int id)
         {
             using (filmContext = new FilmContext())
