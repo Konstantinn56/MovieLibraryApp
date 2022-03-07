@@ -13,6 +13,12 @@
     <Compile Update="PassRecovery\PassRecoveryStep1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PassRecovery\PassRecoveryStep2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PassRecovery\SuccessfulPassResetPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SignUp\RecoveryKeyPage.cs">
       <SubType>Form</SubType>
     </Compile>

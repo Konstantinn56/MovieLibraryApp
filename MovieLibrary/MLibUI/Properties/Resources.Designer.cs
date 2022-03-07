@@ -93,6 +93,16 @@ namespace MLibUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ConfirmationPage1 {
+            get {
+                object obj = ResourceManager.GetObject("ConfirmationPage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap external_content_duckduckgo {
             get {
                 object obj = ResourceManager.GetObject("external-content.duckduckgo", resourceCulture);
@@ -193,6 +203,16 @@ namespace MLibUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fgvbnnfg1 {
+            get {
+                object obj = ResourceManager.GetObject("fgvbnnfg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GreenTick {
             get {
                 object obj = ResourceManager.GetObject("GreenTick", resourceCulture);
@@ -246,6 +266,16 @@ namespace MLibUI.Properties {
         internal static System.Drawing.Bitmap SighnUpBackGround {
             get {
                 object obj = ResourceManager.GetObject("SighnUpBackGround", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap step2 {
+            get {
+                object obj = ResourceManager.GetObject("step2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

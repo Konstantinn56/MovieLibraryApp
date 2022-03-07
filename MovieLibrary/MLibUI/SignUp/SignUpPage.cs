@@ -127,7 +127,7 @@ namespace MLibUI.SignUp
                     panelUsr.BackColor = Color.Red;
                     lblUsrException.Text = "*Username already exists!*";
                 }
-                if(txtBoxUsr.Text.Length < 4)
+                if(txtBoxUsr.Text.Length <= 4)
                 {
                     panelUsr.BackColor = Color.Red;
                     lblUsrException.Text = "*Username must be at least 5 characters*";

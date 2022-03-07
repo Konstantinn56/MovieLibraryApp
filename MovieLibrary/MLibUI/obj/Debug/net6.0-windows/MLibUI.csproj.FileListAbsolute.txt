@@ -64,3 +64,5 @@ C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\bi
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.SignUp.RecoveryKeyPage.resources
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.SignUp.SuccessfulCreatedAcc.resources
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.PassRecovery.PassRecoveryStep1.resources
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.PassRecovery.PassRecoveryStep2.resources
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.PassRecovery.SuccessfulPassResetPage.resources
