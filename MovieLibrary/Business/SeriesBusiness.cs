@@ -10,8 +10,14 @@ namespace Business
 {
     public class SeriesBusiness
     {
-        private SeriesContext seriestContext = new SeriesContext();
+        private SeriesContext seriesContext = new SeriesContext();
 
-
+        public Series SeriesGet(int id)
+        {
+            using (seriesContext = new SeriesContext())
+            {
+                return seriesContext.Series.Find(id);
+            }
+        }
     }
 }
