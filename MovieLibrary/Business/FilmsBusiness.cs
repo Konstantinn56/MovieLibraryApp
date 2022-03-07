@@ -12,6 +12,13 @@ namespace Business
     {
         private FilmContext filmContext = new FilmContext();
 
+        public Film FilmGet(int id)
+        {
+            using (filmContext = new FilmContext())
+            {
+                return filmContext.Films.Find(id);
+            }
+        }
 
         public void FilmAdd(Film film)
         {
