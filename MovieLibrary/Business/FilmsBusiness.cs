@@ -13,6 +13,15 @@ namespace Business
         private FilmContext filmContext = new FilmContext();
 
 
+        public void FilmAdd(Film film)
+        {
+            using (filmContext = new FilmContext())
+            {
+                filmContext.Films.Add(film);
+                filmContext.SaveChanges();
+            }
+        }
+
         public void FilmUpdate(Film film)
         {
             using (filmContext = new FilmContext())
