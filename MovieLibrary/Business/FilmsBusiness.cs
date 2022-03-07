@@ -12,6 +12,20 @@ namespace Business
     {
         private FilmContext filmContext = new FilmContext();
 
+
+        public void FilmUpdate(Film film)
+        {
+            using (filmContext = new FilmContext())
+            {
+                var item = filmContext.Films.Find(film.Id);
+                if (item != null)
+                {
+                    filmContext.Entry(item).CurrentValues.SetValues(film);
+                    filmContext.SaveChanges();
+                }
+            }
+        }
+
         public void FilmDelete(int id)
         {
             using (filmContext = new FilmContext())
