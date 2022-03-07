@@ -8,10 +8,16 @@ using Data.Model;
 
 namespace Business
 {
+    /// <summary>
+    /// Business Logic of the Series
+    /// </summary>
     public class SeriesBusiness
     {
         private SeriesContext seriesContext = new SeriesContext();
 
+        /// <summary>
+        /// Get a series from the database by Id
+        /// </summary>
         public Series SeriesGet(int id)
         {
             using (seriesContext = new SeriesContext())
@@ -20,6 +26,9 @@ namespace Business
             }
         }
 
+        /// <summary>
+        /// Add a series to the database
+        /// </summary>
         public void SeriesAdd(Series series)
         {
             using (seriesContext = new SeriesContext())
@@ -29,6 +38,9 @@ namespace Business
             }
         }
 
+        /// <summary>
+        /// Update a series in the database by Id.
+        /// </summary>
         public void SeriesUpdate(Series series)
         {
             using (seriesContext = new SeriesContext())
@@ -42,6 +54,9 @@ namespace Business
             }
         }
 
+        /// <summary>
+        /// Deleate a series from the database by Id
+        /// </summary>
         public void SeriesDelete(int id)
         {
             using (seriesContext = new SeriesContext())
