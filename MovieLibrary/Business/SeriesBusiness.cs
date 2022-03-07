@@ -28,5 +28,18 @@ namespace Business
                 seriesContext.SaveChanges();
             }
         }
+
+        public void SeriesUpdate(Series series)
+        {
+            using (seriesContext = new SeriesContext())
+            {
+                var item = seriesContext.Series.Find(series.Id);
+                if (item != null)
+                {
+                    seriesContext.Entry(item).CurrentValues.SetValues(series);
+                    seriesContext.SaveChanges();
+                }
+            }
+        }
     }
 }
