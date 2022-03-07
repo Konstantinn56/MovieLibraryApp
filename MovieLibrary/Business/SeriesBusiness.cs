@@ -11,5 +11,7 @@ namespace Business
     public class SeriesBusiness
     {
         private SeriesContext seriestContext = new SeriesContext();
+
+
     }
 }
