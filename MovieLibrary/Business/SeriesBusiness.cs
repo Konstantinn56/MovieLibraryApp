@@ -41,5 +41,18 @@ namespace Business
                 }
             }
         }
+
+        public void SeriesDelete(int id)
+        {
+            using (seriesContext = new SeriesContext())
+            {
+                var film = seriesContext.Series.Find(id);
+                if (film != null)
+                {
+                    seriesContext.Series.Remove(film);
+                    seriesContext.SaveChanges();
+                }
+            }
+        }
     }
 }
