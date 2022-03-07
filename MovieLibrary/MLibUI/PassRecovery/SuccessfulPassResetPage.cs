@@ -16,5 +16,15 @@ namespace MLibUI.PassRecovery
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Close this window, and opens new Login page
+        /// </summary>
+        private void btnDone_Click_1(object sender, EventArgs e)
+        {
+            LoginPage lp = new LoginPage();
+            lp.Show();
+            this.Hide();
+        }
     }
 }

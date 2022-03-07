@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Data.Model;
+using Business;
 
 namespace MLibUI.PassRecovery
 {
@@ -16,7 +18,7 @@ namespace MLibUI.PassRecovery
         {
             InitializeComponent();
         }
-
+        AccountBusiness accountBusiness = new AccountBusiness();
 
         /// <summary>
         /// Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
@@ -76,6 +78,33 @@ namespace MLibUI.PassRecovery
         private void lblExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        /// <summary>
+        /// If there are no exepsions, close current page and opens step2
+        /// </summary>
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            
+            if (!txtBoxUsr.Text.Equals("") || !txtBoxResetKey.Text.Equals(""))
+            {
+                Account currentAccount = accountBusiness.Get(txtBoxUsr.Text);
+                if (currentAccount == null || !currentAccount.RecoveryKey.ToString().Equals(txtBoxResetKey.Text))
+                {
+                    MessageBox.Show("Incorrect Username or Recovery Key.");
+                }
+                else
+                {
+                    PassRecoveryStep2 prs2 = new PassRecoveryStep2();
+                    prs2.Show();
+                    prs2.currentAccount = currentAccount;
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("The Fields must not be empty!");
+            }
         }
     }
 }

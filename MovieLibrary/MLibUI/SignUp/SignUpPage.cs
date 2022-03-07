@@ -226,14 +226,15 @@ namespace MLibUI.SignUp
         /// </summary>
         private void lblEye_Click(object sender, EventArgs e)
         {
-            bool currentStatus = txtBoxPass.UseSystemPasswordChar;
+            bool passStatus = txtBoxPass.UseSystemPasswordChar;
+            bool reEnterPassStatus = txtBoxReEnterPass.UseSystemPasswordChar;
             if (!txtBoxPass.Text.Equals("Password"))
             {
-                txtBoxPass.UseSystemPasswordChar = !currentStatus;
+                txtBoxPass.UseSystemPasswordChar = !passStatus;
             }
             if(!txtBoxReEnterPass.Text.Equals("Re-enter password"))
             {
-                txtBoxReEnterPass.UseSystemPasswordChar = !currentStatus;
+                txtBoxReEnterPass.UseSystemPasswordChar = !reEnterPassStatus;
             }
         }
 
@@ -343,15 +344,6 @@ namespace MLibUI.SignUp
         private void checkBoxTerms_CheckedChanged(object sender, EventArgs e)
         {
             btnSignUp.Enabled = !btnSignUp.Enabled;
-        }
-
-        /// <summary>
-        /// Return is the terms check box checked
-        /// </summary>
-        /// <returns>True(Yes)/False(No)</returns>
-        private bool IsTheTermsChecked()
-        {
-            return checkBoxTerms.Checked;
         }
 
         /// <summary>

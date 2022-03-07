@@ -103,6 +103,26 @@ namespace MLibUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dfvgdf {
+            get {
+                object obj = ResourceManager.GetObject("dfvgdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dfvgdf1 {
+            get {
+                object obj = ResourceManager.GetObject("dfvgdf1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap external_content_duckduckgo {
             get {
                 object obj = ResourceManager.GetObject("external-content.duckduckgo", resourceCulture);
