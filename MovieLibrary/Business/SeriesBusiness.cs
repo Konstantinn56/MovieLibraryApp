@@ -19,5 +19,14 @@ namespace Business
                 return seriesContext.Series.Find(id);
             }
         }
+
+        public void SeriesAdd(Series series)
+        {
+            using (seriesContext = new SeriesContext())
+            {
+                seriesContext.Series.Add(series);
+                seriesContext.SaveChanges();
+            }
+        }
     }
 }
