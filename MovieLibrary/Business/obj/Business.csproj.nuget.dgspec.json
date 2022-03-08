@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {}
+    "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {
+    "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\kocep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\obj\\",
+        "projectPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kocep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj"
+              "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj"
               }
             }
           }
@@ -76,20 +76,20 @@
         }
       }
     },
-    "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
+    "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\kocep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\obj\\",
+        "projectPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kocep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
