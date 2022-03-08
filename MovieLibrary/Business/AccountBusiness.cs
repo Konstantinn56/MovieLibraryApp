@@ -13,7 +13,17 @@ namespace Business
     /// </summary>
     public class AccountBusiness
     {
-        private AccountContext accountContext = new AccountContext();
+        private AccountContext accountContext;
+
+        /// <summary>
+        /// Constructor, who added default information
+        /// </summary>
+        public AccountBusiness()
+        {
+            accountContext = new AccountContext();
+            accountContext.Accounts.Add(new Account("Konstantin", "Balabanov", "Admin", "admin", 100000));
+            accountContext.SaveChanges();
+        }
 
         /// <summary>
         /// Get single account from the database by Username
@@ -55,6 +65,22 @@ namespace Business
         }
 
         /// <summary>
+        /// Update a single account in the database
+        /// </summary>
+        public void Update(Account account)
+        {
+            using (accountContext = new AccountContext())
+            {
+                Account currentAccount = accountContext.Accounts.Find(account.Id);
+                if(currentAccount != null)
+                {
+                    accountContext.Entry(currentAccount).CurrentValues.SetValues(account);
+                    accountContext.SaveChanges();
+                }
+            }
+        }
+
+        /// <summary>
         /// Check if this recoveryKey already exists in the Database
         /// True - Already exists
         /// False - Doesn't exists
@@ -69,27 +95,6 @@ namespace Business
                     return false;
                 }
                 return true;
-            }
-        }
-
-        /// <summary>
-        /// Change the password of the current account with the given username
-        /// The account isnt possible to be null
-        /// </summary>
-        public void ChangePassword(string usr, string newPass)
-        {
-            using (accountContext = new AccountContext())
-            {
-                //Its not possible to be null, because its already logged in.
-                Account currentAccount = accountContext.Accounts.Where(a => a.Username.Equals(usr)).FirstOrDefault();
-
-                if(currentAccount != null)
-                {
-                    Delete(currentAccount.Id);
-                    currentAccount.Password = newPass;
-                    currentAccount.Id = default;
-                    Add(currentAccount);
-                }
             }
         }
     }

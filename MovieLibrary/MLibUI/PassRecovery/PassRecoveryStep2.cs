@@ -147,15 +147,14 @@ namespace MLibUI.PassRecovery
         /// </summary>
         private void lblEye_Click(object sender, EventArgs e)
         {
-            bool txtBoxNewPassStatus = txtBoxNewPass.UseSystemPasswordChar;
-            bool txtBoxReNewPassStatus = txtBoxReEnterNewPass.UseSystemPasswordChar;
+            bool txtBoxPassStatus = txtBoxNewPass.UseSystemPasswordChar;
             if (!txtBoxNewPass.Text.Equals("New Password"))
             {
-                txtBoxNewPass.UseSystemPasswordChar = !txtBoxNewPassStatus;
+                txtBoxNewPass.UseSystemPasswordChar = !txtBoxPassStatus;
             }
             if (!txtBoxReEnterNewPass.Text.Equals("Re-enter password"))
             {
-                txtBoxReEnterNewPass.UseSystemPasswordChar = !txtBoxReNewPassStatus;
+                txtBoxReEnterNewPass.UseSystemPasswordChar = !txtBoxPassStatus;
             }
         }
 
@@ -176,7 +175,9 @@ namespace MLibUI.PassRecovery
                 }
                 else
                 {
-                    accountBusiness.ChangePassword(currentAccount.Username, txtBoxNewPass.Text);
+                    Account updatedAccount = currentAccount;
+                    updatedAccount.Password = txtBoxNewPass.Text;
+                    accountBusiness.Update(updatedAccount);
                     SuccessfulPassResetPage sprp = new SuccessfulPassResetPage();
                     sprp.Show();
                     this.Hide();
@@ -191,6 +192,7 @@ namespace MLibUI.PassRecovery
         {
             panelReEnterPass.BackColor = Color.Black;
             txtBoxReEnterNewPass.Text = "Re-enter password";
+            txtBoxReEnterNewPass.UseSystemPasswordChar = false;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Data.Model
         /// <summary>
         /// The name of the added series
         /// </summary>
-        public string SeriesTitle { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
         /// The number of the season of the series
@@ -29,21 +29,21 @@ namespace Data.Model
         /// <summary>
         /// The year when the first season comes out
         /// </summary>
-        public int SeriesYaer { get; set; }
+        public int SYaer { get; set; }
 
         /// <summary>
         /// The type of the series
         /// </summary>
-        public string SeriesType { get; set; }
+        public string SType { get; set; }
 
         /// <summary>
         /// User evaluation for the series
         /// </summary>
-        public int StarsForSeries { get; set; }
+        public int Stars { get; set; }
 
         /// <summary>
         /// The rating of the series
         /// </summary>
-        public decimal RateForSeries { get; set; }
+        public decimal Rate { get; set; }
     }
 }

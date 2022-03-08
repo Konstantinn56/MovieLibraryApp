@@ -18,7 +18,7 @@ namespace Business
         /// <summary>
         /// Get a series from the database by Id
         /// </summary>
-        public Series SeriesGet(int id)
+        public Series Get(int id)
         {
             using (seriesContext = new SeriesContext())
             {
@@ -29,7 +29,7 @@ namespace Business
         /// <summary>
         /// Add a series to the database
         /// </summary>
-        public void SeriesAdd(Series series)
+        public void Add(Series series)
         {
             using (seriesContext = new SeriesContext())
             {
@@ -41,7 +41,7 @@ namespace Business
         /// <summary>
         /// Update a series in the database by Id.
         /// </summary>
-        public void SeriesUpdate(Series series)
+        public void Update(Series series)
         {
             using (seriesContext = new SeriesContext())
             {
@@ -57,7 +57,7 @@ namespace Business
         /// <summary>
         /// Deleate a series from the database by Id
         /// </summary>
-        public void SeriesDelete(int id)
+        public void Delete(int id)
         {
             using (seriesContext = new SeriesContext())
             {

@@ -229,14 +229,13 @@ namespace MLibUI.SignUp
         private void lblEye_Click(object sender, EventArgs e)
         {
             bool passStatus = txtBoxPass.UseSystemPasswordChar;
-            bool reEnterPassStatus = txtBoxReEnterPass.UseSystemPasswordChar;
             if (!txtBoxPass.Text.Equals("Password"))
             {
                 txtBoxPass.UseSystemPasswordChar = !passStatus;
             }
             if(!txtBoxReEnterPass.Text.Equals("Re-enter password"))
             {
-                txtBoxReEnterPass.UseSystemPasswordChar = !reEnterPassStatus;
+                txtBoxReEnterPass.UseSystemPasswordChar = !passStatus;
             }
         }
 
@@ -365,6 +364,7 @@ namespace MLibUI.SignUp
         {
             panelReEnterPass.BackColor = Color.Black;
             txtBoxReEnterPass.Text = "Re-enter password";
+            txtBoxReEnterPass.UseSystemPasswordChar = false;
         }
     }
 }

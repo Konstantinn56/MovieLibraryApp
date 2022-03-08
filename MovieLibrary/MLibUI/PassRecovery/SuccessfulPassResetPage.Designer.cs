@@ -42,10 +42,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MLibUI.Properties.Resources.GreenTick;
-            this.pictureBox1.Location = new System.Drawing.Point(159, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(139, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 153);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 58;
             this.pictureBox1.TabStop = false;
@@ -67,10 +66,9 @@
             this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDone.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnDone.ForeColor = System.Drawing.Color.White;
-            this.btnDone.Location = new System.Drawing.Point(141, 233);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDone.Location = new System.Drawing.Point(123, 175);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(211, 45);
+            this.btnDone.Size = new System.Drawing.Size(185, 34);
             this.btnDone.TabIndex = 64;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = false;
@@ -79,55 +77,51 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Location = new System.Drawing.Point(498, 8);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(436, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 300);
+            this.panel4.Size = new System.Drawing.Size(4, 225);
             this.panel4.TabIndex = 63;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Location = new System.Drawing.Point(0, 7);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(0, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 297);
+            this.panel3.Size = new System.Drawing.Size(4, 223);
             this.panel3.TabIndex = 62;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(0, 303);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 227);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(562, 5);
+            this.panel2.Size = new System.Drawing.Size(492, 4);
             this.panel2.TabIndex = 61;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 7);
+            this.panel1.Size = new System.Drawing.Size(492, 5);
             this.panel1.TabIndex = 60;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(17, 186);
+            this.label1.Location = new System.Drawing.Point(31, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(475, 23);
+            this.label1.Size = new System.Drawing.Size(372, 21);
             this.label1.TabIndex = 59;
             this.label1.Text = "Your password has been changed successfully!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SuccessfulPassResetPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 307);
+            this.ClientSize = new System.Drawing.Size(439, 230);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.panel4);
@@ -136,7 +130,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SuccessfulPassResetPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuccessfulPassResetPage";

@@ -7,14 +7,14 @@ GO
  CREATE TABLE Accounts
  (
 	Id INT IDENTITY PRIMARY KEY,
-	Username VARCHAR(25) NOT NULL,
-	Password VARCHAR(50) NOT NULL,
 	FirstName VARCHAR(50) NOT NULL,
 	LastName VARCHAR(50) NOT NULL,
+	Username VARCHAR(25) NOT NULL,
+	Password VARCHAR(50) NOT NULL,
 	RecoveryKey INT NOT NULL
  );
   INSERT INTO Accounts
- VALUES('Admin','Admin','Konstantin', 'Balabanov',123456);
+ VALUES('Konstantin', 'Balabanov','Admin','Admin',100000);
 
 
 CREATE TABLE Films
@@ -22,21 +22,21 @@ CREATE TABLE Films
 	Id INT IDENTITY PRIMARY KEY,
 	FilmTitle VARCHAR(50) NOT NULL,
 	Publisher VARCHAR(50) NOT NULL,
-	FilmYear INT NOT NULL,
-	FilmType VARCHAR(50) NOT NULL,
-	StarsForFilms INT NOT NULL,
-	RateForFilms DECIMAL NOT NULL
+	FYear INT NOT NULL,
+	FType VARCHAR(50) NOT NULL,
+	Stars INT NOT NULL,
+	Rate DECIMAL NOT NULL
 );
 
  CREATE TABLE Series
 (
 	Id INT IDENTITY PRIMARY KEY,
-	SeriesTitle VARCHAR(50) NOT NULL,
+	Title VARCHAR(50) NOT NULL,
 	Seasons INT NOT NULL,
-	SeriesYear INT NOT NULL,
-	SeriesType VARCHAR(50) NOT NULL,
-	StarsForSeries INT NOT NULL,
-	RateForSeries DECIMAL NOT NULL
+	SYear INT NOT NULL,
+	SType VARCHAR(50) NOT NULL,
+	Stars INT NOT NULL,
+	Rate DECIMAL NOT NULL
 );
 
 

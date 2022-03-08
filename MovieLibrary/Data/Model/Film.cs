@@ -19,7 +19,7 @@ namespace Data.Model
         /// <summary>
         /// The name of the added film
         /// </summary>
-        public string FilmTitle { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
         /// The publisher of the film
@@ -29,21 +29,21 @@ namespace Data.Model
         /// <summary>
         /// The year the film comes out
         /// </summary>
-        public int FilmYaer { get; set; }
+        public int FYaer { get; set; }
 
         /// <summary>
         /// The type of the film
         /// </summary>
-        public string FilmType { get; set; }
+        public string FType { get; set; }
 
         /// <summary>
         /// User evaluation for the film
         /// </summary>
-        public int StarsForFilm { get; set; }
+        public int Stars { get; set; }
 
         /// <summary>
         /// The rating of the film 
         /// </summary>
-        public decimal RateForFilm { get; set; }
+        public decimal Rate { get; set; }
     }
 }

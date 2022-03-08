@@ -18,7 +18,7 @@ namespace Business
         /// <summary>
         /// Get a film from the database by Id
         /// </summary>
-        public Film FilmGet(int id)
+        public Film Get(int id)
         {
             using (filmContext = new FilmContext())
             {
@@ -29,7 +29,7 @@ namespace Business
         /// <summary>
         /// Add a film to the database
         /// </summary>
-        public void FilmAdd(Film film)
+        public void Add(Film film)
         {
             using (filmContext = new FilmContext())
             {
@@ -41,7 +41,7 @@ namespace Business
         /// <summary>
         /// Update a film in the database by Id.
         /// </summary>
-        public void FilmUpdate(Film film)
+        public void Update(Film film)
         {
             using (filmContext = new FilmContext())
             {
@@ -57,7 +57,7 @@ namespace Business
         /// <summary>
         /// Deleate a film from the database by Id
         /// </summary>
-        public void FilmDelete(int id)
+        public void Delete(int id)
         {
             using (filmContext = new FilmContext())
             {
