@@ -419,6 +419,7 @@
             this.txtBoxPass.Size = new System.Drawing.Size(273, 25);
             this.txtBoxPass.TabIndex = 44;
             this.txtBoxPass.Text = "Password";
+            this.txtBoxPass.TextChanged += new System.EventHandler(this.txtBoxPass_TextChanged);
             this.txtBoxPass.Enter += new System.EventHandler(this.txtBoxPass_Enter);
             this.txtBoxPass.Leave += new System.EventHandler(this.txtBoxPass_Leave);
             // 

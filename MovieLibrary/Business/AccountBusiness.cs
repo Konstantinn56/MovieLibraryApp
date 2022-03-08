@@ -81,7 +81,15 @@ namespace Business
             using (accountContext = new AccountContext())
             {
                 //Its not possible to be null, because its already logged in.
-                accountContext.Accounts.Where(a => a.Username.Equals(usr)).FirstOrDefault().Password = newPass;
+                Account currentAccount = accountContext.Accounts.Where(a => a.Username.Equals(usr)).FirstOrDefault();
+
+                if(currentAccount != null)
+                {
+                    Delete(currentAccount.Id);
+                    currentAccount.Password = newPass;
+                    currentAccount.Id = default;
+                    Add(currentAccount);
+                }
             }
         }
     }

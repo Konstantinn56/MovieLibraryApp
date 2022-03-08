@@ -101,6 +101,7 @@ namespace MLibUI.SignUp
             lblUsrException.Text = "";
             panelUsr.BackColor = Color.Goldenrod;
             txtBoxUsr.ForeColor = Color.Black;
+            
         }
 
         /// <summary>
@@ -152,6 +153,7 @@ namespace MLibUI.SignUp
             {
                 panelPass.BackColor = Color.Goldenrod;
             }
+            
         }
 
         /// <summary>
@@ -354,6 +356,15 @@ namespace MLibUI.SignUp
         {
             Random rnd = new Random();
             return rnd.Next(100001,999999);
+        }
+
+        /// <summary>
+        /// If the text in the pass box is changed, clear reEnter password txtbox 
+        /// </summary>
+        private void txtBoxPass_TextChanged(object sender, EventArgs e)
+        {
+            panelReEnterPass.BackColor = Color.Black;
+            txtBoxReEnterPass.Text = "Re-enter password";
         }
     }
 }

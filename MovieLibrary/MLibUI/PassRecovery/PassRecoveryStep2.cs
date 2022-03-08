@@ -18,6 +18,15 @@ namespace MLibUI.PassRecovery
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Creating account business
+        /// </summary>
+        AccountBusiness accountBusiness = new AccountBusiness();
+        
+        /// <summary>
+        /// Current account
+        /// </summary>
         public Account currentAccount { get; set; }
 
         /// <summary>
@@ -150,9 +159,38 @@ namespace MLibUI.PassRecovery
             }
         }
 
+        /// <summary>
+        /// If there is no exeptions it will change the password and will open Done page
+        /// </summary>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if (txtBoxNewPass.Text.Equals("New Password") || txtBoxReEnterNewPass.Text.Equals("Re-enter password"))
+            {
+                MessageBox.Show("The Fields must not be empty!");
+            }
+            else
+            {
+                if (!lblPassEx.Text.Equals(""))
+                {
+                    MessageBox.Show("Incorrect passwords");
+                }
+                else
+                {
+                    accountBusiness.ChangePassword(currentAccount.Username, txtBoxNewPass.Text);
+                    SuccessfulPassResetPage sprp = new SuccessfulPassResetPage();
+                    sprp.Show();
+                    this.Hide();
+                }
+            }
+        }
 
+        /// <summary>
+        /// If the text in the pass box is changed, clear reEnter password txtbox 
+        /// </summary>
+        private void txtBoxNewPass_TextChanged(object sender, EventArgs e)
+        {
+            panelReEnterPass.BackColor = Color.Black;
+            txtBoxReEnterNewPass.Text = "Re-enter password";
         }
     }
 }

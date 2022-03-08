@@ -331,7 +331,6 @@
             this.Name = "PassRecoveryStep1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassRecoveryStep1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassRecoveryStep1_KeyPress);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
