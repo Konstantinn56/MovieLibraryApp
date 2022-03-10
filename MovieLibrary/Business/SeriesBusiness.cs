@@ -13,16 +13,16 @@ namespace Business
     /// </summary>
     public class SeriesBusiness
     {
-        private SeriesContext seriesContext = new SeriesContext();
+        private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
         /// Get a series from the database by Id
         /// </summary>
         public Series Get(int id)
         {
-            using (seriesContext = new SeriesContext())
+            using (applicationContext = new ApplicationContext())
             {
-                return seriesContext.Series.Find(id);
+                return applicationContext.Series.Find(id);
             }
         }
 
@@ -31,10 +31,10 @@ namespace Business
         /// </summary>
         public void Add(Series series)
         {
-            using (seriesContext = new SeriesContext())
+            using (applicationContext = new ApplicationContext())
             {
-                seriesContext.Series.Add(series);
-                seriesContext.SaveChanges();
+                applicationContext.Series.Add(series);
+                applicationContext.SaveChanges();
             }
         }
 
@@ -43,13 +43,13 @@ namespace Business
         /// </summary>
         public void Update(Series series)
         {
-            using (seriesContext = new SeriesContext())
+            using (applicationContext = new ApplicationContext())
             {
-                var item = seriesContext.Series.Find(series.Id);
+                var item = applicationContext.Series.Find(series.Id);
                 if (item != null)
                 {
-                    seriesContext.Entry(item).CurrentValues.SetValues(series);
-                    seriesContext.SaveChanges();
+                    applicationContext.Entry(item).CurrentValues.SetValues(series);
+                    applicationContext.SaveChanges();
                 }
             }
         }
@@ -59,13 +59,13 @@ namespace Business
         /// </summary>
         public void Delete(int id)
         {
-            using (seriesContext = new SeriesContext())
+            using (applicationContext = new ApplicationContext())
             {
-                var film = seriesContext.Series.Find(id);
+                var film = applicationContext.Series.Find(id);
                 if (film != null)
                 {
-                    seriesContext.Series.Remove(film);
-                    seriesContext.SaveChanges();
+                    applicationContext.Series.Remove(film);
+                    applicationContext.SaveChanges();
                 }
             }
         }

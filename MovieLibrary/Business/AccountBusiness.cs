@@ -13,26 +13,16 @@ namespace Business
     /// </summary>
     public class AccountBusiness
     {
-        private AccountContext accountContext;
-
-        /// <summary>
-        /// Constructor, who added default information
-        /// </summary>
-        public AccountBusiness()
-        {
-            accountContext = new AccountContext();
-            accountContext.Accounts.Add(new Account("Konstantin", "Balabanov", "Admin", "admin", 100000));
-            accountContext.SaveChanges();
-        }
+        private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
         /// Get single account from the database by Username
         /// </summary>
         public Account Get(string username)
         {
-            using (accountContext = new AccountContext())
+            using (applicationContext = new ApplicationContext())
             {
-                return accountContext.Accounts.Where(a => a.Username.Equals(username)).FirstOrDefault();
+                return applicationContext.Accounts.Where(a => a.Username.Equals(username)).FirstOrDefault();
             }
         }
 
@@ -41,10 +31,10 @@ namespace Business
         /// </summary>
         public void Add(Account account)
         {
-            using (accountContext = new AccountContext())
+            using (applicationContext = new ApplicationContext())
             {
-                accountContext.Accounts.Add(account);
-                accountContext.SaveChanges();
+                applicationContext.Accounts.Add(account);
+                applicationContext.SaveChanges();
             }
         }
 
@@ -53,13 +43,13 @@ namespace Business
         /// </summary>
         public void Delete(int id)
         {
-            using (accountContext = new AccountContext())
+            using (applicationContext = new ApplicationContext())
             {
-                var account = accountContext.Accounts.Find(id);
+                var account = applicationContext.Accounts.Find(id);
                 if(account != null)
                 {
-                    accountContext.Accounts.Remove(account);
-                    accountContext.SaveChanges();
+                    applicationContext.Accounts.Remove(account);
+                    applicationContext.SaveChanges();
                 }
             }
         }
@@ -69,13 +59,13 @@ namespace Business
         /// </summary>
         public void Update(Account account)
         {
-            using (accountContext = new AccountContext())
+            using (applicationContext = new ApplicationContext())
             {
-                Account currentAccount = accountContext.Accounts.Find(account.Id);
+                Account currentAccount = applicationContext.Accounts.Find(account.Id);
                 if(currentAccount != null)
                 {
-                    accountContext.Entry(currentAccount).CurrentValues.SetValues(account);
-                    accountContext.SaveChanges();
+                    applicationContext.Entry(currentAccount).CurrentValues.SetValues(account);
+                    applicationContext.SaveChanges();
                 }
             }
         }
@@ -87,9 +77,9 @@ namespace Business
         /// </summary>
         public bool DoesThisRecoveryKeyAlreadyExists(int recoveryKey)
         {
-            using (accountContext = new AccountContext())
+            using (applicationContext = new ApplicationContext())
             {
-                Account account = accountContext.Accounts.Where(a => a.RecoveryKey == recoveryKey).FirstOrDefault();
+                Account account = applicationContext.Accounts.Where(a => a.RecoveryKey == recoveryKey).FirstOrDefault();
                 if(account == null)
                 {
                     return false;

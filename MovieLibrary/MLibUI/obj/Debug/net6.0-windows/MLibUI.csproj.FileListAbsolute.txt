@@ -66,3 +66,5 @@ C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\ob
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.PassRecovery.PassRecoveryStep1.resources
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.PassRecovery.PassRecoveryStep2.resources
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.PassRecovery.SuccessfulPassResetPage.resources
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll

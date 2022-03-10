@@ -13,16 +13,16 @@ namespace Business
     /// </summary>
     public class FilmsBusiness
     {
-        private FilmContext filmContext = new FilmContext();
+        private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
         /// Get a film from the database by Id
         /// </summary>
         public Film Get(int id)
         {
-            using (filmContext = new FilmContext())
+            using (applicationContext = new ApplicationContext())
             {
-                return filmContext.Films.Find(id);
+                return applicationContext.Films.Find(id);
             }
         }
 
@@ -31,10 +31,10 @@ namespace Business
         /// </summary>
         public void Add(Film film)
         {
-            using (filmContext = new FilmContext())
+            using (applicationContext = new ApplicationContext())
             {
-                filmContext.Films.Add(film);
-                filmContext.SaveChanges();
+                applicationContext.Films.Add(film);
+                applicationContext.SaveChanges();
             }
         }
 
@@ -43,13 +43,13 @@ namespace Business
         /// </summary>
         public void Update(Film film)
         {
-            using (filmContext = new FilmContext())
+            using (applicationContext = new ApplicationContext())
             {
-                var item = filmContext.Films.Find(film.Id);
+                var item = applicationContext.Films.Find(film.Id);
                 if (item != null)
                 {
-                    filmContext.Entry(item).CurrentValues.SetValues(film);
-                    filmContext.SaveChanges();
+                    applicationContext.Entry(item).CurrentValues.SetValues(film);
+                    applicationContext.SaveChanges();
                 }
             }
         }
@@ -59,13 +59,13 @@ namespace Business
         /// </summary>
         public void Delete(int id)
         {
-            using (filmContext = new FilmContext())
+            using (applicationContext = new ApplicationContext())
             {
-                var film = filmContext.Films.Find(id);
+                var film = applicationContext.Films.Find(id);
                 if (film != null)
                 {
-                    filmContext.Films.Remove(film);
-                    filmContext.SaveChanges();
+                    applicationContext.Films.Remove(film);
+                    applicationContext.SaveChanges();
                 }
             }
         }
