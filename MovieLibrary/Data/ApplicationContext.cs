@@ -21,7 +21,7 @@ namespace Data
         /// <summary>
         /// Films Table
         /// </summary>
-        public DbSet<Film> Films { get; set; }
+        public DbSet<Movie> Films { get; set; }
 
         /// <summary>
         /// Series Table

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace Data.Model
 {
-    public class Film
+    public class Movie
     {
         /// <summary>
         /// The id of the person who add a film

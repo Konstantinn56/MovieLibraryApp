@@ -18,7 +18,7 @@ namespace Business
         /// <summary>
         /// Get a film from the database by Id
         /// </summary>
-        public Film Get(int id)
+        public Movie Get(int id)
         {
             using (applicationContext = new ApplicationContext())
             {
@@ -29,7 +29,7 @@ namespace Business
         /// <summary>
         /// Add a film to the database
         /// </summary>
-        public void Add(Film film)
+        public void Add(Movie film)
         {
             using (applicationContext = new ApplicationContext())
             {
@@ -41,7 +41,7 @@ namespace Business
         /// <summary>
         /// Update a film in the database by Id.
         /// </summary>
-        public void Update(Film film)
+        public void Update(Movie film)
         {
             using (applicationContext = new ApplicationContext())
             {
