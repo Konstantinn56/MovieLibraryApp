@@ -15,5 +15,6 @@ namespace MLibUI
             ApplicationConfiguration.Initialize();
             Application.Run(new LoginPage());
         }
+
     }
 }

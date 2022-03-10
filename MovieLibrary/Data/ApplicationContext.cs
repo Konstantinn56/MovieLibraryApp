@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Data.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data
 {
@@ -16,18 +11,27 @@ namespace Data
         /// <summary>
         /// Accounts Table
         /// </summary>
-        public DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
 
         /// <summary>
-        /// Films Table
+        /// Movies Table
         /// </summary>
-        public DbSet<Movie> Films { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
 
         /// <summary>
         /// Series Table
         /// </summary>
-        public DbSet<Series> Series { get; set; }
+        public virtual DbSet<Series> Series { get; set; }
 
+        /// <summary>
+        /// Favourite Movies Table
+        /// </summary>
+        public virtual DbSet<FavouriteMovies> FavMovies { get; set; }
+
+        /// <summary>
+        /// Favourite Series Table
+        /// </summary>
+        public virtual DbSet<FavouriteSeries> FavSeries { get; set; }
 
         /// <summary>
         /// Constructor
@@ -55,6 +59,5 @@ namespace Data
             var connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MLibraryDB;Integrated Security=True;";
             optionsBuilder.UseSqlServer(connString);
         }
-
     }
 }

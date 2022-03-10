@@ -44,6 +44,6 @@ namespace Data.Model
         /// <summary>
         /// The rating of the series
         /// </summary>
-        public decimal Rate { get; set; }
+        public double Rate { get; set; }
     }
 }

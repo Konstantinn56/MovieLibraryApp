@@ -20,15 +20,5 @@ namespace Data.Model
         /// Movie id
         /// </summary>
         public int MovieId { get; set; }
-
-        /// <summary>
-        /// Information from class account
-        /// </summary>
-        public virtual Account Account { get; set; } = null!;
-
-        /// <summary>
-        /// Information from class Films
-        /// </summary>
-        public virtual Movie Movie { get; set; } = null!;
     }
 }

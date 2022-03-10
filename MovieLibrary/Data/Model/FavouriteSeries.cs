@@ -20,15 +20,5 @@ namespace Data.Model
         /// Favourite series Id
         /// </summary>
         public int SeriesId { get; set; }
-
-        /// <summary>
-        /// Information from class Account
-        /// </summary>
-        public virtual Account Account { get; set; } = null!;
-
-        /// <summary>
-        /// Information from class Series
-        /// </summary>
-        public virtual Series Series { get; set; } = null!;
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Data.Model
 {
@@ -40,25 +36,5 @@ namespace Data.Model
         /// Account Reset Key
         /// </summary>
         public int RecoveryKey { get; set; }
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public Account()
-        {
-            //empty
-        }
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public Account(string fName, string lName, string usr , string pass, int recKey) : base()
-        {
-            this.FirstName = fName;
-            this.LastName = lName;
-            this.Username = usr;
-            this.Password = pass;
-            this.RecoveryKey = recKey;
-        }
     }
 }

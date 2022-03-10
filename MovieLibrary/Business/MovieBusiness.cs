@@ -11,7 +11,7 @@ namespace Business
 {   /// <summary>
     /// Business Logic of the Film
     /// </summary>
-    public class FilmsBusiness
+    public class MovieBusiness
     {
         private ApplicationContext applicationContext = new ApplicationContext();
 
@@ -22,7 +22,7 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                return applicationContext.Films.Find(id);
+                return applicationContext.Movies.Find(id);
             }
         }
 
@@ -33,7 +33,7 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                applicationContext.Films.Add(film);
+                applicationContext.Movies.Add(film);
                 applicationContext.SaveChanges();
             }
         }
@@ -45,7 +45,7 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                var item = applicationContext.Films.Find(film.Id);
+                var item = applicationContext.Movies.Find(film.Id);
                 if (item != null)
                 {
                     applicationContext.Entry(item).CurrentValues.SetValues(film);
@@ -61,10 +61,10 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                var film = applicationContext.Films.Find(id);
+                var film = applicationContext.Movies.Find(id);
                 if (film != null)
                 {
-                    applicationContext.Films.Remove(film);
+                    applicationContext.Movies.Remove(film);
                     applicationContext.SaveChanges();
                 }
             }
