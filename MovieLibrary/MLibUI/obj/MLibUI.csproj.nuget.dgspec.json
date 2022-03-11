@@ -194,6 +194,9 @@
             "projectReferences": {
               "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {
                 "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj"
+              },
+              "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj"
               }
             }
           }

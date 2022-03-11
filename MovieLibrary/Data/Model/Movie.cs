@@ -9,33 +9,43 @@ using System.Threading.Tasks;
 /// </summary>
 namespace Data.Model
 {
-    public class Movie
+    public partial class Movie
     {
         /// <summary>
         /// The id of the person who add a film
         /// </summary>
-        public int Id { get; set; }
+        public int MId { get; set; }
 
         /// <summary>
         /// The name of the added film
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; set; } = null!;
 
         /// <summary>
-        /// The publisher of the film
+        /// The current status of the Movie
         /// </summary>
-        public string Publisher { get; set; }
-
-        /// <summary>
-        /// The year the film comes out
-        /// </summary>
-        public int FYaer { get; set; }
+        public string State { get; set; } = null!;
 
         /// <summary>
         /// The type of the film
         /// </summary>
-        public string FType { get; set; }
+        public int GenreId { get; set; }
 
+        /// <summary>
+        /// Image of the movie
+        /// </summary>
+        public byte[]? Image { get; set; }
+
+        /// <summary>
+        /// The publisher of the film
+        /// </summary>
+        public string Publisher { get; set; } = null!;
+
+        /// <summary>
+        /// The year the film comes out
+        /// </summary>
+        public int YaerOfCreation { get; set; }
+        
         /// <summary>
         /// User evaluation for the film
         /// </summary>
@@ -44,6 +54,11 @@ namespace Data.Model
         /// <summary>
         /// The rating of the film 
         /// </summary>
-        public double Rate { get; set; }
+        public float Rate { get; set; }
+
+        /// <summary>
+        /// The identifier genre navigation
+        /// </summary>
+        public virtual Genre IdGenreNavigation { get; set; } = null!;
     }
 }

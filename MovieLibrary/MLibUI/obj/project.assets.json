@@ -2314,6 +2314,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Business >= 1.0.0",
+      "Data >= 1.0.0",
       "EntityFramework >= 6.4.4",
       "Microsoft.EntityFrameworkCore >= 6.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.3",
@@ -2354,6 +2355,9 @@
           "projectReferences": {
             "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {
               "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj"
+            },
+            "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\kocep\\Source\\Repos\\Konstantinn56\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj"
             }
           }
         }
