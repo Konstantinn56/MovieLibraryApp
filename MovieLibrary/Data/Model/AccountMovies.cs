@@ -22,6 +22,11 @@ namespace Data.Model
         public int MovieId { get; set; }
 
         /// <summary>
+        /// The current status of the Movie
+        /// </summary>
+        public string State { get; set; } = null!;
+
+        /// <summary>
         /// Information from class account
         /// </summary>
         public virtual Account Account { get; set; } = null!;

@@ -92,7 +92,7 @@ namespace Data
 
                 entity.HasData
                 (
-                    new Account { FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 }
+                    new Account {AId = 1, FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 }
                 );
             });
 
@@ -107,6 +107,11 @@ namespace Data
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("name");
+
+                entity.HasData
+                (
+                    new Genre { GId = 1, Name = "Action"}    
+                );
             });
 
             modelBuilder.Entity<Movie>(entity =>
@@ -121,11 +126,6 @@ namespace Data
                     .IsUnicode(false)
                     .HasColumnName("titel");
 
-                entity.Property(e => e.State)
-                    .HasMaxLength(20)
-                    .IsUnicode(false)
-                    .HasColumnName("state");
-
                 entity.Property(e => e.GenreId).HasColumnName("id_genre");
 
                 entity.Property(e => e.Image)
@@ -134,8 +134,6 @@ namespace Data
 
                 entity.Property(e => e.YaerOfCreation).HasColumnName("year");
 
-                entity.Property(e => e.Stars).HasColumnName("stars");
-
                 entity.Property(e => e.Rate).HasColumnName("rate");
 
                 entity.HasOne(d => d.IdGenreNavigation)
@@ -143,6 +141,11 @@ namespace Data
                     .HasForeignKey(d => d.GenreId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_movies_id_genre");
+
+                entity.HasData
+                (
+                    new Movie {MId = 1, Title = "Spider-Man No way Home", GenreId = 1, Image = null ,YaerOfCreation = 2021, Rate = 8.7}    
+                );
             });
 
             modelBuilder.Entity<AccountMovies>(entity =>
@@ -163,6 +166,11 @@ namespace Data
                    .HasForeignKey(d => d.MovieId)
                    .OnDelete(DeleteBehavior.ClientSetNull)
                    .HasConstraintName("fk_accountsmovies_movie");
+                
+                entity.Property(e => e.State)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("state");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -44,11 +44,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(894, 556);
             this.Controls.Add(this.lblUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.mainPage_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainPage_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainPage_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mainPage_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

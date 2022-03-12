@@ -24,7 +24,6 @@ CREATE TABLE [Movies]
 (
 	[MId] INT IDENTITY NOT NULL,
 	[Title] VARCHAR(100) NOT NULL,
-	[State] VARCHAR(20) NOT NULL CHECK([State] IN('Watching','Watched','Plan to watch')),
 	[GenreId] INT NOT NULL,
 	[Image] IMAGE NULL,
 	[YearOfCreation] INT,
@@ -38,6 +37,7 @@ CREATE TABLE [AccountsMovies]
 (
 	[AccountId] INT NOT NULL,
 	[MovieId] INT NOT NULL,
+	[State] VARCHAR(20) NOT NULL CHECK([State] IN('Watching','Watched','Plan to watch')),
 	CONSTRAINT [fk_accountsMovies_account] FOREIGN KEY ([AccountId]) REFERENCES [Accounts]([AId]),
 	CONSTRAINT [fk_accountsMovies_movies] FOREIGN KEY ([MovieId]) REFERENCES [Movies]([MId])
 );
