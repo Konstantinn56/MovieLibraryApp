@@ -27,7 +27,6 @@ CREATE TABLE [Movies]
 	[GenreId] INT NOT NULL,
 	[Image] IMAGE NULL,
 	[YearOfCreation] INT,
-	[Stars] INT,
 	[Rate] float,
 	CONSTRAINT [pk_movies_id] PRIMARY KEY([MId]),
 	CONSTRAINT [fk_movies_id_genre] FOREIGN KEY([GenreId]) REFERENCES [Genres]([GId])
