@@ -1,4 +1,6 @@
-﻿namespace Data.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Data.Model
 {
     /// <summary>
     /// class Genre
@@ -16,6 +18,7 @@
         /// <summary>
         /// Genre id
         /// </summary>
+        [Key]
         public int GId { get; set; }
 
         /// <summary>

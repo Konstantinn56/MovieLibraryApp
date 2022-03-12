@@ -43,7 +43,7 @@ namespace Data
         /// <summary>
         /// Favourite Movies Table
         /// </summary>
-        public DbSet<AccountMovies> AccountsMovies { get; set; }
+        public virtual DbSet<AccountMovies> AccountsMovies { get; set; }
 
         /// <summary>
         /// Connection string to Microsoft SQL Server
@@ -64,30 +64,36 @@ namespace Data
                 entity.HasIndex(u => u.Username, "Admin")
                     .IsUnique();
 
-                entity.Property(e => e.AId).HasColumnName("Id");
+                entity.Property(e => e.AId)
+                    .UseIdentityColumn()
+                    .HasColumnName("id");
 
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(100)
                     .IsUnicode(false)
-                    .HasColumnName("First Name");
+                    .HasColumnName("firstName");
 
                 entity.Property(e => e.LastName)
                     .HasMaxLength(100)
                     .IsUnicode(false)
-                    .HasColumnName("Last Name");
+                    .HasColumnName("lastName");
 
                 entity.Property(e => e.Username)
                     .HasMaxLength(50)
                     .IsUnicode(false)
-                    .HasColumnName("Username");
+                    .HasColumnName("username");
 
                 entity.Property(e => e.Password)
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("Password");
+                    .HasColumnName("password");
 
-                entity.Property(e => e.RecoveryKey).HasColumnName("Recovery Key");
+                entity.Property(e => e.RecoveryKey).HasColumnName("recoveryKey");
 
+                entity.HasData
+                (
+                    new Account { FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 }
+                );
             });
 
             modelBuilder.Entity<Genre>(entity =>
@@ -109,7 +115,58 @@ namespace Data
                     .HasName("pk_movies_id");
 
                 entity.Property(e => e.MId).HasColumnName("id_movie");
+
+                entity.Property(e => e.Title)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("titel");
+
+                entity.Property(e => e.State)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("state");
+
+                entity.Property(e => e.GenreId).HasColumnName("id_genre");
+
+                entity.Property(e => e.Image)
+                    .HasColumnType("image")
+                    .HasColumnName("image");
+
+                entity.Property(e => e.YaerOfCreation).HasColumnName("year");
+
+                entity.Property(e => e.Stars).HasColumnName("stars");
+
+                entity.Property(e => e.Rate).HasColumnName("rate");
+
+                entity.HasOne(d => d.IdGenreNavigation)
+                    .WithMany(p => p.Movies)
+                    .HasForeignKey(d => d.GenreId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_movies_id_genre");
             });
+
+            modelBuilder.Entity<AccountMovies>(entity =>
+            {
+                entity.HasNoKey();
+                entity.ToTable("AccountsMovies");
+                entity.Property(e => e.AccountId).HasColumnName("account_id");
+                entity.Property(e => e.MovieId).HasColumnName("movie_id");
+                
+                entity.HasOne(d => d.Account)
+                    .WithMany()
+                    .HasForeignKey(d => d.AccountId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_accountsmovies_account");
+
+                entity.HasOne(d => d.Movie)
+                   .WithMany()
+                   .HasForeignKey(d => d.MovieId)
+                   .OnDelete(DeleteBehavior.ClientSetNull)
+                   .HasConstraintName("fk_accountsmovies_movie");
+            });
+
+            OnModelCreatingPartial(modelBuilder);
         }
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

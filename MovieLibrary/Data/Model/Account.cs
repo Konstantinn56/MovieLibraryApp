@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Data.Model
 {
@@ -11,6 +12,7 @@ namespace Data.Model
         /// <summary>
         /// Account identication
         /// </summary>
+        [Key]
         public int AId { get; set; }
 
         /// <summary>

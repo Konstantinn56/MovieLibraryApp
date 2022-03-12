@@ -56,7 +56,7 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                Account currentAccount = applicationContext.Accounts.Find(account.Id);
+                Account currentAccount = applicationContext.Accounts.Find(account.AId);
                 if(currentAccount != null)
                 {
                     applicationContext.Entry(currentAccount).CurrentValues.SetValues(account);

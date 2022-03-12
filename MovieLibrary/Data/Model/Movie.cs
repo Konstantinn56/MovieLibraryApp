@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Data.Model
         /// <summary>
         /// The id of the person who add a film
         /// </summary>
+        [Key]
         public int MId { get; set; }
 
         /// <summary>
@@ -35,11 +37,6 @@ namespace Data.Model
         /// Image of the movie
         /// </summary>
         public byte[]? Image { get; set; }
-
-        /// <summary>
-        /// The publisher of the film
-        /// </summary>
-        public string Publisher { get; set; } = null!;
 
         /// <summary>
         /// The year the film comes out

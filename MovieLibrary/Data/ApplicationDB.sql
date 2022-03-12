@@ -23,11 +23,10 @@ CREATE TABLE[Genres]
 CREATE TABLE [Movies]
 (
 	[MId] INT IDENTITY NOT NULL,
-	[Titel] VARCHAR(100) NOT NULL,
+	[Title] VARCHAR(100) NOT NULL,
 	[State] VARCHAR(20) NOT NULL CHECK([State] IN('Watching','Watched','Plan to watch')),
 	[GenreId] INT NOT NULL,
 	[Image] IMAGE NULL,
-	[Publisher] VARCHAR(50),
 	[YearOfCreation] INT,
 	[Stars] INT,
 	[Rate] float,

@@ -45,7 +45,7 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                var item = applicationContext.Movies.Find(film.Id);
+                var item = applicationContext.Movies.Find(film.MId);
                 if (item != null)
                 {
                     applicationContext.Entry(item).CurrentValues.SetValues(film);
