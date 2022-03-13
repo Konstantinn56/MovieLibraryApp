@@ -41,15 +41,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Movies";
             // 
-            // MoviePage
+            // Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "MoviePage";
-            this.Text = "MoviePage";
+            this.Name = "Movies";
+            this.Text = "Movies";
             this.ResumeLayout(false);
             this.PerformLayout();
 

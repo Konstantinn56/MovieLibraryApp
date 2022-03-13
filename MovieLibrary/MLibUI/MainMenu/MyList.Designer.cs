@@ -41,15 +41,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "MyList";
             // 
-            // MyListPage
+            // MyList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "MyListPage";
-            this.Text = "MyListPage";
+            this.Name = "MyList";
+            this.Text = "MyList";
             this.ResumeLayout(false);
             this.PerformLayout();
 

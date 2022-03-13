@@ -209,11 +209,43 @@ namespace MLibUI.MainMenu
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        /// <summary>
+        /// Reset the windows info
+        /// </summary>
         private void btnUsrText_Click(object sender, EventArgs e)
         {
             Reset();
         }
 
-       
+        /// <summary>
+        /// Minimize the window
+        /// </summary>
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        /// <summary>
+        /// Maximize the window
+        /// </summary>
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        /// <summary>
+        /// Close the application
+        /// </summary>
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

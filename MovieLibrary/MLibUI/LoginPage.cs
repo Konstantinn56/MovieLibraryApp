@@ -3,6 +3,7 @@ using Data.Model;
 using MLibUI.MainMenu;
 using MLibUI.SignUp;
 using MLibUI.PassRecovery;
+using System.Runtime.InteropServices;
 
 namespace MLibUI
 {
@@ -19,6 +20,12 @@ namespace MLibUI
         public LoginPage()
         {
             InitializeComponent();
+
+            //Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         /// <summary>
@@ -148,10 +155,71 @@ namespace MLibUI
         /// <summary>
         /// Close the application
         /// </summary>
-        private void lblExit_Click_1(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        /// <summary>
+        /// Minimize the window
+        /// </summary>
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        /// <summary>
+        /// Make the window draggable
+        /// </summary>
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /// <summary>
+        /// Make the window draggable
+        /// </summary>
+        private void LoginPage_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /// <summary>
+        /// Make the window draggable
+        /// </summary>
+        private void panel11_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /// <summary>
+        /// Make the window draggable
+        /// </summary>
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }
