@@ -7,6 +7,15 @@
     <Compile Update="MainMenu\mainPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MainMenu\Movies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainMenu\MyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainMenu\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PassRecovery\ForgottenPassPage.cs">
       <SubType>Form</SubType>
     </Compile>

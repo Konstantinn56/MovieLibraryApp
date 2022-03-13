@@ -9,68 +9,211 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using FontAwesome.Sharp;
+using System.Runtime.InteropServices;
 
 namespace MLibUI.MainMenu
 {
     public partial class mainPage : Form
     {
-        bool mouseDown;
-        private Point offset;
+        /// <summary>
+        /// Current account
+        /// </summary>
+        public Account currentAccount { get; set; }
 
-        public mainPage()
-        {
-            InitializeComponent();
-        }
+        //Fields
+        private IconButton currentBtn;
+        private Panel leftBorderBtn;
+        private Form currentChildForm;
 
         /// <summary>
         /// Account business
         /// </summary>
         private AccountBusiness accountBusiness = new AccountBusiness();
 
-        /// <summary>
-        /// Set the current Location of the Screen and Set the mouseDown to true
-        /// </summary>
-        private void mainPage_MouseDown(object sender, MouseEventArgs e)
+        public mainPage()
         {
-            offset.X = e.X;
-            offset.Y = e.Y;
-            mouseDown = true;
+            InitializeComponent();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftBorderBtn);
+
+            //Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        private void mainPage_Load(object sender, EventArgs e)
+        {
+            btnUsrText.Text = $"{currentAccount.Username}";
         }
 
         /// <summary>
-        /// Change the location of the screen
+        /// Color structs
         /// </summary>
-        private void mainPage_MouseMove(object sender, MouseEventArgs e)
+        private struct RGBColors
         {
-            if(mouseDown == true)
+            public static Color color1 = Color.WhiteSmoke;
+        }
+
+        /// <summary>
+        /// Button activation method
+        /// </summary>
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if(senderBtn != null)
             {
-                Point currentScreenPos = PointToScreen(e.Location);
-                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+                //Deactivate the previous button
+                DisableButton();
+
+                //Button
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.DimGray;
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+
+                //left border button
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+
+                //Icon current Child Form
+                iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                iconCurrentChildForm.IconColor = color;
             }
         }
 
         /// <summary>
-        /// Change the mouseDown boolean to false
+        /// Disable current button highlight
         /// </summary>
-        private void mainPage_MouseUp(object sender, MouseEventArgs e)
+        private void DisableButton()
         {
-            mouseDown = false;
+            if(currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(64, 64, 64);
+                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            }
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if(currentChildForm != null)
+            {
+                //open only  form
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+            //lbl current Child Form
+            lblChildForm.Text = childForm.Text;
         }
 
         /// <summary>
-        /// Current account
+        /// Reset
         /// </summary>
-        public Account currentAccount { get; set; }
-
-        /// <summary>
-        /// Set the lblUsr to Account Username
-        /// </summary>
-        private void mainPage_Load(object sender, EventArgs e)
+        private void Reset()
         {
-            lblUsername.Text = $"{currentAccount.FirstName} {currentAccount.LastName}";
+            if (currentChildForm != null)
+            {
+                //open only  form
+                currentChildForm.Close();
+            }
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.Gainsboro;
+            lblChildForm.Text = "Home";
         }
 
-        
+        /// <summary>
+        /// Activates the button and open
+        /// </summary>
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        /// <summary>
+        /// Activates the button and open
+        /// </summary>
+        private void btnMovies_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Movies());
+        }
+
+        /// <summary>
+        /// Activates the button and open
+        /// </summary>
+        private void btnMyList_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new MyList());
+        }
+
+        /// <summary>
+        /// Activates button and open
+        /// </summary>
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Settings());
+        }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        /// <summary>
+        /// Make the windows draggable
+        /// </summary>
+        private void panelTitleBarr_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /// <summary>
+        /// Make the windows draggable
+        /// </summary>
+        private void panelMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        /// <summary>
+        /// Make the windows draggable
+        /// </summary>
+        private void mainPage_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnUsrText_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+       
     }
 }

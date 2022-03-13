@@ -118,29 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="external-content6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fgvbnnfg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fgvbnnfg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoginPageImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginPageImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="external-content.duckduckgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usrIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usrIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="whitebackground1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whitebackground1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bfgbgn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bfgbgn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="whitebackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\whitebackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginPageImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPageImage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Border" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="external-content2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginPageImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPageImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="external-content3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="external-content6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dfvgdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dfvgdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="external-content7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usrIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usrIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fgvbnnfg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fgvbnnfg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fgvbnnfg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fgvbnnfg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,55 +157,55 @@
   <data name="external-content1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\external-content.duckduckgo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dfvgdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dfvgdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="step2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\step2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="external-content8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="whitebackground1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\whitebackground1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SighnUpBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SighnUpBackGround.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="external-content7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="external-content5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="external-content4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ConfirmationPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ConfirmationPage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="external-content2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ConfirmationPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ConfirmationPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="external-content.duckduckgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GreenTick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GreenTick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginPageImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginPageImage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoYellow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoYellow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="external-content5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfirmationPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConfirmationPage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="external-content8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whitebackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whitebackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SighnUpBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SighnUpBackGround.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoginPagePhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginPagePhoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="external-content3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\external-content.duckduckgo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="external-content4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\external-content.duckduckgo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="step2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\step2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dfvgdf1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dfvgdf1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Border" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfirmationPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConfirmationPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
