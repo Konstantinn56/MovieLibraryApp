@@ -35,6 +35,8 @@ namespace Data
         /// </summary>
         public virtual DbSet<Movie> Movies { get; set; }
 
+        public virtual DbSet<Genre> Genres { get; set; }
+
         /// <summary>
         /// Favourite Movies Table
         /// </summary>
@@ -89,6 +91,16 @@ namespace Data
                 (
                     new Account {AId = 1, FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 }
                 );
+            });
+
+            modelBuilder.Entity<Genre>(entity =>
+            {
+                entity.Property(e => e.GId).HasColumnName("id_genre");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("name");
             });
 
             modelBuilder.Entity<Movie>(entity =>

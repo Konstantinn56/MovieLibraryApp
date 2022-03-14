@@ -49,6 +49,7 @@
             this.btnAdd.TabIndex = 64;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtBoxGenre
             // 
@@ -62,6 +63,9 @@
             this.txtBoxGenre.Size = new System.Drawing.Size(257, 20);
             this.txtBoxGenre.TabIndex = 65;
             this.txtBoxGenre.Text = "Genre";
+            this.txtBoxGenre.TextChanged += new System.EventHandler(this.txtBoxGenre_TextChanged);
+            this.txtBoxGenre.Enter += new System.EventHandler(this.txtBoxGenre_Enter);
+            this.txtBoxGenre.Leave += new System.EventHandler(this.txtBoxGenre_Leave);
             // 
             // lblUsrException
             // 
@@ -129,7 +133,6 @@
             this.Name = "AddNewGenre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewGenre";
-            this.Load += new System.EventHandler(this.AddNewGenre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

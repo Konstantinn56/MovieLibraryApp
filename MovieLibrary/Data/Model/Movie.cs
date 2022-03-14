@@ -42,10 +42,5 @@ namespace Data.Model
         /// The rating of the film 
         /// </summary>
         public double Rate { get; set; }
-
-        /// <summary>
-        /// The identifier genre navigation
-        /// </summary>
-        //public virtual Genre IdGenreNavigation { get; set; } = null!;
     }
 }

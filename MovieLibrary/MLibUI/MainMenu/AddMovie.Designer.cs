@@ -192,10 +192,6 @@
             this.comboBoxGenre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxGenre.ForeColor = System.Drawing.Color.DarkRed;
             this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Items.AddRange(new object[] {
-            "Action",
-            "Comedy",
-            "Add New Genre"});
             this.comboBoxGenre.Location = new System.Drawing.Point(36, 254);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(304, 28);
