@@ -26,7 +26,7 @@ namespace Data.Model
         /// <summary>
         /// The type of the film
         /// </summary>
-        public int GenreId { get; set; }
+        public string Genre { get; set; } = null!;
 
         /// <summary>
         /// Image of the movie
@@ -46,6 +46,6 @@ namespace Data.Model
         /// <summary>
         /// The identifier genre navigation
         /// </summary>
-        public virtual Genre IdGenreNavigation { get; set; } = null!;
+        //public virtual Genre IdGenreNavigation { get; set; } = null!;
     }
 }

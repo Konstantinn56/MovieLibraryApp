@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace MLibUI.MainMenu
 {
-    public partial class Settings : Form
+    public partial class AddNewGenre : Form
     {
-        public Settings()
+        public AddNewGenre()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddNewGenre_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

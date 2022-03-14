@@ -173,7 +173,7 @@ namespace MLibUI.MainMenu
         private void btnSettings_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Settings());
+            OpenChildForm(new AddMovie());
         }
 
         //Drag Form

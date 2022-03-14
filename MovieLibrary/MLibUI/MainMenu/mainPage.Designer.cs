@@ -31,7 +31,7 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnMovies = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnSettings = new FontAwesome.Sharp.IconButton();
+            this.btnAddMovie = new FontAwesome.Sharp.IconButton();
             this.btnMyList = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnUsrText = new FontAwesome.Sharp.IconButton();
@@ -55,14 +55,14 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelMenu.Controls.Add(this.btnMovies);
             this.panelMenu.Controls.Add(this.panelTitleBar);
-            this.panelMenu.Controls.Add(this.btnSettings);
+            this.panelMenu.Controls.Add(this.btnAddMovie);
             this.panelMenu.Controls.Add(this.btnMyList);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 631);
+            this.panelMenu.Size = new System.Drawing.Size(220, 468);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
@@ -97,28 +97,28 @@
             this.panelTitleBar.Size = new System.Drawing.Size(200, 100);
             this.panelTitleBar.TabIndex = 1;
             // 
-            // btnSettings
+            // btnAddMovie
             // 
-            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSettings.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSettings.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnSettings.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSettings.IconSize = 50;
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 559);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnSettings.Size = new System.Drawing.Size(220, 60);
-            this.btnSettings.TabIndex = 3;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnAddMovie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddMovie.FlatAppearance.BorderSize = 0;
+            this.btnAddMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMovie.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMovie.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddMovie.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAddMovie.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAddMovie.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddMovie.IconSize = 50;
+            this.btnAddMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMovie.Location = new System.Drawing.Point(-3, 312);
+            this.btnAddMovie.Name = "btnAddMovie";
+            this.btnAddMovie.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAddMovie.Size = new System.Drawing.Size(223, 60);
+            this.btnAddMovie.TabIndex = 3;
+            this.btnAddMovie.Text = "Add Movie";
+            this.btnAddMovie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMovie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddMovie.UseVisualStyleBackColor = true;
+            this.btnAddMovie.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnMyList
             // 
@@ -132,7 +132,7 @@
             this.btnMyList.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMyList.IconSize = 50;
             this.btnMyList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyList.Location = new System.Drawing.Point(0, 312);
+            this.btnMyList.Location = new System.Drawing.Point(0, 378);
             this.btnMyList.Name = "btnMyList";
             this.btnMyList.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnMyList.Size = new System.Drawing.Size(220, 60);
@@ -207,7 +207,7 @@
             this.panelTitleBarr.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBarr.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBarr.Name = "panelTitleBarr";
-            this.panelTitleBarr.Size = new System.Drawing.Size(916, 70);
+            this.panelTitleBarr.Size = new System.Drawing.Size(674, 70);
             this.panelTitleBarr.TabIndex = 0;
             this.panelTitleBarr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBarr_MouseDown);
             // 
@@ -221,7 +221,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(826, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(584, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(26, 23);
             this.btnMinimize.TabIndex = 5;
@@ -238,7 +238,7 @@
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(858, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(616, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(26, 23);
             this.btnMaximize.TabIndex = 4;
@@ -255,7 +255,7 @@
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(890, 0);
+            this.btnClose.Location = new System.Drawing.Point(648, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 23);
             this.btnClose.TabIndex = 3;
@@ -293,7 +293,7 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 70);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(916, 11);
+            this.panelShadow.Size = new System.Drawing.Size(674, 11);
             this.panelShadow.TabIndex = 1;
             // 
             // panelDesktop
@@ -302,7 +302,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 70);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(916, 561);
+            this.panelDesktop.Size = new System.Drawing.Size(674, 398);
             this.panelDesktop.TabIndex = 1;
             // 
             // mainPage
@@ -310,7 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1136, 631);
+            this.ClientSize = new System.Drawing.Size(894, 468);
             this.ControlBox = false;
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelDesktop);
@@ -334,7 +334,7 @@
         #endregion
 
         private Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnSettings;
+        private FontAwesome.Sharp.IconButton btnAddMovie;
         private FontAwesome.Sharp.IconButton btnMyList;
         private FontAwesome.Sharp.IconButton btnHome;
         private Panel panel2;

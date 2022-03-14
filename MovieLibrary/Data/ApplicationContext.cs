@@ -31,11 +31,6 @@ namespace Data
         public virtual DbSet<Account> Accounts { get; set; } = null!;
 
         /// <summary>
-        /// Genres Table
-        /// </summary>
-        public virtual DbSet<Genre> Genres { get; set; } = null!;
-
-        /// <summary>
         /// Movies Table
         /// </summary>
         public virtual DbSet<Movie> Movies { get; set; }
@@ -96,24 +91,6 @@ namespace Data
                 );
             });
 
-            modelBuilder.Entity<Genre>(entity =>
-            {
-                entity.HasKey(e => e.GId)
-                    .HasName("pk_genre_id");
-
-                entity.Property(e => e.GId).HasColumnName("id_genre");
-
-                entity.Property(e => e.Name)
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
-                    .HasColumnName("name");
-
-                entity.HasData
-                (
-                    new Genre { GId = 1, Name = "Action"}    
-                );
-            });
-
             modelBuilder.Entity<Movie>(entity =>
             {
                 entity.HasKey(e => e.MId)
@@ -126,7 +103,10 @@ namespace Data
                     .IsUnicode(false)
                     .HasColumnName("titel");
 
-                entity.Property(e => e.GenreId).HasColumnName("id_genre");
+                entity.Property(e => e.Genre)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("Genre");
 
                 entity.Property(e => e.Image)
                     .HasColumnType("image")
@@ -136,15 +116,9 @@ namespace Data
 
                 entity.Property(e => e.Rate).HasColumnName("rate");
 
-                entity.HasOne(d => d.IdGenreNavigation)
-                    .WithMany(p => p.Movies)
-                    .HasForeignKey(d => d.GenreId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_movies_id_genre");
-
                 entity.HasData
                 (
-                    new Movie {MId = 1, Title = "Spider-Man No way Home", GenreId = 1, Image = null ,YaerOfCreation = 2021, Rate = 8.7}    
+                    new Movie {MId = 1, Title = "Spider-Man No way Home", Genre = "Action", Image = null ,YaerOfCreation = 2021, Rate = 8.7}    
                 );
             });
 
