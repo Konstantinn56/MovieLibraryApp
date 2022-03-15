@@ -6,6 +6,12 @@ namespace UnitTests
     public class AccountBusinessTests
     {
             [TestMethod]
+            public void GetAccount()
+            {
+
+            }
+
+            [TestMethod]
             public void AddAccount()
             {
 
