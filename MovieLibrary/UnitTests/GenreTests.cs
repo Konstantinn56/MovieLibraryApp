@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Data.Model;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
@@ -8,6 +9,10 @@ namespace UnitTests
         [TestMethod]
         public void Genre()
         {
+            Genre genre = new Genre();
+            genre.Name = "Animation";
+
+            Assert.IsNotNull(genre);
 
         }
     }
