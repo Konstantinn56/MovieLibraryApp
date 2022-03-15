@@ -36,10 +36,12 @@ namespace UnitTests
             ///Arrange
             Movie movie = new Movie()
             {
-                MId = 2
+                MId = 2,
+                Title = "Encanto"
             };
 
             ///Act
+            movieBusiness.Add(movie);
             var movieDb = movieBusiness.Get(movie.MId);
 
             ///Assert

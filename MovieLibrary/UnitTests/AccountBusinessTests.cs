@@ -41,6 +41,7 @@ namespace UnitTests
             };
 
             ///Act
+            accountBusiness.Add(account);
             var accountDb = accountBusiness.Get(account.FirstName);
 
             ///Assert

@@ -31,6 +31,7 @@ namespace UnitTests
             };
 
             ///Act
+            genreBusiness.Add(genre);
             var genreDb = genreBusiness.Get(genre.Name);
 
             ///Assert

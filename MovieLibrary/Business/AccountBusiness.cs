@@ -50,10 +50,14 @@ namespace Business
             using (applicationContext = new ApplicationContext())
             {
                 var account = applicationContext.Accounts.Find(id);
-                if(account != null)
+                if (account != null)
                 {
                     applicationContext.Accounts.Remove(account);
                     applicationContext.SaveChanges();
+                }
+                else
+                {
+                    throw new ArgumentException("This account doesn't exist!");
                 }
             }
         }
