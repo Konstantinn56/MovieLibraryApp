@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// Test for Movie
+    /// </summary>
     [TestClass]
     public class MovieTests
     {

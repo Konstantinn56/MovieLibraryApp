@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// Test for Genre
+    /// </summary>
     [TestClass]
     public class GenreTests
     {

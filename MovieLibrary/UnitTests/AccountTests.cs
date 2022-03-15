@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// Test for Account
+    /// </summary>
     [TestClass]
     public class AccountTests
     {
