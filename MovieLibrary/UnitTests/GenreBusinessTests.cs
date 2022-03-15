@@ -19,7 +19,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Add when the genre isn't existing
+        /// Test for method Add when the genre doesn't existing
         /// </summary>
         [TestMethod]
         public void AddGenre_NotExistingGenre_ReturnsGenre()
