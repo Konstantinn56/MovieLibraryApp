@@ -28,8 +28,17 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                applicationContext.Accounts.Add(account);
-                applicationContext.SaveChanges();
+                var accountDb = applicationContext.Accounts.FirstOrDefault(a => a.FirstName == account.FirstName);
+
+                if (accountDb != null)
+                {
+                    throw new ArgumentException("This account already exist!");
+                }
+                else
+                {
+                    applicationContext.Accounts.Add(account);
+                    applicationContext.SaveChanges();
+                }
             }
         }
 
