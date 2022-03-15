@@ -104,7 +104,7 @@ namespace MLibUI.MainMenu
             }
         }
 
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             if(currentChildForm != null)
             {

@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnView = new System.Windows.Forms.Button();
             this.btnAddToFavourite = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
             this.lblUsrException = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.btnAddToFavourite);
-            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtBoxSearch);
             this.panel1.Controls.Add(this.lblUsrException);
@@ -108,18 +106,6 @@
             this.btnAddToFavourite.TabIndex = 67;
             this.btnAddToFavourite.Text = "Add To Favourite";
             this.btnAddToFavourite.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.BackColor = System.Drawing.Color.Gray;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(787, 52);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(87, 24);
-            this.btnAdd.TabIndex = 66;
-            this.btnAdd.Text = "Add Movie";
-            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnSearch
             // 
@@ -455,7 +441,6 @@
         private Panel panelSearch;
         private Button btnSearch;
         private Button btnAddToFavourite;
-        private Button btnAdd;
         private PictureBox picBox1;
         private RichTextBox txtBoxMovie1;
         private Button btnView;
