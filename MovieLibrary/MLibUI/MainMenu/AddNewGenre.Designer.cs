@@ -43,9 +43,10 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Gray;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(237, 84);
+            this.btnAdd.Location = new System.Drawing.Point(271, 112);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(68, 24);
+            this.btnAdd.Size = new System.Drawing.Size(78, 32);
             this.btnAdd.TabIndex = 64;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -58,9 +59,10 @@
             this.txtBoxGenre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtBoxGenre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxGenre.ForeColor = System.Drawing.Color.DarkRed;
-            this.txtBoxGenre.Location = new System.Drawing.Point(48, 39);
+            this.txtBoxGenre.Location = new System.Drawing.Point(55, 52);
+            this.txtBoxGenre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxGenre.Name = "txtBoxGenre";
-            this.txtBoxGenre.Size = new System.Drawing.Size(257, 20);
+            this.txtBoxGenre.Size = new System.Drawing.Size(294, 25);
             this.txtBoxGenre.TabIndex = 65;
             this.txtBoxGenre.Text = "Genre";
             this.txtBoxGenre.TextChanged += new System.EventHandler(this.txtBoxGenre_TextChanged);
@@ -73,17 +75,18 @@
             this.lblUsrException.BackColor = System.Drawing.Color.White;
             this.lblUsrException.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblUsrException.ForeColor = System.Drawing.Color.Red;
-            this.lblUsrException.Location = new System.Drawing.Point(48, 70);
+            this.lblUsrException.Location = new System.Drawing.Point(55, 93);
             this.lblUsrException.Name = "lblUsrException";
-            this.lblUsrException.Size = new System.Drawing.Size(0, 16);
+            this.lblUsrException.Size = new System.Drawing.Size(0, 19);
             this.lblUsrException.TabIndex = 68;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MLibUI.Properties.Resources.usrIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 43);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(32, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
@@ -91,18 +94,20 @@
             // panelGenre
             // 
             this.panelGenre.BackColor = System.Drawing.Color.Black;
-            this.panelGenre.Location = new System.Drawing.Point(11, 65);
+            this.panelGenre.Location = new System.Drawing.Point(13, 87);
+            this.panelGenre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelGenre.Name = "panelGenre";
-            this.panelGenre.Size = new System.Drawing.Size(307, 2);
+            this.panelGenre.Size = new System.Drawing.Size(351, 3);
             this.panelGenre.TabIndex = 67;
             // 
             // btnCancle
             // 
             this.btnCancle.BackColor = System.Drawing.Color.Gray;
             this.btnCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancle.Location = new System.Drawing.Point(169, 84);
+            this.btnCancle.Location = new System.Drawing.Point(193, 112);
+            this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(62, 24);
+            this.btnCancle.Size = new System.Drawing.Size(71, 32);
             this.btnCancle.TabIndex = 69;
             this.btnCancle.Text = "Cancle";
             this.btnCancle.UseVisualStyleBackColor = false;
@@ -117,19 +122,22 @@
             this.panel1.Controls.Add(this.panelGenre);
             this.panel1.Controls.Add(this.lblUsrException);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 130);
+            this.panel1.Size = new System.Drawing.Size(371, 173);
             this.panel1.TabIndex = 70;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // AddNewGenre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(331, 137);
+            this.ClientSize = new System.Drawing.Size(378, 183);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewGenre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewGenre";

@@ -35,7 +35,7 @@ namespace MLibUI.MainMenu
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, 80);
             panelMenu.Controls.Add(leftBorderBtn);
 
             //Form

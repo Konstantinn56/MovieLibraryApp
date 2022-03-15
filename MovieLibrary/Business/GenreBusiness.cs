@@ -32,5 +32,22 @@ namespace Business
                 return applicationContext.Genres.Where(a => a.Name.Equals(name)).FirstOrDefault();
             }
         }
+
+        /// <summary>
+        /// Get all genres and return it into List
+        /// </summary>
+        public List<Genre> GetAllGenres()
+        {
+            using (applicationContext = new ApplicationContext())
+            {
+                List<Genre> allGenres = new List<Genre>();
+
+                foreach (Genre genre in applicationContext.Genres)
+                {
+                    allGenres.Add(genre);
+                }
+                return allGenres;
+            }
+        }
     }
 }

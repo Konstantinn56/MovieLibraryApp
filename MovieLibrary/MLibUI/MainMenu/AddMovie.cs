@@ -16,6 +16,12 @@ namespace MLibUI.MainMenu
         /// Movie Business
         /// </summary>
         MovieBusiness movieBusiness = new MovieBusiness();
+
+        /// <summary>
+        /// Genre Business
+        /// </summary>
+        GenreBusiness genreBusiness = new GenreBusiness();
+
         private void btnBrowse_Click_1(object sender, EventArgs e)
         {
             Stream myStream = null;
@@ -122,7 +128,8 @@ namespace MLibUI.MainMenu
             else
             {
                 int year;
-                if(int.TryParse(txtBoxYear.Text, out year))
+                int currentYear = DateTime.Now.Year;
+                if (int.TryParse(txtBoxYear.Text, out year) || int.Parse(txtBoxYear.Text) <= currentYear)
                 {
                     panelYear.BackColor = Color.Green;
                     lblYearExepction.Text = "";
@@ -216,6 +223,18 @@ namespace MLibUI.MainMenu
             comboBoxGenre.Text = null;
 
             pictureBoxImage.Image = null;
+        }
+        /// <summary>
+        /// Link Combobox with Database Genres values
+        /// </summary>
+        private void comboBoxGenre_MouseClick(object sender, MouseEventArgs e)
+        {
+            List<Genre> allGenres = genreBusiness.GetAllGenres();
+            comboBoxGenre.Items.Clear();
+            foreach (Genre genre in allGenres)
+            {
+                comboBoxGenre.Items.Add(genre.Name);
+            }
         }
     }
 }

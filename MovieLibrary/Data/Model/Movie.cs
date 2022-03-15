@@ -19,6 +19,11 @@ namespace Data.Model
         public int MId { get; set; }
 
         /// <summary>
+        /// Image of the movie
+        /// </summary>
+        public byte[]? Image { get; set; }
+
+        /// <summary>
         /// The name of the added film
         /// </summary>
         public string Title { get; set; } = null!;
@@ -27,11 +32,6 @@ namespace Data.Model
         /// The type of the film
         /// </summary>
         public string Genre { get; set; } = null!;
-
-        /// <summary>
-        /// Image of the movie
-        /// </summary>
-        public byte[]? Image { get; set; }
 
         /// <summary>
         /// The year the film comes out

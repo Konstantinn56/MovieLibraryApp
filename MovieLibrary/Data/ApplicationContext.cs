@@ -35,7 +35,10 @@ namespace Data
         /// </summary>
         public virtual DbSet<Movie> Movies { get; set; }
 
-        public virtual DbSet<Genre> Genres { get; set; }
+        /// <summary>
+        /// Genres Table
+        /// </summary>
+        public virtual DbSet<Genre> Genres { get; set; } = null!;
 
         /// <summary>
         /// Favourite Movies Table
@@ -95,12 +98,37 @@ namespace Data
 
             modelBuilder.Entity<Genre>(entity =>
             {
-                entity.Property(e => e.GId).HasColumnName("id_genre");
+                entity.HasKey(e => e.GId)
+                    .HasName("pk_genres_id");
+
+                entity.Property(e => e.GId)
+                    .UseIdentityColumn()
+                    .HasColumnName("id_genre");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("name");
+
+                entity.HasData
+                (
+                    new Genre{GId = 1, Name = "Add New Genre"},
+                    new Genre{GId = 2, Name = "Action"},  
+                    new Genre{GId = 3, Name = "Adventure"},  
+                    new Genre{GId = 4, Name = "Drama"}, 
+                    new Genre{GId = 5, Name = "Sci-Fi"},  
+                    new Genre{GId = 6, Name = "Crime"}, 
+                    new Genre{GId = 7, Name = "Thriller"},  
+                    new Genre{GId = 8, Name = "Comedy"},     
+                    new Genre{GId = 9, Name = "Fantasy"},
+                    new Genre{GId = 10, Name = "Mystery"},
+                    new Genre{GId = 11, Name = "Family"},
+                    new Genre{GId = 12, Name = "History"},
+                    new Genre{GId = 13, Name = "Biography"},
+                    new Genre{GId = 14, Name = "Horror"},
+                    new Genre{GId = 15, Name = "Music"},
+                    new Genre{GId = 16, Name = "Romance"}
+                );
             });
 
             modelBuilder.Entity<Movie>(entity =>
@@ -110,19 +138,19 @@ namespace Data
 
                 entity.Property(e => e.MId).HasColumnName("id_movie");
 
+                entity.Property(e => e.Image)
+                    .HasColumnType("image")
+                    .HasColumnName("image");
+
                 entity.Property(e => e.Title)
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("titel");
+                    .HasColumnName("title");
 
                 entity.Property(e => e.Genre)
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("Genre");
-
-                entity.Property(e => e.Image)
-                    .HasColumnType("image")
-                    .HasColumnName("image");
 
                 entity.Property(e => e.YaerOfCreation).HasColumnName("year");
 
