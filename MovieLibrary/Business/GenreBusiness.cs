@@ -17,8 +17,17 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                applicationContext.Genres.Add(genre);
-                applicationContext.SaveChanges();
+                var genreDb = applicationContext.Genres.FirstOrDefault(g => g.Name == genre.Name);
+
+                if (genreDb != null)
+                {
+                    throw new ArgumentException("Genre already exist!");
+                }
+                else
+                {
+                    applicationContext.Genres.Add(genre);
+                    applicationContext.SaveChanges();
+                }
             }
         }
 
