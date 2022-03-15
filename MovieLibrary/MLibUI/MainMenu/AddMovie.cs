@@ -68,6 +68,9 @@ namespace MLibUI.MainMenu
                 Movie currentMovie = new Movie() { Title = txtBoxTitle.Text, Genre = comboBoxGenre.Text, Image = pic, YaerOfCreation = int.Parse(txtBoxYear.Text), Rate = double.Parse(txtBoxRate.Text) };
                 movieBusiness.Add(currentMovie);
 
+                SuccessfulAddedMovie successfulAddedMovie = new SuccessfulAddedMovie();
+                successfulAddedMovie.Show();
+
                 //Reset the fields
                 ResetFields();
             }
@@ -132,7 +135,7 @@ namespace MLibUI.MainMenu
             {
                 int year;
                 int currentYear = DateTime.Now.Year;
-                if (int.TryParse(txtBoxYear.Text, out year) || int.Parse(txtBoxYear.Text) <= currentYear)
+                if (int.TryParse(txtBoxYear.Text, out year) && int.Parse(txtBoxYear.Text) <= currentYear)
                 {
                     panelYear.BackColor = Color.Green;
                     lblYearExepction.Text = "";

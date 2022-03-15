@@ -29,6 +29,22 @@ namespace Business
         }
 
         /// <summary>
+        /// Get all films from the database
+        /// </summary>
+        public List<Movie> GetAll()
+        {
+            using (applicationContext = new ApplicationContext())
+            {
+                List<Movie> movieList = new List<Movie>();
+                foreach (Movie m in applicationContext.Movies)
+                {
+                    movieList.Add(m);
+                }
+                return movieList;
+            }
+        }
+
+        /// <summary>
         /// Add a film to the database
         /// </summary>
         public void Add(Movie film)

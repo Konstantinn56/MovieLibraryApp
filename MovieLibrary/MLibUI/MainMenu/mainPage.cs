@@ -35,7 +35,7 @@ namespace MLibUI.MainMenu
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 80);
+            leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
 
             //Form
@@ -174,6 +174,7 @@ namespace MLibUI.MainMenu
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new AddMovie());
+            lblChildForm.Text = "Add Movie";
         }
 
         //Drag Form
