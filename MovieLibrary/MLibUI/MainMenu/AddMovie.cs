@@ -67,6 +67,9 @@ namespace MLibUI.MainMenu
                 //Adding movie into database
                 Movie currentMovie = new Movie() { Title = txtBoxTitle.Text, Genre = comboBoxGenre.Text, Image = pic, YaerOfCreation = int.Parse(txtBoxYear.Text), Rate = double.Parse(txtBoxRate.Text) };
                 movieBusiness.Add(currentMovie);
+
+                //Reset the fields
+                ResetFields();
             }
         }
 
@@ -204,6 +207,14 @@ namespace MLibUI.MainMenu
         /// Reset all fields
         /// </summary>
         private void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetFields();
+        }
+
+        /// <summary>
+        /// This will reset all fields
+        /// </summary>
+        public void ResetFields()
         {
             txtBoxYear.Text = "Year";
             txtBoxYear.ForeColor = Color.DarkRed;

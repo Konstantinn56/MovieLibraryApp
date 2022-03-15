@@ -30,9 +30,6 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void Movies_Load(object sender, EventArgs e)
         {
-            MovieDGV.ColumnHeadersVisible = false;
-            MovieDGV.RowHeadersVisible = false;
-            FiLLDataGridView();
         }
 
         /// <summary>
@@ -40,15 +37,6 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void FiLLDataGridView()
         {
-            SqlConnection conn = DataBase.GetConnection();
-            conn.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT id_movie,title, Genre, year, rate FROM Movies", conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            MovieDGV.DataSource = dt;
-            MovieDGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            //MovieDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            conn.Close();
         }
     }
 }
