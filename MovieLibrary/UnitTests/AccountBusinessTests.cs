@@ -32,12 +32,12 @@ namespace UnitTests
         /// Test for method Add when the acount doesn't existing
         /// </summary>
         [TestMethod]
-        public void AddAccount_NotExistingAccount_ReturnsGenre()
+        public void AddAccount_NotExistingAccount_ReturnsAccount()
         {
             ///Arrange
             Account account = new Account()
             {
-                FirstName = "Velina"
+                FirstName = "Georgi"
             };
 
             ///Act
@@ -66,20 +66,48 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Delete
+        /// Test for method Delete when the account exist
         /// </summary>
         [TestMethod]
-        public void DeleteAccount()
+        public void DeleteAccount_ExistingAccount_RemovesAccount()
         {
+            Account account = new Account()
+            {
+                AId = 3,
+                FirstName = "Dimitar"
+            };
 
+            ///Act
+            var accountDb = accountBusiness.Get(account.FirstName);
+            accountBusiness.Delete(account.AId);
+
+            ///Assert
+            Assert.AreEqual(account.FirstName, accountDb.FirstName);
         }
 
         /// <summary>
-        /// Test for method Update
+        /// Test for method Delete when the account doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void DeleteAccount_NotExistingAccount_ThrowArgumentException()
+        {
+            ///Arrange
+            Account account = new Account()
+            {
+                AId = 5
+            };
+
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => accountBusiness.Delete(account.AId));
+            Assert.AreEqual("This account doesn't exist!", exception.Message);
+        }
+
+        /// <summary>
+        /// Test for method Update when the account doesn't exist
         /// </summary>
         [TestMethod]
         public void UpdateAccount()
-        {
+        { 
 
         }
     }
