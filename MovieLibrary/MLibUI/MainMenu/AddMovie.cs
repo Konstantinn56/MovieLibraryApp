@@ -59,20 +59,40 @@ namespace MLibUI.MainMenu
             }
             else
             {
-                //Save image
-                MemoryStream stream = new MemoryStream();
-                pictureBoxImage.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] pic = stream.ToArray();
+                if (lblTitleException.Text.Equals("") && lblYearExepction.Text.Equals("") && lblRateException.Text.Equals(""))
+                {
+                    //Save image
+                    MemoryStream stream = new MemoryStream();
+                    pictureBoxImage.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    byte[] pic = stream.ToArray();
 
-                //Adding movie into database
-                Movie currentMovie = new Movie() { Title = txtBoxTitle.Text, Genre = comboBoxGenre.Text, Image = pic, YaerOfCreation = int.Parse(txtBoxYear.Text), Rate = double.Parse(txtBoxRate.Text) };
-                movieBusiness.Add(currentMovie);
+                    //Adding movie into database
+                    Movie currentMovie = new Movie() { Title = txtBoxTitle.Text, Genre = comboBoxGenre.Text, Image = pic, YaerOfCreation = int.Parse(txtBoxYear.Text), Rate = double.Parse(txtBoxRate.Text) };
+                    movieBusiness.Add(currentMovie);
 
-                SuccessfulAddedMovie successfulAddedMovie = new SuccessfulAddedMovie();
-                successfulAddedMovie.Show();
+                    SuccessfulAddedMovie successfulAddedMovie = new SuccessfulAddedMovie();
+                    successfulAddedMovie.Show();
 
-                //Reset the fields
-                ResetFields();
+                    //Reset the fields
+                    ResetFields();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Check If the movie with this Title exists in the DataBase
+        /// </summary>
+        /// <returns>True/False</returns>
+        private bool DoesTheMovieAlreadyExists(string title)
+        {
+            try
+            {
+                Movie movie = movieBusiness.GetByTitle(title);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
 
@@ -102,7 +122,22 @@ namespace MLibUI.MainMenu
             }
             else
             {
-                panelTitle.BackColor = Color.Green;
+                if (lblTitleException.Text.Equals(""))
+                {
+                    panelTitle.BackColor = Color.Green;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Check if the movie already exists
+        /// </summary>
+        private void txtBoxTitle_TextChanged(object sender, EventArgs e)
+        {
+            if (DoesTheMovieAlreadyExists(txtBoxTitle.Text))
+            {
+                lblTitleException.Text = "*Already exists*";
+                panelTitle.BackColor = Color.Red;
             }
         }
 
@@ -227,7 +262,7 @@ namespace MLibUI.MainMenu
             txtBoxTitle.Text = "Title";
             txtBoxTitle.ForeColor = Color.DarkRed;
             panelTitle.BackColor = Color.Black;
-            lblUsrException.Text = "";
+            lblTitleException.Text = "";
 
             txtBoxRate.Text = "Rate [1-10]";
             txtBoxRate.ForeColor = Color.DarkRed;
@@ -250,5 +285,7 @@ namespace MLibUI.MainMenu
                 comboBoxGenre.Items.Add(genre.Name);
             }
         }
+
+        
     }
 }

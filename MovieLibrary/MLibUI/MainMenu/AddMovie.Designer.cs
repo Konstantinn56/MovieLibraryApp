@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtBoxTitle = new System.Windows.Forms.TextBox();
-            this.lblUsrException = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.txtBoxYear = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.lblYearExepction = new System.Windows.Forms.Label();
             this.lblRateException = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblTitleException = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,19 +66,9 @@
             this.txtBoxTitle.Size = new System.Drawing.Size(257, 20);
             this.txtBoxTitle.TabIndex = 39;
             this.txtBoxTitle.Text = "Title";
+            this.txtBoxTitle.TextChanged += new System.EventHandler(this.txtBoxTitle_TextChanged);
             this.txtBoxTitle.Enter += new System.EventHandler(this.txtBoxTitle_Enter);
             this.txtBoxTitle.Leave += new System.EventHandler(this.txtBoxTitle_Leave);
-            // 
-            // lblUsrException
-            // 
-            this.lblUsrException.AutoSize = true;
-            this.lblUsrException.BackColor = System.Drawing.Color.White;
-            this.lblUsrException.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUsrException.ForeColor = System.Drawing.Color.Red;
-            this.lblUsrException.Location = new System.Drawing.Point(70, 121);
-            this.lblUsrException.Name = "lblUsrException";
-            this.lblUsrException.Size = new System.Drawing.Size(0, 16);
-            this.lblUsrException.TabIndex = 48;
             // 
             // pictureBox1
             // 
@@ -280,12 +270,24 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "Movie Information";
             // 
+            // lblTitleException
+            // 
+            this.lblTitleException.AutoSize = true;
+            this.lblTitleException.BackColor = System.Drawing.Color.DarkGray;
+            this.lblTitleException.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitleException.ForeColor = System.Drawing.Color.Red;
+            this.lblTitleException.Location = new System.Drawing.Point(70, 121);
+            this.lblTitleException.Name = "lblTitleException";
+            this.lblTitleException.Size = new System.Drawing.Size(0, 16);
+            this.lblTitleException.TabIndex = 68;
+            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(837, 485);
+            this.Controls.Add(this.lblTitleException);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRateException);
             this.Controls.Add(this.lblYearExepction);
@@ -303,7 +305,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelYear);
             this.Controls.Add(this.txtBoxTitle);
-            this.Controls.Add(this.lblUsrException);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelTitle);
             this.Name = "AddMovie";
@@ -319,7 +320,6 @@
 
         #endregion
         private TextBox txtBoxTitle;
-        private Label lblUsrException;
         private PictureBox pictureBox1;
         private Panel panelTitle;
         private TextBox txtBoxYear;
@@ -338,5 +338,6 @@
         private Label lblYearExepction;
         private Label lblRateException;
         private Label label1;
+        private Label lblTitleException;
     }
 }
