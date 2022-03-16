@@ -17,9 +17,9 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                var genreDb = applicationContext.Genres.FirstOrDefault(g => g.Name == genre.Name);
+                var genreDate = applicationContext.Genres.FirstOrDefault(g => g.Name == genre.Name);
 
-                if (genreDb != null)
+                if (genreDate != null)
                 {
                     throw new ArgumentException("Genre already exist!");
                 }

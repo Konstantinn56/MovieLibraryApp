@@ -15,25 +15,7 @@ namespace UnitTests
 
         public MovieBusinessTests()
         {
-            var movieBusiness = new MovieBusiness();
-        }
-
-        /// <summary>
-        /// Test for method Get when the movie exist
-        /// </summary>
-        [TestMethod]
-        public void GetMovie_ExistingMovie_ReturnsMovie()
-        {
-
-        }
-
-        /// <summary>
-        /// Test for method Get when the account doesn't exist
-        /// </summary>
-        [TestMethod]
-        public void GetMovie_NotExistingMovie_ThrowArgumentException()
-        {
-
+            movieBusiness = new MovieBusiness();
         }
 
         /// <summary>

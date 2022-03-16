@@ -16,25 +16,7 @@ namespace UnitTests
 
         public AccountBusinessTests()
         {
-            var accountBusiness = new AccountBusiness();
-        }
-
-        /// <summary>
-        /// Test for method Get when the account exist
-        /// </summary>
-        [TestMethod]
-        public void GetAccount_ExistingAccount_ReturnsAccount()
-        {
-            
-        }
-
-        /// <summary>
-        /// Test for method Get when the account doesn't exist
-        /// </summary>
-        [TestMethod]
-        public void GetAccount_NotExistingAccount_ThrowArgumentException()
-        {
-
+            accountBusiness = new AccountBusiness();
         }
 
         //// <summary>
@@ -83,11 +65,12 @@ namespace UnitTests
             Account account = new Account()
             {
                 AId = 3,
-                FirstName = "Dimitar"
+                FirstName = "Dimitar",
+                Username = "dimSt"
             };
 
             ///Act
-            var accountDb = accountBusiness.Get(account.FirstName);
+            var accountDb = accountBusiness.Get(account.Username);
             accountBusiness.Delete(account.AId);
 
             ///Assert
@@ -138,13 +121,15 @@ namespace UnitTests
             ///Arrange
             Account account = new Account()
             {
-                FirstName = "Velina",
-                LastName = "Petrova"
+                AId = 2,
+                FirstName = "Neli",
+                LastName = "Petrova",
+                Username = "admin_2"
             };
 
             ///Act
-            var accountDb = accountBusiness.Get(account.LastName);
             accountBusiness.Update(account);
+            var accountDb = accountBusiness.Get(account.Username);
 
             ///Assert
             Assert.AreNotEqual(account.LastName, accountDb.LastName);
