@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Movies));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnView = new System.Windows.Forms.Button();
             this.btnAddToFavourite = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.txtBoxTitle6 = new System.Windows.Forms.TextBox();
             this.txtBoxTitle7 = new System.Windows.Forms.TextBox();
             this.txtBoxTitle8 = new System.Windows.Forms.TextBox();
+            this.txtBoxMovieInfo = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).BeginInit();
@@ -71,7 +71,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.btnAddToFavourite);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtBoxSearch);
@@ -81,28 +80,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 82);
+            this.panel1.Size = new System.Drawing.Size(1011, 82);
             this.panel1.TabIndex = 3;
-            // 
-            // btnView
-            // 
-            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Location = new System.Drawing.Point(1001, 52);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(55, 24);
-            this.btnView.TabIndex = 68;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = false;
             // 
             // btnAddToFavourite
             // 
             this.btnAddToFavourite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddToFavourite.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAddToFavourite.BackColor = System.Drawing.Color.Goldenrod;
             this.btnAddToFavourite.Enabled = false;
             this.btnAddToFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddToFavourite.Location = new System.Drawing.Point(880, 52);
+            this.btnAddToFavourite.Location = new System.Drawing.Point(884, 52);
             this.btnAddToFavourite.Name = "btnAddToFavourite";
             this.btnAddToFavourite.Size = new System.Drawing.Size(115, 24);
             this.btnAddToFavourite.TabIndex = 67;
@@ -111,7 +98,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSearch.BackColor = System.Drawing.Color.Goldenrod;
             this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(348, 52);
@@ -134,6 +121,7 @@
             this.txtBoxSearch.Size = new System.Drawing.Size(257, 20);
             this.txtBoxSearch.TabIndex = 39;
             this.txtBoxSearch.Text = "Search";
+            this.txtBoxSearch.TextChanged += new System.EventHandler(this.txtBoxSearch_TextChanged);
             this.txtBoxSearch.Enter += new System.EventHandler(this.txtBoxSearch_Enter);
             this.txtBoxSearch.Leave += new System.EventHandler(this.txtBoxSearch_Leave);
             // 
@@ -180,112 +168,128 @@
             this.picBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBox1.ErrorImage")));
             this.picBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox1.InitialImage")));
-            this.picBox1.Location = new System.Drawing.Point(52, 108);
+            this.picBox1.Location = new System.Drawing.Point(69, 107);
             this.picBox1.Name = "picBox1";
-            this.picBox1.Size = new System.Drawing.Size(161, 146);
+            this.picBox1.Size = new System.Drawing.Size(165, 146);
             this.picBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox1.TabIndex = 4;
             this.picBox1.TabStop = false;
             this.picBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox1_MouseClick);
+            this.picBox1.MouseLeave += new System.EventHandler(this.picBox1_MouseLeave);
+            this.picBox1.MouseHover += new System.EventHandler(this.picBox1_MouseHover);
             // 
             // picBox2
             // 
             this.picBox2.BackColor = System.Drawing.Color.DimGray;
             this.picBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox2.Location = new System.Drawing.Point(279, 108);
+            this.picBox2.Location = new System.Drawing.Point(296, 107);
             this.picBox2.Name = "picBox2";
-            this.picBox2.Size = new System.Drawing.Size(161, 146);
+            this.picBox2.Size = new System.Drawing.Size(165, 146);
             this.picBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox2.TabIndex = 8;
             this.picBox2.TabStop = false;
             this.picBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox2_MouseClick);
+            this.picBox2.MouseLeave += new System.EventHandler(this.picBox2_MouseLeave);
+            this.picBox2.MouseHover += new System.EventHandler(this.picBox2_MouseHover);
             // 
             // picBox3
             // 
             this.picBox3.BackColor = System.Drawing.Color.DimGray;
             this.picBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox3.Location = new System.Drawing.Point(510, 108);
+            this.picBox3.Location = new System.Drawing.Point(527, 107);
             this.picBox3.Name = "picBox3";
-            this.picBox3.Size = new System.Drawing.Size(161, 146);
+            this.picBox3.Size = new System.Drawing.Size(165, 146);
             this.picBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox3.TabIndex = 10;
             this.picBox3.TabStop = false;
             this.picBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox3_MouseClick);
+            this.picBox3.MouseLeave += new System.EventHandler(this.picBox3_MouseLeave);
+            this.picBox3.MouseHover += new System.EventHandler(this.picBox3_MouseHover);
             // 
             // picBox4
             // 
             this.picBox4.BackColor = System.Drawing.Color.DimGray;
             this.picBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox4.Location = new System.Drawing.Point(735, 108);
+            this.picBox4.Location = new System.Drawing.Point(752, 107);
             this.picBox4.Name = "picBox4";
-            this.picBox4.Size = new System.Drawing.Size(161, 146);
+            this.picBox4.Size = new System.Drawing.Size(165, 146);
             this.picBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox4.TabIndex = 12;
             this.picBox4.TabStop = false;
             this.picBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox4_MouseClick);
+            this.picBox4.MouseLeave += new System.EventHandler(this.picBox4_MouseLeave);
+            this.picBox4.MouseHover += new System.EventHandler(this.picBox4_MouseHover);
             // 
             // picBox8
             // 
             this.picBox8.BackColor = System.Drawing.Color.DimGray;
             this.picBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox8.Location = new System.Drawing.Point(735, 332);
+            this.picBox8.Location = new System.Drawing.Point(752, 331);
             this.picBox8.Name = "picBox8";
-            this.picBox8.Size = new System.Drawing.Size(161, 146);
+            this.picBox8.Size = new System.Drawing.Size(165, 146);
             this.picBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox8.TabIndex = 22;
             this.picBox8.TabStop = false;
             this.picBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox8_MouseClick);
+            this.picBox8.MouseLeave += new System.EventHandler(this.picBox8_MouseLeave);
+            this.picBox8.MouseHover += new System.EventHandler(this.picBox8_MouseHover);
             // 
             // picBox7
             // 
             this.picBox7.BackColor = System.Drawing.Color.DimGray;
             this.picBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox7.Location = new System.Drawing.Point(510, 332);
+            this.picBox7.Location = new System.Drawing.Point(527, 331);
             this.picBox7.Name = "picBox7";
-            this.picBox7.Size = new System.Drawing.Size(161, 146);
+            this.picBox7.Size = new System.Drawing.Size(165, 146);
             this.picBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox7.TabIndex = 20;
             this.picBox7.TabStop = false;
             this.picBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox7_MouseClick);
+            this.picBox7.MouseLeave += new System.EventHandler(this.picBox7_MouseLeave);
+            this.picBox7.MouseHover += new System.EventHandler(this.picBox7_MouseHover);
             // 
             // picBox6
             // 
             this.picBox6.BackColor = System.Drawing.Color.DimGray;
             this.picBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox6.Location = new System.Drawing.Point(279, 332);
+            this.picBox6.Location = new System.Drawing.Point(296, 331);
             this.picBox6.Name = "picBox6";
-            this.picBox6.Size = new System.Drawing.Size(161, 146);
+            this.picBox6.Size = new System.Drawing.Size(165, 146);
             this.picBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox6.TabIndex = 18;
             this.picBox6.TabStop = false;
             this.picBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox6_MouseClick);
+            this.picBox6.MouseLeave += new System.EventHandler(this.picBox6_MouseLeave);
+            this.picBox6.MouseHover += new System.EventHandler(this.picBox6_MouseHover);
             // 
             // picBox5
             // 
             this.picBox5.BackColor = System.Drawing.Color.DimGray;
             this.picBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox5.Location = new System.Drawing.Point(52, 332);
+            this.picBox5.Location = new System.Drawing.Point(69, 331);
             this.picBox5.Name = "picBox5";
-            this.picBox5.Size = new System.Drawing.Size(161, 146);
+            this.picBox5.Size = new System.Drawing.Size(165, 146);
             this.picBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox5.TabIndex = 16;
             this.picBox5.TabStop = false;
             this.picBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox5_MouseClick);
+            this.picBox5.MouseLeave += new System.EventHandler(this.picBox5_MouseLeave);
+            this.picBox5.MouseHover += new System.EventHandler(this.picBox5_MouseHover);
             // 
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BackColor = System.Drawing.Color.Goldenrod;
             this.btnNext.Enabled = false;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Location = new System.Drawing.Point(960, 550);
+            this.btnNext.Location = new System.Drawing.Point(938, 549);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(61, 24);
             this.btnNext.TabIndex = 69;
@@ -296,10 +300,10 @@
             // btnPrev
             // 
             this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrev.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPrev.BackColor = System.Drawing.Color.Goldenrod;
             this.btnPrev.Enabled = false;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.Location = new System.Drawing.Point(893, 550);
+            this.btnPrev.Location = new System.Drawing.Point(871, 549);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(61, 24);
             this.btnPrev.TabIndex = 70;
@@ -313,11 +317,11 @@
             this.txtBoxTitle1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle1.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle1.Location = new System.Drawing.Point(52, 260);
+            this.txtBoxTitle1.Location = new System.Drawing.Point(69, 259);
             this.txtBoxTitle1.Multiline = true;
             this.txtBoxTitle1.Name = "txtBoxTitle1";
             this.txtBoxTitle1.ReadOnly = true;
-            this.txtBoxTitle1.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle1.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle1.TabIndex = 72;
             this.txtBoxTitle1.Text = "Title";
             this.txtBoxTitle1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -328,11 +332,11 @@
             this.txtBoxTitle2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle2.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle2.Location = new System.Drawing.Point(279, 260);
+            this.txtBoxTitle2.Location = new System.Drawing.Point(296, 259);
             this.txtBoxTitle2.Multiline = true;
             this.txtBoxTitle2.Name = "txtBoxTitle2";
             this.txtBoxTitle2.ReadOnly = true;
-            this.txtBoxTitle2.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle2.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle2.TabIndex = 73;
             this.txtBoxTitle2.Text = "Title";
             this.txtBoxTitle2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -343,11 +347,11 @@
             this.txtBoxTitle3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle3.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle3.Location = new System.Drawing.Point(510, 260);
+            this.txtBoxTitle3.Location = new System.Drawing.Point(527, 259);
             this.txtBoxTitle3.Multiline = true;
             this.txtBoxTitle3.Name = "txtBoxTitle3";
             this.txtBoxTitle3.ReadOnly = true;
-            this.txtBoxTitle3.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle3.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle3.TabIndex = 74;
             this.txtBoxTitle3.Text = "Title";
             this.txtBoxTitle3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -358,11 +362,11 @@
             this.txtBoxTitle4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle4.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle4.Location = new System.Drawing.Point(735, 260);
+            this.txtBoxTitle4.Location = new System.Drawing.Point(752, 259);
             this.txtBoxTitle4.Multiline = true;
             this.txtBoxTitle4.Name = "txtBoxTitle4";
             this.txtBoxTitle4.ReadOnly = true;
-            this.txtBoxTitle4.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle4.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle4.TabIndex = 75;
             this.txtBoxTitle4.Text = "Title";
             this.txtBoxTitle4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -373,11 +377,11 @@
             this.txtBoxTitle5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle5.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle5.Location = new System.Drawing.Point(52, 484);
+            this.txtBoxTitle5.Location = new System.Drawing.Point(69, 483);
             this.txtBoxTitle5.Multiline = true;
             this.txtBoxTitle5.Name = "txtBoxTitle5";
             this.txtBoxTitle5.ReadOnly = true;
-            this.txtBoxTitle5.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle5.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle5.TabIndex = 76;
             this.txtBoxTitle5.Text = "Title";
             this.txtBoxTitle5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -388,11 +392,11 @@
             this.txtBoxTitle6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle6.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle6.Location = new System.Drawing.Point(279, 484);
+            this.txtBoxTitle6.Location = new System.Drawing.Point(296, 483);
             this.txtBoxTitle6.Multiline = true;
             this.txtBoxTitle6.Name = "txtBoxTitle6";
             this.txtBoxTitle6.ReadOnly = true;
-            this.txtBoxTitle6.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle6.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle6.TabIndex = 77;
             this.txtBoxTitle6.Text = "Title";
             this.txtBoxTitle6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -403,11 +407,11 @@
             this.txtBoxTitle7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle7.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle7.Location = new System.Drawing.Point(510, 484);
+            this.txtBoxTitle7.Location = new System.Drawing.Point(527, 483);
             this.txtBoxTitle7.Multiline = true;
             this.txtBoxTitle7.Name = "txtBoxTitle7";
             this.txtBoxTitle7.ReadOnly = true;
-            this.txtBoxTitle7.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle7.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle7.TabIndex = 78;
             this.txtBoxTitle7.Text = "Title";
             this.txtBoxTitle7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -418,21 +422,35 @@
             this.txtBoxTitle8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxTitle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxTitle8.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxTitle8.Location = new System.Drawing.Point(735, 484);
+            this.txtBoxTitle8.Location = new System.Drawing.Point(752, 483);
             this.txtBoxTitle8.Multiline = true;
             this.txtBoxTitle8.Name = "txtBoxTitle8";
             this.txtBoxTitle8.ReadOnly = true;
-            this.txtBoxTitle8.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle8.Size = new System.Drawing.Size(165, 42);
             this.txtBoxTitle8.TabIndex = 79;
             this.txtBoxTitle8.Text = "Title";
             this.txtBoxTitle8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxMovieInfo
+            // 
+            this.txtBoxMovieInfo.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxMovieInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxMovieInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxMovieInfo.Location = new System.Drawing.Point(206, 519);
+            this.txtBoxMovieInfo.Name = "txtBoxMovieInfo";
+            this.txtBoxMovieInfo.ReadOnly = true;
+            this.txtBoxMovieInfo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtBoxMovieInfo.Size = new System.Drawing.Size(548, 116);
+            this.txtBoxMovieInfo.TabIndex = 80;
+            this.txtBoxMovieInfo.Text = "Movie Information\n\nTitle:\nGenre:\nYear: \nRate:";
             // 
             // Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1068, 589);
+            this.ClientSize = new System.Drawing.Size(1011, 639);
+            this.Controls.Add(this.txtBoxMovieInfo);
             this.Controls.Add(this.txtBoxTitle8);
             this.Controls.Add(this.txtBoxTitle7);
             this.Controls.Add(this.txtBoxTitle6);
@@ -481,7 +499,6 @@
         private Button btnSearch;
         private Button btnAddToFavourite;
         private PictureBox picBox1;
-        private Button btnView;
         private PictureBox picBox2;
         private PictureBox picBox3;
         private PictureBox picBox4;
@@ -499,5 +516,6 @@
         private TextBox txtBoxTitle6;
         private TextBox txtBoxTitle7;
         private TextBox txtBoxTitle8;
+        private RichTextBox txtBoxMovieInfo;
     }
 }
