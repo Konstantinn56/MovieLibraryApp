@@ -70,36 +70,6 @@ namespace MLibUI.MainMenu
         }
 
         /// <summary>
-        /// It will align the text in the movie information
-        /// </summary>
-        private void LineUpTheText()
-        {
-            txtBoxMovie1.SelectAll();
-            txtBoxMovie1.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie2.SelectAll();
-            txtBoxMovie2.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie3.SelectAll();
-            txtBoxMovie3.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie4.SelectAll();
-            txtBoxMovie4.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie5.SelectAll();
-            txtBoxMovie5.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie6.SelectAll();
-            txtBoxMovie6.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie7.SelectAll();
-            txtBoxMovie7.SelectionAlignment = HorizontalAlignment.Center;
-
-            txtBoxMovie8.SelectAll();
-            txtBoxMovie8.SelectionAlignment = HorizontalAlignment.Center;
-        }
-
-        /// <summary>
         /// Fill all the fields with movies from database
         /// </summary>
         private void FillThePage()
@@ -117,42 +87,42 @@ namespace MLibUI.MainMenu
                 {
                     if (currentPageMovies == 0)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox1, txtBoxMovie1);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox1, txtBoxTitle1);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 1)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox2, txtBoxMovie2);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox2, txtBoxTitle2);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 2)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox3, txtBoxMovie3);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox3, txtBoxTitle3);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 3)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox4, txtBoxMovie4);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox4, txtBoxTitle4);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 4)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox5, txtBoxMovie5);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox5, txtBoxTitle5);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 5)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox6, txtBoxMovie6);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox6, txtBoxTitle6);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 6)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox7, txtBoxMovie7);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox7, txtBoxTitle7);
                         addedMovie = true;
                     }
                     else if (currentPageMovies == 7)
                     {
-                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox8, txtBoxMovie8);
+                        FillOneMovieField(this.MoviesList[this.LastPrintedMovieIndex], picBox8, txtBoxTitle8);
                         addedMovie = true;
 
                     }
@@ -175,7 +145,7 @@ namespace MLibUI.MainMenu
         /// <summary>
         /// Fill one movie Field
         /// </summary>
-        private void FillOneMovieField(Movie movie,PictureBox pictureBox, RichTextBox txtBox)
+        private void FillOneMovieField(Movie movie,PictureBox pictureBox, TextBox txtBox)
         {
             MemoryStream ms = new MemoryStream(movie.Image);
             pictureBox.Image = Image.FromStream(ms);
@@ -197,14 +167,14 @@ namespace MLibUI.MainMenu
             picBox6.Image = null;
             picBox7.Image = null;
             picBox8.Image = null;
-            txtBoxMovie1.Text = "";
-            txtBoxMovie2.Text = "";
-            txtBoxMovie3.Text = "";
-            txtBoxMovie4.Text = "";
-            txtBoxMovie5.Text = "";
-            txtBoxMovie6.Text = "";
-            txtBoxMovie7.Text = "";
-            txtBoxMovie8.Text = "";
+            txtBoxTitle1.Text = "";
+            txtBoxTitle2.Text = "";
+            txtBoxTitle3.Text = "";
+            txtBoxTitle4.Text = "";
+            txtBoxTitle5.Text = "";
+            txtBoxTitle6.Text = "";
+            txtBoxTitle7.Text = "";
+            txtBoxTitle8.Text = "";
         }
 
         /// <summary>
@@ -227,7 +197,6 @@ namespace MLibUI.MainMenu
             ResetAllFields();
             this.LastPrintedMovieIndex = 0;
             FillThePage();
-            
         }
     }
 }

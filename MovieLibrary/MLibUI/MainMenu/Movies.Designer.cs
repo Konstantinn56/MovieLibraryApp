@@ -38,23 +38,23 @@
             this.panelSearch = new System.Windows.Forms.Panel();
             this.sqlConnection1 = new Microsoft.Data.SqlClient.SqlConnection();
             this.picBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie1 = new System.Windows.Forms.RichTextBox();
-            this.txtBoxMovie2 = new System.Windows.Forms.RichTextBox();
             this.picBox2 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie3 = new System.Windows.Forms.RichTextBox();
             this.picBox3 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie4 = new System.Windows.Forms.RichTextBox();
             this.picBox4 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie8 = new System.Windows.Forms.RichTextBox();
             this.picBox8 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie7 = new System.Windows.Forms.RichTextBox();
             this.picBox7 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie6 = new System.Windows.Forms.RichTextBox();
             this.picBox6 = new System.Windows.Forms.PictureBox();
-            this.txtBoxMovie5 = new System.Windows.Forms.RichTextBox();
             this.picBox5 = new System.Windows.Forms.PictureBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
+            this.txtBoxTitle1 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle2 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle3 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle4 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle5 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle6 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle7 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle8 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).BeginInit();
@@ -181,34 +181,6 @@
             this.picBox1.TabIndex = 4;
             this.picBox1.TabStop = false;
             // 
-            // txtBoxMovie1
-            // 
-            this.txtBoxMovie1.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie1.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie1.Location = new System.Drawing.Point(52, 260);
-            this.txtBoxMovie1.Name = "txtBoxMovie1";
-            this.txtBoxMovie1.ReadOnly = true;
-            this.txtBoxMovie1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie1.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie1.TabIndex = 7;
-            this.txtBoxMovie1.Text = "Title\nGenre\n";
-            // 
-            // txtBoxMovie2
-            // 
-            this.txtBoxMovie2.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie2.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie2.Location = new System.Drawing.Point(279, 260);
-            this.txtBoxMovie2.Name = "txtBoxMovie2";
-            this.txtBoxMovie2.ReadOnly = true;
-            this.txtBoxMovie2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie2.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie2.TabIndex = 9;
-            this.txtBoxMovie2.Text = "Title\nGenre\n";
-            // 
             // picBox2
             // 
             this.picBox2.BackColor = System.Drawing.Color.Black;
@@ -218,20 +190,6 @@
             this.picBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox2.TabIndex = 8;
             this.picBox2.TabStop = false;
-            // 
-            // txtBoxMovie3
-            // 
-            this.txtBoxMovie3.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie3.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie3.Location = new System.Drawing.Point(510, 260);
-            this.txtBoxMovie3.Name = "txtBoxMovie3";
-            this.txtBoxMovie3.ReadOnly = true;
-            this.txtBoxMovie3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie3.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie3.TabIndex = 11;
-            this.txtBoxMovie3.Text = "Title\nGenre\n";
             // 
             // picBox3
             // 
@@ -243,20 +201,6 @@
             this.picBox3.TabIndex = 10;
             this.picBox3.TabStop = false;
             // 
-            // txtBoxMovie4
-            // 
-            this.txtBoxMovie4.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie4.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie4.Location = new System.Drawing.Point(735, 260);
-            this.txtBoxMovie4.Name = "txtBoxMovie4";
-            this.txtBoxMovie4.ReadOnly = true;
-            this.txtBoxMovie4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie4.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie4.TabIndex = 13;
-            this.txtBoxMovie4.Text = "Title\nGenre\n";
-            // 
             // picBox4
             // 
             this.picBox4.BackColor = System.Drawing.Color.Black;
@@ -266,20 +210,6 @@
             this.picBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox4.TabIndex = 12;
             this.picBox4.TabStop = false;
-            // 
-            // txtBoxMovie8
-            // 
-            this.txtBoxMovie8.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie8.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie8.Location = new System.Drawing.Point(735, 484);
-            this.txtBoxMovie8.Name = "txtBoxMovie8";
-            this.txtBoxMovie8.ReadOnly = true;
-            this.txtBoxMovie8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie8.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie8.TabIndex = 23;
-            this.txtBoxMovie8.Text = "Title\nGenre\n";
             // 
             // picBox8
             // 
@@ -291,20 +221,6 @@
             this.picBox8.TabIndex = 22;
             this.picBox8.TabStop = false;
             // 
-            // txtBoxMovie7
-            // 
-            this.txtBoxMovie7.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie7.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie7.Location = new System.Drawing.Point(510, 484);
-            this.txtBoxMovie7.Name = "txtBoxMovie7";
-            this.txtBoxMovie7.ReadOnly = true;
-            this.txtBoxMovie7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie7.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie7.TabIndex = 21;
-            this.txtBoxMovie7.Text = "Title\nGenre\n";
-            // 
             // picBox7
             // 
             this.picBox7.BackColor = System.Drawing.Color.Black;
@@ -315,20 +231,6 @@
             this.picBox7.TabIndex = 20;
             this.picBox7.TabStop = false;
             // 
-            // txtBoxMovie6
-            // 
-            this.txtBoxMovie6.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie6.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie6.Location = new System.Drawing.Point(279, 484);
-            this.txtBoxMovie6.Name = "txtBoxMovie6";
-            this.txtBoxMovie6.ReadOnly = true;
-            this.txtBoxMovie6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie6.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie6.TabIndex = 19;
-            this.txtBoxMovie6.Text = "Title\nGenre\n";
-            // 
             // picBox6
             // 
             this.picBox6.BackColor = System.Drawing.Color.Black;
@@ -338,20 +240,6 @@
             this.picBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox6.TabIndex = 18;
             this.picBox6.TabStop = false;
-            // 
-            // txtBoxMovie5
-            // 
-            this.txtBoxMovie5.BackColor = System.Drawing.Color.Silver;
-            this.txtBoxMovie5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxMovie5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMovie5.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxMovie5.Location = new System.Drawing.Point(52, 484);
-            this.txtBoxMovie5.Name = "txtBoxMovie5";
-            this.txtBoxMovie5.ReadOnly = true;
-            this.txtBoxMovie5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBoxMovie5.Size = new System.Drawing.Size(161, 39);
-            this.txtBoxMovie5.TabIndex = 17;
-            this.txtBoxMovie5.Text = "Title\nGenre\n";
             // 
             // picBox5
             // 
@@ -391,29 +279,149 @@
             this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
+            // txtBoxTitle1
+            // 
+            this.txtBoxTitle1.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle1.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle1.Location = new System.Drawing.Point(52, 260);
+            this.txtBoxTitle1.Multiline = true;
+            this.txtBoxTitle1.Name = "txtBoxTitle1";
+            this.txtBoxTitle1.ReadOnly = true;
+            this.txtBoxTitle1.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle1.TabIndex = 72;
+            this.txtBoxTitle1.Text = "Title";
+            this.txtBoxTitle1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle2
+            // 
+            this.txtBoxTitle2.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle2.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle2.Location = new System.Drawing.Point(279, 260);
+            this.txtBoxTitle2.Multiline = true;
+            this.txtBoxTitle2.Name = "txtBoxTitle2";
+            this.txtBoxTitle2.ReadOnly = true;
+            this.txtBoxTitle2.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle2.TabIndex = 73;
+            this.txtBoxTitle2.Text = "Title";
+            this.txtBoxTitle2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle3
+            // 
+            this.txtBoxTitle3.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle3.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle3.Location = new System.Drawing.Point(510, 260);
+            this.txtBoxTitle3.Multiline = true;
+            this.txtBoxTitle3.Name = "txtBoxTitle3";
+            this.txtBoxTitle3.ReadOnly = true;
+            this.txtBoxTitle3.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle3.TabIndex = 74;
+            this.txtBoxTitle3.Text = "Title";
+            this.txtBoxTitle3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle4
+            // 
+            this.txtBoxTitle4.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle4.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle4.Location = new System.Drawing.Point(735, 260);
+            this.txtBoxTitle4.Multiline = true;
+            this.txtBoxTitle4.Name = "txtBoxTitle4";
+            this.txtBoxTitle4.ReadOnly = true;
+            this.txtBoxTitle4.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle4.TabIndex = 75;
+            this.txtBoxTitle4.Text = "Title";
+            this.txtBoxTitle4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle5
+            // 
+            this.txtBoxTitle5.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle5.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle5.Location = new System.Drawing.Point(52, 484);
+            this.txtBoxTitle5.Multiline = true;
+            this.txtBoxTitle5.Name = "txtBoxTitle5";
+            this.txtBoxTitle5.ReadOnly = true;
+            this.txtBoxTitle5.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle5.TabIndex = 76;
+            this.txtBoxTitle5.Text = "Title";
+            this.txtBoxTitle5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle6
+            // 
+            this.txtBoxTitle6.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle6.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle6.Location = new System.Drawing.Point(279, 484);
+            this.txtBoxTitle6.Multiline = true;
+            this.txtBoxTitle6.Name = "txtBoxTitle6";
+            this.txtBoxTitle6.ReadOnly = true;
+            this.txtBoxTitle6.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle6.TabIndex = 77;
+            this.txtBoxTitle6.Text = "Title";
+            this.txtBoxTitle6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle7
+            // 
+            this.txtBoxTitle7.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle7.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle7.Location = new System.Drawing.Point(510, 484);
+            this.txtBoxTitle7.Multiline = true;
+            this.txtBoxTitle7.Name = "txtBoxTitle7";
+            this.txtBoxTitle7.ReadOnly = true;
+            this.txtBoxTitle7.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle7.TabIndex = 78;
+            this.txtBoxTitle7.Text = "Title";
+            this.txtBoxTitle7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxTitle8
+            // 
+            this.txtBoxTitle8.BackColor = System.Drawing.Color.Silver;
+            this.txtBoxTitle8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxTitle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTitle8.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTitle8.Location = new System.Drawing.Point(735, 484);
+            this.txtBoxTitle8.Multiline = true;
+            this.txtBoxTitle8.Name = "txtBoxTitle8";
+            this.txtBoxTitle8.ReadOnly = true;
+            this.txtBoxTitle8.Size = new System.Drawing.Size(161, 42);
+            this.txtBoxTitle8.TabIndex = 79;
+            this.txtBoxTitle8.Text = "Title";
+            this.txtBoxTitle8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1068, 589);
+            this.Controls.Add(this.txtBoxTitle8);
+            this.Controls.Add(this.txtBoxTitle7);
+            this.Controls.Add(this.txtBoxTitle6);
+            this.Controls.Add(this.txtBoxTitle5);
+            this.Controls.Add(this.txtBoxTitle4);
+            this.Controls.Add(this.txtBoxTitle3);
+            this.Controls.Add(this.txtBoxTitle2);
+            this.Controls.Add(this.txtBoxTitle1);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.txtBoxMovie8);
             this.Controls.Add(this.picBox8);
-            this.Controls.Add(this.txtBoxMovie7);
             this.Controls.Add(this.picBox7);
-            this.Controls.Add(this.txtBoxMovie6);
             this.Controls.Add(this.picBox6);
-            this.Controls.Add(this.txtBoxMovie5);
             this.Controls.Add(this.picBox5);
-            this.Controls.Add(this.txtBoxMovie4);
             this.Controls.Add(this.picBox4);
-            this.Controls.Add(this.txtBoxMovie3);
             this.Controls.Add(this.picBox3);
-            this.Controls.Add(this.txtBoxMovie2);
             this.Controls.Add(this.picBox2);
-            this.Controls.Add(this.txtBoxMovie1);
             this.Controls.Add(this.picBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Movies";
@@ -431,6 +439,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -444,23 +453,23 @@
         private Button btnSearch;
         private Button btnAddToFavourite;
         private PictureBox picBox1;
-        private RichTextBox txtBoxMovie1;
         private Button btnView;
-        private RichTextBox txtBoxMovie2;
         private PictureBox picBox2;
-        private RichTextBox txtBoxMovie3;
         private PictureBox picBox3;
-        private RichTextBox txtBoxMovie4;
         private PictureBox picBox4;
-        private RichTextBox txtBoxMovie8;
         private PictureBox picBox8;
-        private RichTextBox txtBoxMovie7;
         private PictureBox picBox7;
-        private RichTextBox txtBoxMovie6;
         private PictureBox picBox6;
-        private RichTextBox txtBoxMovie5;
         private PictureBox picBox5;
         private Button btnNext;
         private Button btnPrev;
+        private TextBox txtBoxTitle1;
+        private TextBox txtBoxTitle2;
+        private TextBox txtBoxTitle3;
+        private TextBox txtBoxTitle4;
+        private TextBox txtBoxTitle5;
+        private TextBox txtBoxTitle6;
+        private TextBox txtBoxTitle7;
+        private TextBox txtBoxTitle8;
     }
 }
