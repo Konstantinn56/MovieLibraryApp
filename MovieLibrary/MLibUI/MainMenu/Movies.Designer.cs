@@ -95,6 +95,7 @@
             this.btnAddToFavourite.TabIndex = 67;
             this.btnAddToFavourite.Text = "Add To Favourite";
             this.btnAddToFavourite.UseVisualStyleBackColor = false;
+            this.btnAddToFavourite.Click += new System.EventHandler(this.btnAddToFavourite_Click);
             // 
             // btnSearch
             // 

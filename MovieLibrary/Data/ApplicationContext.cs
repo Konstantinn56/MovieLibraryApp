@@ -164,7 +164,13 @@ namespace Data
 
             modelBuilder.Entity<AccountMovies>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Id)
+                    .HasName("pk_accountMovies_id");
+
+                entity.Property(e => e.Id)
+                    .UseIdentityColumn()
+                    .HasColumnName("accountMovies_id");
+
                 entity.ToTable("AccountsMovies");
                 entity.Property(e => e.AccountId).HasColumnName("account_id");
                 entity.Property(e => e.MovieId).HasColumnName("movie_id");

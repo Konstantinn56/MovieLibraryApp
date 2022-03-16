@@ -21,7 +21,13 @@ namespace MLibUI.MainMenu
         /// </summary>
         MovieBusiness movieBusiness = new MovieBusiness();
 
+        /// <summary>
+        /// AccountMovies business
+        /// </summary>
+        AccountMoviesBusiness accountMoviesBusiness = new AccountMoviesBusiness();
+
         //Fields
+        private Account CurrentAccount { get; set; }
         private List<Movie> MoviesList { get; set; }
         private int MoviesCount { get; set; }
         private int LastPrintedMovieIndex { get; set; }
@@ -31,6 +37,7 @@ namespace MLibUI.MainMenu
         public Movies()
         {
             InitializeComponent();
+            this.SelectedMovie = new Movie();
         }
 
         /// <summary>
@@ -129,6 +136,18 @@ namespace MLibUI.MainMenu
                     MessageBox.Show(ex.Message);
                 }
 
+            }
+        }
+
+        /// <summary>
+        /// Add the selected Movie to Favourite
+        /// </summary>
+        private void btnAddToFavourite_Click(object sender, EventArgs e)
+        {
+            if(this.SelectedMovie != null)
+            {
+                btnAddToFavourite.Enabled = true;
+                accountMoviesBusiness.Add(this.CurrentAccount.AId,this.SelectedMovie.MId);
             }
         }
 
@@ -600,6 +619,12 @@ namespace MLibUI.MainMenu
             return false;
         }
 
-        
+        /// <summary>
+        /// Set the current account
+        /// </summary>
+        public void SetCurrentAccount(Account account)
+        {
+            this.CurrentAccount = account;
+        }
     }
 }

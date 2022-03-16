@@ -155,7 +155,9 @@ namespace MLibUI.MainMenu
         private void btnMovies_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Movies());
+            Movies movies = new Movies();
+            movies.SetCurrentAccount(this.currentAccount);
+            OpenChildForm(movies);
         }
 
         /// <summary>
@@ -164,7 +166,9 @@ namespace MLibUI.MainMenu
         private void btnMyList_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new MyList());
+            MyList myList = new MyList();
+            myList.SetCurrentAccount(this.currentAccount);
+            OpenChildForm(myList);
         }
 
         /// <summary>

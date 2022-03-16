@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,13 @@ namespace Data.Model
     /// </summary>
     public partial class AccountMovies
     {
+        /// <summary>
+        /// Id
+        /// </summary>
+        ///
+        [Key]
+        public int Id { get; set; }
+
         /// <summary>
         /// The account id
         /// </summary>
@@ -35,6 +43,5 @@ namespace Data.Model
         /// information from class movie
         /// </summary>
         public virtual Movie Movie { get; set; } = null!;
-
     }
 }
