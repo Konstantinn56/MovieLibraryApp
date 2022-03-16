@@ -19,10 +19,19 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Get
+        /// Test for method Get when the movie exist
         /// </summary>
         [TestMethod]
-        public void GetMovie()
+        public void GetMovie_ExistingMovie_ReturnsMovie()
+        {
+
+        }
+
+        /// <summary>
+        /// Test for method Get when the account doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void GetMovie_NotExistingMovie_ThrowArgumentException()
         {
 
         }
@@ -66,19 +75,37 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Delete
+        /// Test for method Delete when the Movie exist
         /// </summary>
         [TestMethod]
-        public void DeleteMovie()
+        public void DeleteMovie_ExistingMovie_RemovesMovie()
+        {
+            
+        }
+
+        /// <summary>
+        /// Test for method Delete when the movie doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void DeleteMovie_NotExistingMovie_ThrowArgumentException()
+        {
+            
+        }
+
+        /// <summary>
+        /// Test for method Update when the Movie exist
+        /// </summary>
+        [TestMethod]
+        public void UpdateMovie_ExistingMovie_RemovesMovie()
         {
 
         }
 
         /// <summary>
-        /// Test for method Update
+        /// Test for method Update when the movie doesn't exist
         /// </summary>
         [TestMethod]
-        public void UodateMovie()
+        public void UpdateMovie_NotExistingMovie_ThrowArgumentException()
         {
 
         }

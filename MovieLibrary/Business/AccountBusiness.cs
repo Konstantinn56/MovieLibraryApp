@@ -17,7 +17,16 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                return applicationContext.Accounts.Where(a => a.Username.Equals(username)).FirstOrDefault();
+                var account = applicationContext.Accounts.Where(a => a.Username.Equals(username)).FirstOrDefault();
+
+                if (account != null)
+                {
+                    return account;
+                }
+                else
+                {
+                    throw new ArgumentException("This account already exist!");
+                }
             }
         }
 

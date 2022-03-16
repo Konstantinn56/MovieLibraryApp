@@ -57,10 +57,19 @@ namespace UnitTests
 
 
         /// <summary>
-        /// Test for method Get
+        /// Test for method Get when the genre exist
         /// </summary>
         [TestMethod]
-        public void GetGenre()
+        public void GetGenre_ExistingGenre_ReturnsGenre()
+        {
+
+        }
+
+        /// <summary>
+        /// Test for method Get when the genre doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void GetGenre_NotExistingGenre_ThrowArgumentException()
         {
 
         }

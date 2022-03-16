@@ -20,16 +20,25 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Get
+        /// Test for method Get when the account exist
         /// </summary>
         [TestMethod]
-        public void GetAccount()
+        public void GetAccount_ExistingAccount_ReturnsAccount()
+        {
+            
+        }
+
+        /// <summary>
+        /// Test for method Get when the account doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void GetAccount_NotExistingAccount_ThrowArgumentException()
         {
 
         }
 
         //// <summary>
-        /// Test for method Add when the acount doesn't existing
+        /// Test for method Add when the account doesn't exist
         /// </summary>
         [TestMethod]
         public void AddAccount_NotExistingAccount_ReturnsAccount()
@@ -106,9 +115,39 @@ namespace UnitTests
         /// Test for method Update when the account doesn't exist
         /// </summary>
         [TestMethod]
-        public void UpdateAccount()
-        { 
+        public void UpdateAccount_NotExistingAccount_ThrowArguentException()
+        {
+            ///Arrange
+            Account account = new Account()
+            {
+                FirstName = "Samuil",
+                LastName = "Petrov"
+            };
 
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => accountBusiness.Update(account));
+            Assert.AreEqual("This account doesn't exist!", exception.Message);
+        }
+
+        /// <summary>
+        /// Test for method Update when the account exist
+        /// </summary>
+        [TestMethod]
+        public void UpdateAccount_ExistingAccount_ReturnsNewAccount()
+        {
+            ///Arrange
+            Account account = new Account()
+            {
+                FirstName = "Velina",
+                LastName = "Petrova"
+            };
+
+            ///Act
+            var accountDb = accountBusiness.Get(account.LastName);
+            accountBusiness.Update(account);
+
+            ///Assert
+            Assert.AreNotEqual(account.LastName, accountDb.LastName);
         }
     }
 }
