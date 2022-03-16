@@ -69,7 +69,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.btnAddToFavourite);
             this.panel1.Controls.Add(this.btnSearch);
@@ -86,7 +86,7 @@
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.BackColor = System.Drawing.Color.Gray;
+            this.btnView.BackColor = System.Drawing.Color.Gainsboro;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Location = new System.Drawing.Point(1001, 52);
             this.btnView.Name = "btnView";
@@ -98,7 +98,8 @@
             // btnAddToFavourite
             // 
             this.btnAddToFavourite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddToFavourite.BackColor = System.Drawing.Color.Gray;
+            this.btnAddToFavourite.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAddToFavourite.Enabled = false;
             this.btnAddToFavourite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToFavourite.Location = new System.Drawing.Point(880, 52);
             this.btnAddToFavourite.Name = "btnAddToFavourite";
@@ -109,7 +110,8 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Gray;
+            this.btnSearch.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(348, 52);
             this.btnSearch.Name = "btnSearch";
@@ -120,7 +122,7 @@
             // 
             // txtBoxSearch
             // 
-            this.txtBoxSearch.BackColor = System.Drawing.Color.Gray;
+            this.txtBoxSearch.BackColor = System.Drawing.Color.DarkGray;
             this.txtBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtBoxSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -181,7 +183,7 @@
             // 
             // txtBoxMovie1
             // 
-            this.txtBoxMovie1.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie1.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie1.ForeColor = System.Drawing.Color.Black;
@@ -195,7 +197,7 @@
             // 
             // txtBoxMovie2
             // 
-            this.txtBoxMovie2.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie2.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie2.ForeColor = System.Drawing.Color.Black;
@@ -219,7 +221,7 @@
             // 
             // txtBoxMovie3
             // 
-            this.txtBoxMovie3.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie3.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie3.ForeColor = System.Drawing.Color.Black;
@@ -243,7 +245,7 @@
             // 
             // txtBoxMovie4
             // 
-            this.txtBoxMovie4.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie4.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie4.ForeColor = System.Drawing.Color.Black;
@@ -267,7 +269,7 @@
             // 
             // txtBoxMovie8
             // 
-            this.txtBoxMovie8.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie8.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie8.ForeColor = System.Drawing.Color.Black;
@@ -291,7 +293,7 @@
             // 
             // txtBoxMovie7
             // 
-            this.txtBoxMovie7.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie7.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie7.ForeColor = System.Drawing.Color.Black;
@@ -315,7 +317,7 @@
             // 
             // txtBoxMovie6
             // 
-            this.txtBoxMovie6.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie6.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie6.ForeColor = System.Drawing.Color.Black;
@@ -339,7 +341,7 @@
             // 
             // txtBoxMovie5
             // 
-            this.txtBoxMovie5.BackColor = System.Drawing.Color.DimGray;
+            this.txtBoxMovie5.BackColor = System.Drawing.Color.Silver;
             this.txtBoxMovie5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMovie5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxMovie5.ForeColor = System.Drawing.Color.Black;
@@ -364,7 +366,7 @@
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.BackColor = System.Drawing.Color.Gray;
+            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
             this.btnNext.Enabled = false;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Location = new System.Drawing.Point(960, 550);
@@ -378,7 +380,7 @@
             // btnPrev
             // 
             this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrev.BackColor = System.Drawing.Color.Gray;
+            this.btnPrev.BackColor = System.Drawing.Color.Gainsboro;
             this.btnPrev.Enabled = false;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev.Location = new System.Drawing.Point(893, 550);
@@ -393,7 +395,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1068, 589);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);

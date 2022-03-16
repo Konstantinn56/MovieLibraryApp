@@ -298,7 +298,7 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.Gray;
+            this.panelDesktop.BackColor = System.Drawing.Color.DarkGray;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 70);
             this.panelDesktop.Name = "panelDesktop";
