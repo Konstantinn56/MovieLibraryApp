@@ -26,6 +26,7 @@ namespace MLibUI.MainMenu
         private int MoviesCount { get; set; }
         private int LastPrintedMovieIndex { get; set; }
         private int currentPageMovies { get; set; }
+        private Movie SelectedMovie { get; set; }
 
         public Movies()
         {
@@ -185,6 +186,7 @@ namespace MLibUI.MainMenu
             if(this.LastPrintedMovieIndex != this.MoviesCount)
             {
                 ResetAllFields();
+                ResetSelection();
                 FillThePage();
             }
         }
@@ -195,8 +197,168 @@ namespace MLibUI.MainMenu
         private void btnPrev_Click(object sender, EventArgs e)
         {
             ResetAllFields();
+            ResetSelection();
             this.LastPrintedMovieIndex = 0;
             FillThePage();
+        }
+
+        /// <summary>
+        /// Reset the current selection
+        /// </summary>
+        private void ResetSelection()
+        {
+            picBox1.BorderStyle = BorderStyle.None;
+            picBox2.BorderStyle = BorderStyle.None;
+            picBox3.BorderStyle = BorderStyle.None;
+            picBox4.BorderStyle = BorderStyle.None;
+            picBox5.BorderStyle = BorderStyle.None;
+            picBox6.BorderStyle = BorderStyle.None;
+            picBox7.BorderStyle = BorderStyle.None;
+            picBox8.BorderStyle = BorderStyle.None;
+            this.SelectedMovie = new Movie();
+        }
+
+        /// <summary>
+        /// Check if the movie field is empty
+        /// </summary>
+        private bool IsTheFieldEmpty(PictureBox picBox)
+        {
+            if(picBox.Image == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox1))
+            {
+                ResetSelection();
+                picBox1.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle1.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox2))
+            {
+                ResetSelection();
+                picBox2.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle2.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox3))
+            {
+                ResetSelection();
+                picBox3.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle3.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox1))
+            {
+                ResetSelection();
+                picBox4.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle4.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox5_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox5))
+            {
+                ResetSelection();
+                picBox5.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle5.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox6_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox6))
+            {
+                ResetSelection();
+                picBox6.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle6.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox7_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox7))
+            {
+                ResetSelection();
+                picBox7.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle7.Text);
+            }
+        }
+
+        /// <summary>
+        /// Select the movie in the current field
+        /// </summary>
+        private void picBox8_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!IsTheFieldEmpty(picBox8))
+            {
+                ResetSelection();
+                picBox8.BorderStyle = BorderStyle.Fixed3D;
+
+                //Get the selected movie
+                this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle8.Text);
+            }
+        }
+
+        /// <summary>
+        /// Search for movie by Title
+        /// </summary>
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!txtBoxSearch.Text.Equals("Search"))
+            {
+                Movie searchedMovie = movieBusiness.GetByTitle(txtBoxSearch.Text.ToLower());
+            }
         }
     }
 }

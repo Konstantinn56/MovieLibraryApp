@@ -1,4 +1,4 @@
-﻿.using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -25,6 +25,25 @@ namespace Business
             using (applicationContext = new ApplicationContext())
             {
                 return applicationContext.Movies.Find(id);
+            }
+        }
+
+        /// <summary>
+        /// Get a film from the database by Title
+        /// </summary>
+        public Movie GetByTitle(string title)
+        {
+            using (applicationContext = new ApplicationContext())
+            {
+                Movie movie = applicationContext.Movies.Where(m => m.Title.ToLower().Equals(title.ToLower())).FirstOrDefault();
+                if(movie == null)
+                {
+                    throw new ArgumentException("This movie does not exists!");
+                }
+                else
+                {
+                    return movie;
+                }
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Movies));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnView = new System.Windows.Forms.Button();
             this.btnAddToFavourite = new System.Windows.Forms.Button();
@@ -119,6 +120,7 @@
             this.btnSearch.TabIndex = 65;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtBoxSearch
             // 
@@ -173,83 +175,109 @@
             // 
             // picBox1
             // 
-            this.picBox1.BackColor = System.Drawing.Color.Black;
+            this.picBox1.BackColor = System.Drawing.Color.DimGray;
+            this.picBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBox1.ErrorImage")));
+            this.picBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox1.InitialImage")));
             this.picBox1.Location = new System.Drawing.Point(52, 108);
             this.picBox1.Name = "picBox1";
             this.picBox1.Size = new System.Drawing.Size(161, 146);
             this.picBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox1.TabIndex = 4;
             this.picBox1.TabStop = false;
+            this.picBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox1_MouseClick);
             // 
             // picBox2
             // 
-            this.picBox2.BackColor = System.Drawing.Color.Black;
+            this.picBox2.BackColor = System.Drawing.Color.DimGray;
+            this.picBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox2.Location = new System.Drawing.Point(279, 108);
             this.picBox2.Name = "picBox2";
             this.picBox2.Size = new System.Drawing.Size(161, 146);
             this.picBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox2.TabIndex = 8;
             this.picBox2.TabStop = false;
+            this.picBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox2_MouseClick);
             // 
             // picBox3
             // 
-            this.picBox3.BackColor = System.Drawing.Color.Black;
+            this.picBox3.BackColor = System.Drawing.Color.DimGray;
+            this.picBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox3.Location = new System.Drawing.Point(510, 108);
             this.picBox3.Name = "picBox3";
             this.picBox3.Size = new System.Drawing.Size(161, 146);
             this.picBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox3.TabIndex = 10;
             this.picBox3.TabStop = false;
+            this.picBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox3_MouseClick);
             // 
             // picBox4
             // 
-            this.picBox4.BackColor = System.Drawing.Color.Black;
+            this.picBox4.BackColor = System.Drawing.Color.DimGray;
+            this.picBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox4.Location = new System.Drawing.Point(735, 108);
             this.picBox4.Name = "picBox4";
             this.picBox4.Size = new System.Drawing.Size(161, 146);
             this.picBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox4.TabIndex = 12;
             this.picBox4.TabStop = false;
+            this.picBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox4_MouseClick);
             // 
             // picBox8
             // 
-            this.picBox8.BackColor = System.Drawing.Color.Black;
+            this.picBox8.BackColor = System.Drawing.Color.DimGray;
+            this.picBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox8.Location = new System.Drawing.Point(735, 332);
             this.picBox8.Name = "picBox8";
             this.picBox8.Size = new System.Drawing.Size(161, 146);
             this.picBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox8.TabIndex = 22;
             this.picBox8.TabStop = false;
+            this.picBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox8_MouseClick);
             // 
             // picBox7
             // 
-            this.picBox7.BackColor = System.Drawing.Color.Black;
+            this.picBox7.BackColor = System.Drawing.Color.DimGray;
+            this.picBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox7.Location = new System.Drawing.Point(510, 332);
             this.picBox7.Name = "picBox7";
             this.picBox7.Size = new System.Drawing.Size(161, 146);
             this.picBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox7.TabIndex = 20;
             this.picBox7.TabStop = false;
+            this.picBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox7_MouseClick);
             // 
             // picBox6
             // 
-            this.picBox6.BackColor = System.Drawing.Color.Black;
+            this.picBox6.BackColor = System.Drawing.Color.DimGray;
+            this.picBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox6.Location = new System.Drawing.Point(279, 332);
             this.picBox6.Name = "picBox6";
             this.picBox6.Size = new System.Drawing.Size(161, 146);
             this.picBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox6.TabIndex = 18;
             this.picBox6.TabStop = false;
+            this.picBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox6_MouseClick);
             // 
             // picBox5
             // 
-            this.picBox5.BackColor = System.Drawing.Color.Black;
+            this.picBox5.BackColor = System.Drawing.Color.DimGray;
+            this.picBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBox5.Location = new System.Drawing.Point(52, 332);
             this.picBox5.Name = "picBox5";
             this.picBox5.Size = new System.Drawing.Size(161, 146);
             this.picBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox5.TabIndex = 16;
             this.picBox5.TabStop = false;
+            this.picBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox5_MouseClick);
             // 
             // btnNext
             // 

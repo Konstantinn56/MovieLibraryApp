@@ -213,6 +213,16 @@ namespace MLibUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fgvbfvb {
+            get {
+                object obj = ResourceManager.GetObject("fgvbfvb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fgvbnnfg {
             get {
                 object obj = ResourceManager.GetObject("fgvbnnfg", resourceCulture);
