@@ -47,12 +47,21 @@ namespace Business
         /// <summary>
         /// Add a film to the database
         /// </summary>
-        public void Add(Movie film)
+        public void Add(Movie movie)
         {
             using (applicationContext = new ApplicationContext())
             {
-                applicationContext.Movies.Add(film);
-                applicationContext.SaveChanges();
+                var movieDb = applicationContext.Movies.FirstOrDefault(m => m.Title == movie.Title);
+
+                if (movieDb != null)
+                {
+                    throw new ArgumentException("This movie already exist!");
+                }
+                else
+                {
+                    applicationContext.Movies.Add(movie);
+                    applicationContext.SaveChanges();
+                }
             }
         }
 

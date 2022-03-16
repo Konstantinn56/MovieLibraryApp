@@ -1,6 +1,8 @@
+using Business;
 using Data;
 using Data.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace UnitTests
 {
@@ -10,6 +12,13 @@ namespace UnitTests
     [TestClass]
     public class AccountBusinessTests
     {
+        private AccountBusiness accountBusiness;
+
+        public AccountBusinessTests()
+        {
+            var accountBusiness = new AccountBusiness();
+        }
+
         /// <summary>
         /// Test for method Get
         /// </summary>
@@ -19,13 +28,41 @@ namespace UnitTests
 
         }
 
-        /// <summary>
-        /// Test for method Add
+        //// <summary>
+        /// Test for method Add when the acount doesn't existing
         /// </summary>
         [TestMethod]
-        public void AddAccount()
+        public void AddAccount_NotExistingAccount_ReturnsGenre()
         {
+            ///Arrange
+            Account account = new Account()
+            {
+                FirstName = "Velina"
+            };
 
+            ///Act
+            accountBusiness.Add(account);
+            var accountDb = accountBusiness.Get(account.FirstName);
+
+            ///Assert
+            Assert.AreEqual(account.FirstName, accountDb.FirstName);
+        }
+
+        /// <summary>
+        /// Test for method Add when the account exist
+        /// </summary>
+        [TestMethod]
+        public void AddAccount_ExistingAccount_ThrowArgumentException()
+        {
+            ///Arrange
+            Account account = new Account()
+            {
+                FirstName = "Konstatnin"
+            };
+
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => accountBusiness.Add(account));
+            Assert.AreEqual("This account already exist!", exception.Message);
         }
 
         /// <summary>

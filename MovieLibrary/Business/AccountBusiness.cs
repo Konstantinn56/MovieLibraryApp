@@ -28,8 +28,17 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                applicationContext.Accounts.Add(account);
-                applicationContext.SaveChanges();
+                var accountDb = applicationContext.Accounts.FirstOrDefault(a => a.FirstName == account.FirstName);
+
+                if (accountDb != null)
+                {
+                    throw new ArgumentException("This account already exist!");
+                }
+                else
+                {
+                    applicationContext.Accounts.Add(account);
+                    applicationContext.SaveChanges();
+                }
             }
         }
 
@@ -41,10 +50,14 @@ namespace Business
             using (applicationContext = new ApplicationContext())
             {
                 var account = applicationContext.Accounts.Find(id);
-                if(account != null)
+                if (account != null)
                 {
                     applicationContext.Accounts.Remove(account);
                     applicationContext.SaveChanges();
+                }
+                else
+                {
+                    throw new ArgumentException("This account doesn't exist!");
                 }
             }
         }
