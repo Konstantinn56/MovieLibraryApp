@@ -139,6 +139,11 @@ namespace MLibUI.MainMenu
                 lblTitleException.Text = "*Already exists*";
                 panelTitle.BackColor = Color.Red;
             }
+            else
+            {
+                lblTitleException.Text = "";
+                panelTitle.BackColor = Color.Green;
+            }
         }
 
         /// <summary>

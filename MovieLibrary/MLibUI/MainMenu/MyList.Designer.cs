@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,9 +40,12 @@
             this.panelSearch = new System.Windows.Forms.Panel();
             this.lblUsrException = new System.Windows.Forms.Label();
             this.MyListDGV = new System.Windows.Forms.DataGridView();
+            this.applicationContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyListDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationContextBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,6 +135,7 @@
             this.MyListDGV.AllowUserToAddRows = false;
             this.MyListDGV.AllowUserToDeleteRows = false;
             this.MyListDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.MyListDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -140,6 +145,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MyListDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MyListDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MyListDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Image});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -151,8 +158,10 @@
             this.MyListDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MyListDGV.EnableHeadersVisualStyles = false;
             this.MyListDGV.Location = new System.Drawing.Point(0, 82);
+            this.MyListDGV.MultiSelect = false;
             this.MyListDGV.Name = "MyListDGV";
             this.MyListDGV.ReadOnly = true;
+            this.MyListDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -161,10 +170,22 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MyListDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.MyListDGV.RowTemplate.Height = 25;
+            this.MyListDGV.RowTemplate.Height = 140;
             this.MyListDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MyListDGV.Size = new System.Drawing.Size(1011, 557);
             this.MyListDGV.TabIndex = 1;
+            // 
+            // applicationContextBindingSource
+            // 
+            this.applicationContextBindingSource.DataSource = typeof(Data.ApplicationContext);
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Pic";
+            this.Image.HeaderText = "Image";
+            this.Image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
             // 
             // MyList
             // 
@@ -181,6 +202,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyListDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationContextBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +217,7 @@
         private Label lblUsrException;
         private Button btnRemove;
         private DataGridView MyListDGV;
+        private BindingSource applicationContextBindingSource;
+        private DataGridViewImageColumn Image;
     }
 }

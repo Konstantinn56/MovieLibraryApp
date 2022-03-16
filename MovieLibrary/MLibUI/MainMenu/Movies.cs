@@ -146,8 +146,16 @@ namespace MLibUI.MainMenu
         {
             if(this.SelectedMovie != null)
             {
-                btnAddToFavourite.Enabled = true;
-                accountMoviesBusiness.Add(this.CurrentAccount.AId,this.SelectedMovie.MId);
+                try
+                {
+                    btnAddToFavourite.Enabled = true;
+                    accountMoviesBusiness.Add(this.CurrentAccount.AId, this.SelectedMovie.MId);
+                    MessageBox.Show("Successfully added!");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("This Movie was added already!");
+                }
             }
         }
 

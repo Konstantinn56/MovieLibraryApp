@@ -37,17 +37,7 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void FillDataGridView()
         {
-            SqlConnection conn = DataBase.GetConnection();
-
-            conn.Open();
-            SqlDataAdapter da = new SqlDataAdapter($"SELECT * FROM Movies WHERE id_movie IN(SELECT movie_id FROM AccountsMovies WHERE account_id = {this.CurrentAccount.AId})", conn);
-            conn.Close();
-
-            SqlCommandBuilder cb = new SqlCommandBuilder(da);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
             
-            MyListDGV.DataSource = dt;
         }
         /// <summary>
         /// Set the logged account into currentAccount

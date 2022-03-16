@@ -172,7 +172,7 @@
             this.picBox1.Location = new System.Drawing.Point(69, 107);
             this.picBox1.Name = "picBox1";
             this.picBox1.Size = new System.Drawing.Size(165, 146);
-            this.picBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox1.TabIndex = 4;
             this.picBox1.TabStop = false;
             this.picBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox1_MouseClick);
@@ -187,7 +187,7 @@
             this.picBox2.Location = new System.Drawing.Point(296, 107);
             this.picBox2.Name = "picBox2";
             this.picBox2.Size = new System.Drawing.Size(165, 146);
-            this.picBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox2.TabIndex = 8;
             this.picBox2.TabStop = false;
             this.picBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox2_MouseClick);
@@ -202,7 +202,7 @@
             this.picBox3.Location = new System.Drawing.Point(527, 107);
             this.picBox3.Name = "picBox3";
             this.picBox3.Size = new System.Drawing.Size(165, 146);
-            this.picBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox3.TabIndex = 10;
             this.picBox3.TabStop = false;
             this.picBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox3_MouseClick);
@@ -217,7 +217,7 @@
             this.picBox4.Location = new System.Drawing.Point(752, 107);
             this.picBox4.Name = "picBox4";
             this.picBox4.Size = new System.Drawing.Size(165, 146);
-            this.picBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox4.TabIndex = 12;
             this.picBox4.TabStop = false;
             this.picBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox4_MouseClick);
@@ -232,7 +232,7 @@
             this.picBox8.Location = new System.Drawing.Point(752, 331);
             this.picBox8.Name = "picBox8";
             this.picBox8.Size = new System.Drawing.Size(165, 146);
-            this.picBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox8.TabIndex = 22;
             this.picBox8.TabStop = false;
             this.picBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox8_MouseClick);
@@ -247,7 +247,7 @@
             this.picBox7.Location = new System.Drawing.Point(527, 331);
             this.picBox7.Name = "picBox7";
             this.picBox7.Size = new System.Drawing.Size(165, 146);
-            this.picBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox7.TabIndex = 20;
             this.picBox7.TabStop = false;
             this.picBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox7_MouseClick);
@@ -262,7 +262,7 @@
             this.picBox6.Location = new System.Drawing.Point(296, 331);
             this.picBox6.Name = "picBox6";
             this.picBox6.Size = new System.Drawing.Size(165, 146);
-            this.picBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox6.TabIndex = 18;
             this.picBox6.TabStop = false;
             this.picBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox6_MouseClick);
@@ -277,7 +277,7 @@
             this.picBox5.Location = new System.Drawing.Point(69, 331);
             this.picBox5.Name = "picBox5";
             this.picBox5.Size = new System.Drawing.Size(165, 146);
-            this.picBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox5.TabIndex = 16;
             this.picBox5.TabStop = false;
             this.picBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox5_MouseClick);
