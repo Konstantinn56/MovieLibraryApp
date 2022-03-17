@@ -47,6 +47,7 @@ namespace Business
                 else
                 {
                     applicationContext.AccountsMovies.Remove(accountMovies);
+                    applicationContext.SaveChanges();
                 }
             }
         }
