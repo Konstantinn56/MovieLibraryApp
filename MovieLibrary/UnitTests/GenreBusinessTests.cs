@@ -15,7 +15,7 @@ namespace UnitTests
 
         public GenreBusinessTests()
         {
-            var genreBusiness = new GenreBusiness();
+            genreBusiness = new GenreBusiness();
         }
 
         /// <summary>
@@ -53,16 +53,6 @@ namespace UnitTests
             ///Act and Assert
             var exception = Assert.ThrowsException<ArgumentException>(() => genreBusiness.Add(genre));
             Assert.AreEqual("Genre already exist!", exception.Message);
-        }
-
-
-        /// <summary>
-        /// Test for method Get
-        /// </summary>
-        [TestMethod]
-        public void GetGenre()
-        {
-
         }
     }
 }

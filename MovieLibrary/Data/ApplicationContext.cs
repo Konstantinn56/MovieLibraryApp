@@ -92,7 +92,9 @@ namespace Data
 
                 entity.HasData
                 (
-                    new Account {AId = 1, FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 }
+                    new Account {AId = 1, FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 },
+                    new Account {AId = 2, FirstName = "Velina", LastName = "Yordanova", Username = "admin_2", Password = "admin_2", RecoveryKey = 200000 },
+                    new Account {AId = 3, FirstName = "Dimitar", LastName = "Stoyanov", Username = "dimSt", Password = "1234", RecoveryKey = 300000 }
                 );
             });
 

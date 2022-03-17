@@ -17,7 +17,16 @@ namespace Business
         {
             using (applicationContext = new ApplicationContext())
             {
-                return applicationContext.Accounts.Where(a => a.Username.Equals(username)).FirstOrDefault();
+                var account = applicationContext.Accounts.Where(a => a.Username.Equals(username)).FirstOrDefault();
+
+                if (account != null)
+                {
+                    return account;
+                }
+                else
+                {
+                    throw new ArgumentException("This account already exist!");
+                }
             }
         }
 
@@ -70,10 +79,14 @@ namespace Business
             using (applicationContext = new ApplicationContext())
             {
                 Account currentAccount = applicationContext.Accounts.Find(account.AId);
-                if(currentAccount != null)
+                if (currentAccount != null)
                 {
                     applicationContext.Entry(currentAccount).CurrentValues.SetValues(account);
                     applicationContext.SaveChanges();
+                }
+                else
+                { 
+                    throw new ArgumentException("This account doesn't exist!");
                 }
             }
         }

@@ -15,16 +15,7 @@ namespace UnitTests
 
         public MovieBusinessTests()
         {
-            var movieBusiness = new MovieBusiness();
-        }
-
-        /// <summary>
-        /// Test for method Get
-        /// </summary>
-        [TestMethod]
-        public void GetMovie()
-        {
-
+            movieBusiness = new MovieBusiness();
         }
 
         /// <summary>
@@ -66,19 +57,37 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Delete
+        /// Test for method Delete when the Movie exist
         /// </summary>
         [TestMethod]
-        public void DeleteMovie()
+        public void DeleteMovie_ExistingMovie_RemovesMovie()
+        {
+            
+        }
+
+        /// <summary>
+        /// Test for method Delete when the movie doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void DeleteMovie_NotExistingMovie_ThrowArgumentException()
+        {
+            
+        }
+
+        /// <summary>
+        /// Test for method Update when the Movie exist
+        /// </summary>
+        [TestMethod]
+        public void UpdateMovie_ExistingMovie_RemovesMovie()
         {
 
         }
 
         /// <summary>
-        /// Test for method Update
+        /// Test for method Update when the movie doesn't exist
         /// </summary>
         [TestMethod]
-        public void UodateMovie()
+        public void UpdateMovie_NotExistingMovie_ThrowArgumentException()
         {
 
         }

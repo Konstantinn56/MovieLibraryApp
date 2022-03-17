@@ -16,28 +16,19 @@ namespace UnitTests
 
         public AccountBusinessTests()
         {
-            var accountBusiness = new AccountBusiness();
-        }
-
-        /// <summary>
-        /// Test for method Get
-        /// </summary>
-        [TestMethod]
-        public void GetAccount()
-        {
-
+            accountBusiness = new AccountBusiness();
         }
 
         //// <summary>
-        /// Test for method Add when the acount doesn't existing
+        /// Test for method Add when the account doesn't exist
         /// </summary>
         [TestMethod]
-        public void AddAccount_NotExistingAccount_ReturnsGenre()
+        public void AddAccount_NotExistingAccount_ReturnsAccount()
         {
             ///Arrange
             Account account = new Account()
             {
-                FirstName = "Velina"
+                FirstName = "Georgi"
             };
 
             ///Act
@@ -66,21 +57,82 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Test for method Delete
+        /// Test for method Delete when the account exist
         /// </summary>
         [TestMethod]
-        public void DeleteAccount()
+        public void DeleteAccount_ExistingAccount_RemovesAccount()
         {
+            Account account = new Account()
+            {
+                AId = 3,
+                FirstName = "Dimitar",
+                Username = "dimSt"
+            };
 
+            ///Act
+            var accountDb = accountBusiness.Get(account.Username);
+            accountBusiness.Delete(account.AId);
+
+            ///Assert
+            Assert.AreEqual(account.FirstName, accountDb.FirstName);
         }
 
         /// <summary>
-        /// Test for method Update
+        /// Test for method Delete when the account doesn't exist
         /// </summary>
         [TestMethod]
-        public void UpdateAccount()
+        public void DeleteAccount_NotExistingAccount_ThrowArgumentException()
         {
+            ///Arrange
+            Account account = new Account()
+            {
+                AId = 5
+            };
 
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => accountBusiness.Delete(account.AId));
+            Assert.AreEqual("This account doesn't exist!", exception.Message);
+        }
+
+        /// <summary>
+        /// Test for method Update when the account doesn't exist
+        /// </summary>
+        [TestMethod]
+        public void UpdateAccount_NotExistingAccount_ThrowArguentException()
+        {
+            ///Arrange
+            Account account = new Account()
+            {
+                FirstName = "Samuil",
+                LastName = "Petrov"
+            };
+
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => accountBusiness.Update(account));
+            Assert.AreEqual("This account doesn't exist!", exception.Message);
+        }
+
+        /// <summary>
+        /// Test for method Update when the account exist
+        /// </summary>
+        [TestMethod]
+        public void UpdateAccount_ExistingAccount_ReturnsNewAccount()
+        {
+            ///Arrange
+            Account account = new Account()
+            {
+                AId = 2,
+                FirstName = "Neli",
+                LastName = "Petrova",
+                Username = "admin_2"
+            };
+
+            ///Act
+            accountBusiness.Update(account);
+            var accountDb = accountBusiness.Get(account.Username);
+
+            ///Assert
+            Assert.AreNotEqual(account.LastName, accountDb.LastName);
         }
     }
 }
