@@ -150,3 +150,4 @@ C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\ref\MLibUI.dll
 C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.MainMenu.SuccessfulAddedMovie.resources
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.MainMenu.SuccessfulAddedMovie.resources
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\MLibUI\obj\Debug\net6.0-windows\MLibUI.MainMenu.UpdatePage.resources

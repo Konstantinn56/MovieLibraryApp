@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Movies));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddToFavourite = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.txtBoxTitle7 = new System.Windows.Forms.TextBox();
             this.txtBoxTitle8 = new System.Windows.Forms.TextBox();
             this.txtBoxMovieInfo = new System.Windows.Forms.RichTextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).BeginInit();
@@ -84,6 +84,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1011, 82);
             this.panel1.TabIndex = 3;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(810, 52);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(68, 24);
+            this.btnUpdate.TabIndex = 68;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAddToFavourite
             // 
@@ -446,18 +460,6 @@
             this.txtBoxMovieInfo.Size = new System.Drawing.Size(548, 116);
             this.txtBoxMovieInfo.TabIndex = 80;
             this.txtBoxMovieInfo.Text = "Movie Information\n\nTitle:\nGenre:\nYear: \nRate:";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(810, 52);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(68, 24);
-            this.btnUpdate.TabIndex = 68;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // Movies
             // 

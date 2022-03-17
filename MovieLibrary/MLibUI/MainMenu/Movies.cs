@@ -148,7 +148,6 @@ namespace MLibUI.MainMenu
             {
                 try
                 {
-                    btnAddToFavourite.Enabled = true;
                     accountMoviesBusiness.Add(this.CurrentAccount.AId, this.SelectedMovie.MId);
                     MessageBox.Show("Successfully added!");
                 }
@@ -172,6 +171,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle1.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -188,6 +188,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle2.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -204,6 +205,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle3.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -220,6 +222,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle4.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -236,6 +239,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle5.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -252,6 +256,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle6.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -268,6 +273,7 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle7.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
         }
 
@@ -284,7 +290,9 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle8.Text);
                 btnAddToFavourite.Enabled = true;
+                btnUpdate.Enabled = true;
             }
+
         }
 
         /// <summary>
@@ -505,6 +513,7 @@ namespace MLibUI.MainMenu
             picBox8.BorderStyle = BorderStyle.None;
             this.SelectedMovie = new Movie();
             btnAddToFavourite.Enabled = false;
+            btnUpdate.Enabled = false;
         }
 
         /// <summary>
@@ -633,6 +642,25 @@ namespace MLibUI.MainMenu
         public void SetCurrentAccount(Account account)
         {
             this.CurrentAccount = account;
+        }
+
+        /// <summary>
+        /// Open updatePage and sets the value of the selected movie to the property
+        /// </summary>
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(this.SelectedMovie != null)
+            {
+                this.Hide();
+                //mainPage mp = new mainPage();
+                //UpdatePage up = new UpdatePage();
+                //up.SetCurrentMovie(this.SelectedMovie);
+                //mp.OpenChildForm(up);
+            }
+            else
+            {
+                MessageBox.Show("Please select a movie!");
+            }
         }
     }
 }
