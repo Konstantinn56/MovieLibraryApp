@@ -33,7 +33,7 @@ namespace Data
         /// <summary>
         /// Movies Table
         /// </summary>
-        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; } 
 
         /// <summary>
         /// Genres Table
@@ -52,13 +52,14 @@ namespace Data
         {
             if (!optionsBuilder.IsConfigured) 
             {
-                var connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MLibraryDB;Integrated Security=True;";
+                var connString = @"Data Source=DESKTOP-RLES03U\SQL2019;Initial Catalog=MLibraryDB;Integrated Security=True;";
                 optionsBuilder.UseSqlServer(connString);
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //fluent api
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasIndex(u => u.Username, "Admin")
@@ -160,7 +161,8 @@ namespace Data
 
                 entity.HasData
                 (
-                    new Movie {MId = 1, Title = "Spider-Man No way Home", Genre = "Action", Image = null ,YaerOfCreation = 2021, Rate = 8.7}    
+                    new Movie {MId = 1,Title = "Spider-Man No way Home", Genre = "Action", Image = null ,YaerOfCreation = 2021, Rate = 8.7},
+                    new Movie {MId = 10, Title = "Spirited away", Genre = "Anime", Image = null, YaerOfCreation = 2001, Rate = 8.6 }
                 );
             });
 

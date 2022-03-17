@@ -87,15 +87,19 @@ namespace Business
         /// <summary>
         /// Update a film in the database by Id.
         /// </summary>
-        public void Update(Movie film)
+        public void Update(Movie movie)
         {
             using (applicationContext = new ApplicationContext())
             {
-                var item = applicationContext.Movies.Find(film.MId);
+                var item = applicationContext.Movies.Find(movie.MId);
                 if (item != null)
                 {
-                    applicationContext.Entry(item).CurrentValues.SetValues(film);
+                    applicationContext.Entry(item).CurrentValues.SetValues(movie);
                     applicationContext.SaveChanges();
+                }
+                else
+                {
+                    throw new ArgumentException("This movie doesn't exist!");
                 }
             }
         }
@@ -112,6 +116,10 @@ namespace Business
                 {
                     applicationContext.Movies.Remove(film);
                     applicationContext.SaveChanges();
+                }
+                else
+                {
+                    throw new ArgumentException("This movie doesn't exist!");
                 }
             }
         }

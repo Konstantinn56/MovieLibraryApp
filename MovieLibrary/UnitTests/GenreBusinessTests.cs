@@ -47,7 +47,7 @@ namespace UnitTests
             ///Arrange
             Genre genre = new Genre()
             {
-                Name = "Animation"
+                Name = "Action"
             };
 
             ///Act and Assert

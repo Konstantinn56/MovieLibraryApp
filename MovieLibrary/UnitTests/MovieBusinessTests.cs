@@ -27,8 +27,8 @@ namespace UnitTests
             ///Arrange
             Movie movie = new Movie()
             {
-                MId = 2,
-                Title = "Encanto"
+                Title = "Encanto",
+                Genre = "Animation"
             };
 
             ///Act
@@ -62,7 +62,18 @@ namespace UnitTests
         [TestMethod]
         public void DeleteMovie_ExistingMovie_RemovesMovie()
         {
-            
+            Movie movie = new Movie()
+            {
+                MId = 1,
+                Title = "Spider-Man No way Home"
+            };
+
+            ///Act
+            var movieDb = movieBusiness.Get(movie.MId);
+            movieBusiness.Delete(movie.MId);
+
+            ///Assert
+            Assert.AreEqual(movie.Title, movieDb.Title);
         }
 
         /// <summary>
@@ -71,16 +82,38 @@ namespace UnitTests
         [TestMethod]
         public void DeleteMovie_NotExistingMovie_ThrowArgumentException()
         {
-            
+            ///Arrange
+            Movie movie = new Movie()
+            {
+                MId = 100
+            };
+
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => movieBusiness.Delete(movie.MId));
+            Assert.AreEqual("This movie doesn't exist!", exception.Message);
+
         }
 
         /// <summary>
         /// Test for method Update when the Movie exist
         /// </summary>
         [TestMethod]
-        public void UpdateMovie_ExistingMovie_RemovesMovie()
+        public void UpdateMovie_ExistingMovie_ReturnsUpdatedMovie()
         {
+            ///Arrange
+            Movie movie = new Movie()
+            {
+                MId = 2,
+                Title = "Encanto",
+                Genre = "Animation, Family"
+            };
 
+            ///Act
+            var movieDb = movieBusiness.Get(movie.MId);
+            movieBusiness.Update(movie);
+
+            ///Assert
+            Assert.AreNotEqual(movie.Genre, movieDb.Genre);
         }
 
         /// <summary>
@@ -89,7 +122,16 @@ namespace UnitTests
         [TestMethod]
         public void UpdateMovie_NotExistingMovie_ThrowArgumentException()
         {
+            ///Arrange
+            Movie movie = new Movie()
+            {
+                Title = "1917",
+                Genre = "War"
+            };
 
+            ///Act and Assert
+            var exception = Assert.ThrowsException<ArgumentException>(() => movieBusiness.Update(movie));
+            Assert.AreEqual("This movie doesn't exist!", exception.Message);
         }
     }
 }
