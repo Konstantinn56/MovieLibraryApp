@@ -57,6 +57,7 @@ namespace MLibUI.MainMenu
             this.MoviesCount = this.MoviesList.Count;
             this.LastPrintedMovieIndex = 0;
             this.btnEditStatus = false;
+            SetAllGenres();
             FillThePage();
         }
 
@@ -180,7 +181,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle1.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -198,7 +198,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle2.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -216,7 +215,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle3.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -234,7 +232,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle4.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -252,7 +249,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle5.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -270,7 +266,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle6.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -288,7 +283,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle7.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
         }
@@ -306,7 +300,6 @@ namespace MLibUI.MainMenu
                 //Get the selected movie
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle8.Text);
                 btnAddToFavourite.Enabled = true;
-                btnUpdate.Enabled = true;
                 FillMovieInfo(this.SelectedMovie);
             }
 
@@ -361,7 +354,6 @@ namespace MLibUI.MainMenu
             picBox8.BorderStyle = BorderStyle.None;
             this.SelectedMovie = new Movie();
             btnAddToFavourite.Enabled = false;
-            btnUpdate.Enabled = false;
         }
 
         /// <summary>
@@ -501,7 +493,7 @@ namespace MLibUI.MainMenu
             {
                 Movie updatedMovie = this.SelectedMovie;
                 
-                if (!DoesTheMovieAlreadyExists(txtBoxTitle.Text))
+                if (!DoesTheMovieAlreadyExists(txtBoxTitle.Text) || txtBoxTitle.Text == this.SelectedMovie.Title)
                 {
                     //Movie Image
                     MemoryStream stream = new MemoryStream();
@@ -514,10 +506,14 @@ namespace MLibUI.MainMenu
                     updatedMovie.Image = pic;
 
                     movieBusiness.Update(updatedMovie);
+                    this.MoviesList = movieBusiness.GetAll();
 
                     ResetMovieInfoTextBox();
+                    ResetAllFields();
                     ResetSelection();
+                    this.LastPrintedMovieIndex = 0;
                     FillThePage();
+                    MessageBox.Show("Movie has been updated successfully!");
                 }
                 else
                 {
@@ -536,37 +532,45 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //if its false(Edit)
-            if(!this.btnEditStatus)
+            if(this.SelectedMovie.Title != null)
             {
-                btnEdit.Text = "Lock";
-                this.btnEditStatus = true;
+                //if its false(Edit)
+                if (!this.btnEditStatus)
+                {
+                    btnEdit.Text = "Lock";
+                    btnUpdate.Enabled = true;
+                    this.btnEditStatus = true;
 
-                //Enable fields
-                btnBrowse.Enabled = true;
-                txtBoxTitle.ReadOnly = false;
-                comboBoxGenre.Enabled = true;
-                txtBoxYear.ReadOnly = false;
-                txtBoxRate.ReadOnly = false;
+                    //Enable fields
+                    btnBrowse.Enabled = true;
+                    txtBoxTitle.ReadOnly = false;
+                    comboBoxGenre.Enabled = true;
+                    txtBoxYear.ReadOnly = false;
+                    txtBoxRate.ReadOnly = false;
 
-                //ComboBoxGenreInfo
+                    //ComboBoxGenreInfo
 
-            }
-            //If its true(Lock)
-            else
-            {
-                this.btnEditStatus = false;
-                btnEdit.Text = "Edit";
+                }
+                //If its true(Lock)
+                else
+                {
+                    this.btnEditStatus = false;
+                    btnEdit.Text = "Edit";
+                    btnUpdate.Enabled = false;
 
-                //Disable fields
-                btnBrowse.Enabled = false;
-                txtBoxTitle.ReadOnly = true;
-                comboBoxGenre.Enabled = false;
-                txtBoxYear.ReadOnly = true;
-                txtBoxRate.ReadOnly = true;
+                    //Disable fields
+                    btnBrowse.Enabled = false;
+                    txtBoxTitle.ReadOnly = true;
+                    comboBoxGenre.Enabled = false;
+                    txtBoxYear.ReadOnly = true;
+                    txtBoxRate.ReadOnly = true;
+                }
             }
         }
 
+        /// <summary>
+        /// Opens browse window to navigate to the image
+        /// </summary>
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             Stream myStream = null;
@@ -617,9 +621,17 @@ namespace MLibUI.MainMenu
         }
 
         /// <summary>
-        /// Link Combobox with Database Genres values
+        /// Use SetAllGenres method
         /// </summary>
         private void comboBoxGenre_MouseClick(object sender, MouseEventArgs e)
+        {
+            SetAllGenres();
+        }
+
+        /// <summary>
+        /// Link Combobox with Database Genres values
+        /// </summary>
+        private void SetAllGenres()
         {
             List<Genre> allGenres = genreBusiness.GetAllGenres();
             comboBoxGenre.Items.Clear();
@@ -629,28 +641,34 @@ namespace MLibUI.MainMenu
             }
         }
 
+        /// <summary>
+        /// Check for any exeptions in the movie info panel
+        /// </summary>
         private string IsThereExceptionsInTheMovieInfoPanel()
         {
             string exception = "";
 
             int year;
             int currentYear = DateTime.Now.Year;
-            if (!int.TryParse(txtBoxYear.Text, out year) && int.Parse(txtBoxYear.Text) !<= currentYear)
+            if (int.TryParse(txtBoxYear.Text, out year) && int.Parse(txtBoxYear.Text) !<= currentYear)
+            {
+                double rate;
+                if (!double.TryParse(txtBoxRate.Text, out rate))
+                {
+                    return "Invalid Information!";
+                }
+                if (rate < 0 && rate > 10)
+                {
+                    return "Invalid Information!";
+                }
+                if (picBoxMovieInfo.Image == null || txtBoxTitle.Text.Equals("") || txtBoxYear.Text.Equals("") || txtBoxRate.Equals(""))
+                {
+                    return "The Fields must not be empty";
+                }
+            }
+            else
             {
                 return "Invalid Information!";
-            }
-            double rate;
-            if (!double.TryParse(txtBoxRate.Text, out rate))
-            {
-                return "Invalid Information!";
-            }
-            if (rate < 0 && rate > 10)
-            {
-                return "Invalid Information!";
-            }
-            if(picBoxMovieInfo.Image == null || txtBoxTitle.Text.Equals("") || txtBoxYear.Text.Equals("") || txtBoxRate.Equals(""))
-            {
-                return "The Fields must not be empty";
             }
             return exception;
         }
@@ -672,5 +690,21 @@ namespace MLibUI.MainMenu
             }
         }
 
+        /// <summary>
+        /// Disables the editmode
+        /// </summary>
+        private void txtBoxSearch_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.btnEditStatus = false;
+            btnEdit.Text = "Edit";
+            btnUpdate.Enabled = false;
+
+            //Disable fields
+            btnBrowse.Enabled = false;
+            txtBoxTitle.ReadOnly = true;
+            comboBoxGenre.Enabled = false;
+            txtBoxYear.ReadOnly = true;
+            txtBoxRate.ReadOnly = true;
+        }
     }
 }

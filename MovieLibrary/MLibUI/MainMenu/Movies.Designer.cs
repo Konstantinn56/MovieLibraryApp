@@ -141,6 +141,7 @@
             this.txtBoxSearch.Size = new System.Drawing.Size(257, 20);
             this.txtBoxSearch.TabIndex = 39;
             this.txtBoxSearch.Text = "Search";
+            this.txtBoxSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBoxSearch_MouseClick);
             this.txtBoxSearch.TextChanged += new System.EventHandler(this.txtBoxSearch_TextChanged);
             this.txtBoxSearch.Enter += new System.EventHandler(this.txtBoxSearch_Enter);
             this.txtBoxSearch.Leave += new System.EventHandler(this.txtBoxSearch_Leave);
@@ -300,6 +301,8 @@
             this.comboBoxGenre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxGenre.ForeColor = System.Drawing.Color.Black;
             this.comboBoxGenre.FormattingEnabled = true;
+            this.comboBoxGenre.Items.AddRange(new object[] {
+            " "});
             this.comboBoxGenre.Location = new System.Drawing.Point(62, 117);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(186, 25);
