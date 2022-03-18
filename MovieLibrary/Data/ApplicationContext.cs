@@ -60,7 +60,6 @@ namespace Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //fluent api
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasIndex(u => u.Username, "Admin")
