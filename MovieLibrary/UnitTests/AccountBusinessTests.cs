@@ -28,12 +28,15 @@ namespace UnitTests
             ///Arrange
             Account account = new Account()
             {
-                FirstName = "Georgi"
+                FirstName = "Georgi",
+                LastName = "Georgiev",
+                Password = "password",
+                Username = "gr123"
             };
 
             ///Act
             accountBusiness.Add(account);
-            var accountDb = accountBusiness.Get(account.FirstName);
+            var accountDb = accountBusiness.Get(account.Username);
 
             ///Assert
             Assert.AreEqual(account.FirstName, accountDb.FirstName);
@@ -66,7 +69,9 @@ namespace UnitTests
             {
                 AId = 3,
                 FirstName = "Dimitar",
-                Username = "dimSt"
+                LastName = "Stoyanov",
+                Username = "dimSt",
+                Password = "1234"
             };
 
             ///Act
@@ -116,7 +121,7 @@ namespace UnitTests
         /// Test for method Update when the account exist
         /// </summary>
         [TestMethod]
-        public void UpdateAccount_ExistingAccount_ReturnsNewAccount()
+        public void UpdateAccount_ExistingAccount_ReturnsUpdatedAccount()
         {
             ///Arrange
             Account account = new Account()
@@ -124,12 +129,13 @@ namespace UnitTests
                 AId = 2,
                 FirstName = "Neli",
                 LastName = "Petrova",
-                Username = "admin_2"
+                Username = "admin_2",
+                Password = "admin_2"
             };
 
             ///Act
-            accountBusiness.Update(account);
             var accountDb = accountBusiness.Get(account.Username);
+            accountBusiness.Update(account);
 
             ///Assert
             Assert.AreNotEqual(account.LastName, accountDb.LastName);
