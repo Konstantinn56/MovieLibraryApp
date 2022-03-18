@@ -72,6 +72,10 @@
             this.picBox7 = new System.Windows.Forms.PictureBox();
             this.picBox6 = new System.Windows.Forms.PictureBox();
             this.picBox5 = new System.Windows.Forms.PictureBox();
+            this.comboBoxGenre2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxGenre3 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -159,13 +163,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MLibUI.Properties.Resources.usrIcon;
+            this.pictureBox1.Image = global::MLibUI.Properties.Resources.Searching;
             this.pictureBox1.Location = new System.Drawing.Point(35, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelSearch
             // 
@@ -206,7 +211,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
             this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(101, 511);
+            this.btnUpdate.Location = new System.Drawing.Point(109, 523);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 25);
             this.btnUpdate.TabIndex = 68;
@@ -261,6 +266,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.comboBoxGenre3);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.comboBoxGenre2);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.comboBoxGenre);
             this.panel2.Controls.Add(this.btnReset);
@@ -286,7 +295,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(63, 194);
+            this.label5.Location = new System.Drawing.Point(61, 251);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 97;
@@ -303,7 +312,7 @@
             this.comboBoxGenre.FormattingEnabled = true;
             this.comboBoxGenre.Items.AddRange(new object[] {
             " "});
-            this.comboBoxGenre.Location = new System.Drawing.Point(62, 117);
+            this.comboBoxGenre.Location = new System.Drawing.Point(61, 117);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(186, 25);
             this.comboBoxGenre.TabIndex = 96;
@@ -317,7 +326,7 @@
             this.btnReset.Enabled = false;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.Location = new System.Drawing.Point(42, 511);
+            this.btnReset.Location = new System.Drawing.Point(50, 523);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(55, 25);
             this.btnReset.TabIndex = 93;
@@ -331,7 +340,7 @@
             this.btnBrowse.Enabled = false;
             this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowse.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBrowse.Location = new System.Drawing.Point(189, 453);
+            this.btnBrowse.Location = new System.Drawing.Point(189, 464);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(59, 22);
             this.btnBrowse.TabIndex = 91;
@@ -341,7 +350,7 @@
             // 
             // picBoxMovieInfo
             // 
-            this.picBoxMovieInfo.Location = new System.Drawing.Point(55, 264);
+            this.picBoxMovieInfo.Location = new System.Drawing.Point(55, 275);
             this.picBoxMovieInfo.Name = "picBoxMovieInfo";
             this.picBoxMovieInfo.Size = new System.Drawing.Size(193, 183);
             this.picBoxMovieInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +361,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(21, 171);
+            this.label4.Location = new System.Drawing.Point(19, 228);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 88;
@@ -362,7 +371,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(21, 148);
+            this.label3.Location = new System.Drawing.Point(19, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 87;
@@ -372,7 +381,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 119);
+            this.label2.Location = new System.Drawing.Point(12, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 86;
@@ -393,7 +402,7 @@
             this.txtBoxRate.BackColor = System.Drawing.Color.DarkGray;
             this.txtBoxRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxRate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxRate.Location = new System.Drawing.Point(63, 171);
+            this.txtBoxRate.Location = new System.Drawing.Point(61, 228);
             this.txtBoxRate.Name = "txtBoxRate";
             this.txtBoxRate.ReadOnly = true;
             this.txtBoxRate.Size = new System.Drawing.Size(185, 20);
@@ -404,7 +413,7 @@
             this.txtBoxYear.BackColor = System.Drawing.Color.DarkGray;
             this.txtBoxYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxYear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxYear.Location = new System.Drawing.Point(63, 148);
+            this.txtBoxYear.Location = new System.Drawing.Point(61, 205);
             this.txtBoxYear.Name = "txtBoxYear";
             this.txtBoxYear.ReadOnly = true;
             this.txtBoxYear.Size = new System.Drawing.Size(185, 20);
@@ -662,6 +671,58 @@
             this.picBox5.TabStop = false;
             this.picBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox5_MouseClick);
             // 
+            // comboBoxGenre2
+            // 
+            this.comboBoxGenre2.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBoxGenre2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre2.Enabled = false;
+            this.comboBoxGenre2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxGenre2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxGenre2.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxGenre2.FormattingEnabled = true;
+            this.comboBoxGenre2.Items.AddRange(new object[] {
+            " "});
+            this.comboBoxGenre2.Location = new System.Drawing.Point(61, 145);
+            this.comboBoxGenre2.Name = "comboBoxGenre2";
+            this.comboBoxGenre2.Size = new System.Drawing.Size(186, 25);
+            this.comboBoxGenre2.TabIndex = 99;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(12, 148);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Genre:";
+            // 
+            // comboBoxGenre3
+            // 
+            this.comboBoxGenre3.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBoxGenre3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre3.Enabled = false;
+            this.comboBoxGenre3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxGenre3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxGenre3.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxGenre3.FormattingEnabled = true;
+            this.comboBoxGenre3.Items.AddRange(new object[] {
+            " "});
+            this.comboBoxGenre3.Location = new System.Drawing.Point(62, 174);
+            this.comboBoxGenre3.Name = "comboBoxGenre3";
+            this.comboBoxGenre3.Size = new System.Drawing.Size(186, 25);
+            this.comboBoxGenre3.TabIndex = 101;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(12, 177);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 17);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "Genre:";
+            // 
             // Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -738,5 +799,9 @@
         private Button btnReset;
         private ComboBox comboBoxGenre;
         private Label label5;
+        private ComboBox comboBoxGenre3;
+        private Label label7;
+        private ComboBox comboBoxGenre2;
+        private Label label6;
     }
 }

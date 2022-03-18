@@ -66,8 +66,20 @@ namespace MLibUI.MainMenu
                     pictureBoxImage.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] pic = stream.ToArray();
 
+                    //Genres
+                    string genre2 = "";
+                    string genre3 = "";
+                    if(comboBoxGenre2.Text != "")
+                    {
+                        genre2 = comboBoxGenre2.Text;
+                    }
+                    if(comboBoxGenre3.Text != "")
+                    {
+                        genre3 = comboBoxGenre3.Text;
+                    }
+
                     //Adding movie into database
-                    Movie currentMovie = new Movie() { Title = txtBoxTitle.Text, Genre = comboBoxGenre.Text, Image = pic, YaerOfCreation = int.Parse(txtBoxYear.Text), Rate = double.Parse(txtBoxRate.Text) };
+                    Movie currentMovie = new Movie() { Title = txtBoxTitle.Text, Genre = comboBoxGenre.Text , Genre2 = genre2, Genre3 =genre3, Image = pic, YaerOfCreation = int.Parse(txtBoxYear.Text), Rate = double.Parse(txtBoxRate.Text) };
                     movieBusiness.Add(currentMovie);
 
                     SuccessfulAddedMovie successfulAddedMovie = new SuccessfulAddedMovie();
@@ -246,6 +258,40 @@ namespace MLibUI.MainMenu
             if (comboBoxGenre.Text.Equals("Add New Genre"))
             {
                 AddNewGenre ang = new AddNewGenre();
+                FillGenresComboBoxes(comboBoxGenre);
+                lblAddGenre2.Visible = false;
+                ang.Show();
+            }
+            else
+            {
+                lblAddGenre2.Visible = true;
+            }
+        }
+
+        /// <summary>
+        /// Opens window to create new Genre
+        /// </summary>
+        private void comboBoxGenre2_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGenre2.Text.Equals("Add New Genre"))
+            {
+                AddNewGenre ang = new AddNewGenre();
+                FillGenresComboBoxes(comboBoxGenre2);
+                lblAddGenre2.Visible = false;
+                ang.Show();
+            }
+            else
+            {
+                lblAddGenre3.Visible = true;
+            }
+        }
+
+        private void comboBoxGenre3_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGenre3.Text.Equals("Add New Genre"))
+            {
+                AddNewGenre ang = new AddNewGenre();
+                FillGenresComboBoxes(comboBoxGenre3);
                 ang.Show();
             }
         }
@@ -279,6 +325,8 @@ namespace MLibUI.MainMenu
             lblRateException.Text = "";
 
             comboBoxGenre.Text = null;
+            comboBoxGenre2.Text = null;
+            comboBoxGenre3.Text = null;
 
             pictureBoxImage.Image = null;
         }
@@ -287,14 +335,149 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void comboBoxGenre_MouseClick(object sender, MouseEventArgs e)
         {
+            FillGenresComboBoxes(comboBoxGenre);
+        }
+
+        /// <summary>
+        /// Link Combobox with Database Genres values
+        /// </summary>
+        private void FillGenresComboBoxes(ComboBox combobox)
+        {
             List<Genre> allGenres = genreBusiness.GetAllGenres();
-            comboBoxGenre.Items.Clear();
+            combobox.Items.Clear();
             foreach (Genre genre in allGenres)
             {
-                comboBoxGenre.Items.Add(genre.Name);
+                combobox.Items.Add(genre.Name);
             }
         }
 
-        
+        /// <summary>
+        /// Add new Genre field
+        /// </summary>
+        private void lblAddGenre2_Click(object sender, EventArgs e)
+        {
+            if(comboBoxGenre.Text != "")
+            {
+                //ComboBoxGenre1
+                comboBoxGenre.Enabled = false;
+                lblAddGenre2.Visible = false;
+                lblCloseGenre2.Visible = false;
+
+                //ComboBoxGenre2
+                comboBoxGenre2.Visible = true;
+                comboBoxGenre2.Enabled = true;
+                lblGenre2.Visible = true;
+                lblCloseGenre2.Visible = true;
+            }
+        }
+
+        /// <summary>
+        /// Add new Genre field
+        /// </summary>
+        private void lblAddGenre3_Click(object sender, EventArgs e)
+        {
+            if (comboBoxGenre2.Text != "")
+            {
+                if (!comboBoxGenre2.Text.Equals(comboBoxGenre.Text))
+                {
+                    //ComboBoxGenre2
+                    comboBoxGenre2.Enabled = false;
+                    lblAddGenre2.Visible = false;
+                    lblCloseGenre2.Visible = false;
+
+                    //ComboBoxGenre3
+                    comboBoxGenre3.Visible = true;
+                    comboBoxGenre3.Enabled = true;
+                    lblGenre3.Visible = true;
+                    lblCloseGenre3.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("The Genres must not be same!");
+                    comboBoxGenre2.Text = null;
+                    lblCloseGenre3_Click(sender, e);
+                    lblCloseGenre2_Click(sender, e);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Fill the genre field
+        /// </summary>
+        private void comboBoxGenre2_Enter(object sender, EventArgs e)
+        {
+            FillGenresComboBoxes(comboBoxGenre2);
+        }
+
+        /// <summary>
+        /// Fill the genre field
+        /// </summary>
+        private void comboBoxGenre3_Enter(object sender, EventArgs e)
+        {
+            FillGenresComboBoxes(comboBoxGenre3);
+        }
+
+        /// <summary>
+        /// Disable current genre field
+        /// </summary>
+        private void lblCloseGenre2_Click(object sender, EventArgs e)
+        {
+            //ComboBoxGenre1
+            comboBoxGenre.Enabled = true;
+            lblAddGenre2.Visible = true;
+
+            //ComboBoxGenre2
+            comboBoxGenre2.Text = null;
+            comboBoxGenre2.Visible = false;
+            comboBoxGenre2.Enabled = false;
+            lblGenre2.Visible = false;
+            lblCloseGenre2.Visible = false;
+            lblAddGenre3.Visible = false;
+        }
+
+        /// <summary>
+        /// Disable current genre field
+        /// </summary>
+        private void lblCloseGenre3_Click(object sender, EventArgs e)
+        {
+            //ComboBoxGenre2
+            comboBoxGenre2.Enabled = true;
+            lblAddGenre2.Visible = true;
+            lblCloseGenre2.Visible = true;
+
+            //ComboBoxGenre3
+            comboBoxGenre3.Text = null;
+            comboBoxGenre3.Visible = false;
+            comboBoxGenre3.Enabled = false;
+            lblGenre3.Visible = false;
+            lblCloseGenre3.Visible = false;
+        }
+
+        /// <summary>
+        /// If the genres are euqal give exception
+        /// </summary>
+        private void comboBoxGenre2_Leave(object sender, EventArgs e)
+        {
+            if (comboBoxGenre2.Text.Equals(comboBoxGenre.Text))
+            {
+                MessageBox.Show("The Genres must not be same!");
+                comboBoxGenre2.Text = null;
+                lblCloseGenre3_Click(sender,e);
+                lblCloseGenre2_Click(sender, e);
+            }
+        }
+
+        /// <summary>
+        /// If the genres are euqal give exception
+        /// </summary>
+        private void comboBoxGenre3_Leave(object sender, EventArgs e)
+        {
+            if (comboBoxGenre3.Text.Equals(comboBoxGenre.Text) || comboBoxGenre3.Text.Equals(comboBoxGenre2.Text))
+            {
+                MessageBox.Show("The Genres must not be same!");
+                comboBoxGenre3.Text = null;
+                lblCloseGenre3_Click(sender, e);
+            }
+        }
     }
 }

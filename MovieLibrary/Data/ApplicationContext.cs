@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Data.Model;
+using Data;
 
 namespace Data
 {
@@ -155,14 +156,24 @@ namespace Data
                     .IsUnicode(false)
                     .HasColumnName("Genre");
 
+                entity.Property(e => e.Genre2)
+                   .HasMaxLength(255)
+                   .IsUnicode(false)
+                   .HasColumnName("Genre2");
+
+                entity.Property(e => e.Genre3)
+                   .HasMaxLength(255)
+                   .IsUnicode(false)
+                   .HasColumnName("Genre3");
+
                 entity.Property(e => e.YaerOfCreation).HasColumnName("year");
 
                 entity.Property(e => e.Rate).HasColumnName("rate");
 
                 entity.HasData
                 (
-                    new Movie {MId = 1,Title = "Spider-Man No way Home", Genre = "Action", Image = null ,YaerOfCreation = 2021, Rate = 8.7},
-                    new Movie {MId = 2, Title = "Spirited away", Genre = "Anime", Image = null, YaerOfCreation = 2001, Rate = 8.6 }
+                    new Movie {MId = 1,Title = "Gladiator", Genre = "Action",Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.Gladiator ,YaerOfCreation = 2000, Rate = 8.5}
+                    
                 );
             });
 

@@ -48,6 +48,14 @@
             this.lblRateException = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitleException = new System.Windows.Forms.Label();
+            this.lblGenre2 = new System.Windows.Forms.Label();
+            this.comboBoxGenre2 = new System.Windows.Forms.ComboBox();
+            this.lblGenre3 = new System.Windows.Forms.Label();
+            this.comboBoxGenre3 = new System.Windows.Forms.ComboBox();
+            this.lblAddGenre2 = new System.Windows.Forms.Label();
+            this.lblCloseGenre2 = new System.Windows.Forms.Label();
+            this.lblAddGenre3 = new System.Windows.Forms.Label();
+            this.lblCloseGenre3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,7 +80,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MLibUI.Properties.Resources.usrIcon;
+            this.pictureBox1.Image = global::MLibUI.Properties.Resources.info_logo;
             this.pictureBox1.Location = new System.Drawing.Point(36, 83);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 27);
@@ -105,7 +113,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::MLibUI.Properties.Resources.usrIcon;
+            this.pictureBox2.Image = global::MLibUI.Properties.Resources.info_logo;
             this.pictureBox2.Location = new System.Drawing.Point(36, 158);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 27);
@@ -138,7 +146,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::MLibUI.Properties.Resources.usrIcon;
+            this.pictureBox3.Image = global::MLibUI.Properties.Resources.info_logo;
             this.pictureBox3.Location = new System.Drawing.Point(36, 236);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 27);
@@ -183,7 +191,7 @@
             this.comboBoxGenre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxGenre.ForeColor = System.Drawing.Color.DarkRed;
             this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Location = new System.Drawing.Point(36, 352);
+            this.comboBoxGenre.Location = new System.Drawing.Point(39, 329);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(304, 28);
             this.comboBoxGenre.TabIndex = 60;
@@ -195,7 +203,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(33, 332);
+            this.label2.Location = new System.Drawing.Point(36, 309);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 61;
@@ -217,7 +225,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Gray;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(172, 411);
+            this.btnAdd.Location = new System.Drawing.Point(172, 532);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(96, 27);
             this.btnAdd.TabIndex = 63;
@@ -229,7 +237,7 @@
             // 
             this.btnReset.BackColor = System.Drawing.Color.Gray;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Location = new System.Drawing.Point(70, 411);
+            this.btnReset.Location = new System.Drawing.Point(70, 532);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(96, 27);
             this.btnReset.TabIndex = 64;
@@ -281,12 +289,140 @@
             this.lblTitleException.Size = new System.Drawing.Size(0, 16);
             this.lblTitleException.TabIndex = 68;
             // 
+            // lblGenre2
+            // 
+            this.lblGenre2.AutoSize = true;
+            this.lblGenre2.Enabled = false;
+            this.lblGenre2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblGenre2.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblGenre2.Location = new System.Drawing.Point(39, 369);
+            this.lblGenre2.Name = "lblGenre2";
+            this.lblGenre2.Size = new System.Drawing.Size(58, 17);
+            this.lblGenre2.TabIndex = 70;
+            this.lblGenre2.Text = "optional";
+            this.lblGenre2.Visible = false;
+            // 
+            // comboBoxGenre2
+            // 
+            this.comboBoxGenre2.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBoxGenre2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre2.Enabled = false;
+            this.comboBoxGenre2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxGenre2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxGenre2.ForeColor = System.Drawing.Color.DarkRed;
+            this.comboBoxGenre2.FormattingEnabled = true;
+            this.comboBoxGenre2.Location = new System.Drawing.Point(39, 389);
+            this.comboBoxGenre2.Name = "comboBoxGenre2";
+            this.comboBoxGenre2.Size = new System.Drawing.Size(304, 28);
+            this.comboBoxGenre2.TabIndex = 69;
+            this.comboBoxGenre2.Visible = false;
+            this.comboBoxGenre2.TextChanged += new System.EventHandler(this.comboBoxGenre2_TextChanged);
+            this.comboBoxGenre2.Enter += new System.EventHandler(this.comboBoxGenre2_Enter);
+            this.comboBoxGenre2.Leave += new System.EventHandler(this.comboBoxGenre2_Leave);
+            // 
+            // lblGenre3
+            // 
+            this.lblGenre3.AutoSize = true;
+            this.lblGenre3.Enabled = false;
+            this.lblGenre3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblGenre3.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblGenre3.Location = new System.Drawing.Point(36, 431);
+            this.lblGenre3.Name = "lblGenre3";
+            this.lblGenre3.Size = new System.Drawing.Size(58, 17);
+            this.lblGenre3.TabIndex = 72;
+            this.lblGenre3.Text = "optional";
+            this.lblGenre3.Visible = false;
+            // 
+            // comboBoxGenre3
+            // 
+            this.comboBoxGenre3.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBoxGenre3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre3.Enabled = false;
+            this.comboBoxGenre3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxGenre3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxGenre3.ForeColor = System.Drawing.Color.DarkRed;
+            this.comboBoxGenre3.FormattingEnabled = true;
+            this.comboBoxGenre3.Location = new System.Drawing.Point(39, 451);
+            this.comboBoxGenre3.Name = "comboBoxGenre3";
+            this.comboBoxGenre3.Size = new System.Drawing.Size(304, 28);
+            this.comboBoxGenre3.TabIndex = 71;
+            this.comboBoxGenre3.Visible = false;
+            this.comboBoxGenre3.TextChanged += new System.EventHandler(this.comboBoxGenre3_TextChanged);
+            this.comboBoxGenre3.Enter += new System.EventHandler(this.comboBoxGenre3_Enter);
+            this.comboBoxGenre3.Leave += new System.EventHandler(this.comboBoxGenre3_Leave);
+            // 
+            // lblAddGenre2
+            // 
+            this.lblAddGenre2.AutoSize = true;
+            this.lblAddGenre2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddGenre2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAddGenre2.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddGenre2.ForeColor = System.Drawing.Color.Black;
+            this.lblAddGenre2.Location = new System.Drawing.Point(277, 360);
+            this.lblAddGenre2.Name = "lblAddGenre2";
+            this.lblAddGenre2.Size = new System.Drawing.Size(66, 15);
+            this.lblAddGenre2.TabIndex = 75;
+            this.lblAddGenre2.Text = "Add Genre";
+            this.lblAddGenre2.Visible = false;
+            this.lblAddGenre2.Click += new System.EventHandler(this.lblAddGenre2_Click);
+            // 
+            // lblCloseGenre2
+            // 
+            this.lblCloseGenre2.AutoSize = true;
+            this.lblCloseGenre2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCloseGenre2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCloseGenre2.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblCloseGenre2.Location = new System.Drawing.Point(349, 395);
+            this.lblCloseGenre2.Name = "lblCloseGenre2";
+            this.lblCloseGenre2.Size = new System.Drawing.Size(15, 17);
+            this.lblCloseGenre2.TabIndex = 76;
+            this.lblCloseGenre2.Text = "X";
+            this.lblCloseGenre2.Visible = false;
+            this.lblCloseGenre2.Click += new System.EventHandler(this.lblCloseGenre2_Click);
+            // 
+            // lblAddGenre3
+            // 
+            this.lblAddGenre3.AutoSize = true;
+            this.lblAddGenre3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddGenre3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAddGenre3.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddGenre3.ForeColor = System.Drawing.Color.Black;
+            this.lblAddGenre3.Location = new System.Drawing.Point(274, 420);
+            this.lblAddGenre3.Name = "lblAddGenre3";
+            this.lblAddGenre3.Size = new System.Drawing.Size(66, 15);
+            this.lblAddGenre3.TabIndex = 77;
+            this.lblAddGenre3.Text = "Add Genre";
+            this.lblAddGenre3.Visible = false;
+            this.lblAddGenre3.Click += new System.EventHandler(this.lblAddGenre3_Click);
+            // 
+            // lblCloseGenre3
+            // 
+            this.lblCloseGenre3.AutoSize = true;
+            this.lblCloseGenre3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCloseGenre3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCloseGenre3.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblCloseGenre3.Location = new System.Drawing.Point(349, 457);
+            this.lblCloseGenre3.Name = "lblCloseGenre3";
+            this.lblCloseGenre3.Size = new System.Drawing.Size(15, 17);
+            this.lblCloseGenre3.TabIndex = 78;
+            this.lblCloseGenre3.Text = "X";
+            this.lblCloseGenre3.Visible = false;
+            this.lblCloseGenre3.Click += new System.EventHandler(this.lblCloseGenre3_Click);
+            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(837, 485);
+            this.ClientSize = new System.Drawing.Size(837, 606);
+            this.Controls.Add(this.lblCloseGenre3);
+            this.Controls.Add(this.lblAddGenre3);
+            this.Controls.Add(this.lblCloseGenre2);
+            this.Controls.Add(this.lblAddGenre2);
+            this.Controls.Add(this.lblGenre3);
+            this.Controls.Add(this.comboBoxGenre3);
+            this.Controls.Add(this.lblGenre2);
+            this.Controls.Add(this.comboBoxGenre2);
             this.Controls.Add(this.lblTitleException);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRateException);
@@ -339,5 +475,13 @@
         private Label lblRateException;
         private Label label1;
         private Label lblTitleException;
+        private Label lblGenre2;
+        private ComboBox comboBoxGenre2;
+        private Label lblGenre3;
+        private ComboBox comboBoxGenre3;
+        private Label lblAddGenre2;
+        private Label lblCloseGenre2;
+        private Label lblAddGenre3;
+        private Label lblCloseGenre3;
     }
 }

@@ -706,5 +706,10 @@ namespace MLibUI.MainMenu
             txtBoxYear.ReadOnly = true;
             txtBoxRate.ReadOnly = true;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

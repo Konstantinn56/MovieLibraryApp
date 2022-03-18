@@ -38,3 +38,5 @@ C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Data\obj\Debug\net6.0\re
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Data\obj\Debug\net6.0\Data.pdb
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Data\obj\Debug\net6.0\ref\Data.dll
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\Data\obj\Debug\net6.0\Data.Properties.Resources.resources
+C:\Users\kocep\Source\Repos\Konstantinn56\MovieLibraryApp\MovieLibrary\Data\obj\Debug\net6.0\Data.csproj.GenerateResource.cache

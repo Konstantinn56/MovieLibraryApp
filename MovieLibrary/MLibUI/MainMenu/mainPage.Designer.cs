@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnMovies = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnAddMovie = new FontAwesome.Sharp.IconButton();
@@ -53,6 +54,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btnMovies);
             this.panelMenu.Controls.Add(this.panelTitleBar);
             this.panelMenu.Controls.Add(this.btnAddMovie);
@@ -65,6 +67,30 @@
             this.panelMenu.Size = new System.Drawing.Size(220, 731);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnLogout.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogout.IconSize = 50;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(3, 659);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnLogout.Size = new System.Drawing.Size(217, 60);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnMovies
             // 
@@ -164,7 +190,7 @@
             this.btnUsrText.IconColor = System.Drawing.Color.DarkGoldenrod;
             this.btnUsrText.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsrText.IconSize = 120;
-            this.btnUsrText.Location = new System.Drawing.Point(0, 0);
+            this.btnUsrText.Location = new System.Drawing.Point(0, 12);
             this.btnUsrText.Name = "btnUsrText";
             this.btnUsrText.Size = new System.Drawing.Size(220, 162);
             this.btnUsrText.TabIndex = 4;
@@ -349,5 +375,6 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;
+        private FontAwesome.Sharp.IconButton btnLogout;
     }
 }

@@ -252,5 +252,15 @@ namespace MLibUI.MainMenu
         {
             Application.Exit();
         }
+
+        /// <summary>
+        /// logout
+        /// </summary>
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginPage lp = new LoginPage();
+            lp.Show();
+            this.Hide();
+        }
     }
 }

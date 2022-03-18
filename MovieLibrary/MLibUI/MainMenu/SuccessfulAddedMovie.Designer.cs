@@ -42,7 +42,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MLibUI.Properties.Resources.GreenTick;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(134, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(159, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -66,7 +66,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(121, 182);
+            this.btnClose.Location = new System.Drawing.Point(118, 177);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(185, 32);
             this.btnClose.TabIndex = 64;
@@ -77,7 +77,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Location = new System.Drawing.Point(434, 11);
+            this.panel4.Location = new System.Drawing.Point(431, 6);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(4, 225);
             this.panel4.TabIndex = 63;
@@ -85,7 +85,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Location = new System.Drawing.Point(-2, 10);
+            this.panel3.Location = new System.Drawing.Point(-5, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(4, 223);
             this.panel3.TabIndex = 62;
@@ -93,7 +93,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(-2, 232);
+            this.panel2.Location = new System.Drawing.Point(-5, 227);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(492, 4);
             this.panel2.TabIndex = 61;
@@ -101,7 +101,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Location = new System.Drawing.Point(-2, 5);
+            this.panel1.Location = new System.Drawing.Point(-5, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(492, 5);
             this.panel1.TabIndex = 60;
@@ -110,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(56, 142);
+            this.label1.Location = new System.Drawing.Point(53, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(319, 21);
             this.label1.TabIndex = 59;
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 237);
+            this.ClientSize = new System.Drawing.Size(437, 231);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);

@@ -34,6 +34,16 @@ namespace Data.Model
         public string Genre { get; set; } = null!;
 
         /// <summary>
+        /// The type of the film
+        /// </summary>
+        public string Genre2 { get; set; } = null!;
+
+        /// <summary>
+        /// The type of the film
+        /// </summary>
+        public string Genre3 { get; set; } = null!;
+
+        /// <summary>
         /// The year the film comes out
         /// </summary>
         public int YaerOfCreation { get; set; }
