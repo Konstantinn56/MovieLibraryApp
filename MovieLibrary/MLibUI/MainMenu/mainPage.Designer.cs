@@ -207,7 +207,7 @@
             this.panelTitleBarr.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBarr.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBarr.Name = "panelTitleBarr";
-            this.panelTitleBarr.Size = new System.Drawing.Size(980, 70);
+            this.panelTitleBarr.Size = new System.Drawing.Size(1251, 70);
             this.panelTitleBarr.TabIndex = 0;
             this.panelTitleBarr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBarr_MouseDown);
             // 
@@ -221,7 +221,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(890, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1161, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(26, 23);
             this.btnMinimize.TabIndex = 5;
@@ -238,7 +238,7 @@
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(922, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(1193, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(26, 23);
             this.btnMaximize.TabIndex = 4;
@@ -255,7 +255,7 @@
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(951, 0);
+            this.btnClose.Location = new System.Drawing.Point(1222, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 23);
             this.btnClose.TabIndex = 3;
@@ -293,7 +293,7 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 70);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(980, 11);
+            this.panelShadow.Size = new System.Drawing.Size(1251, 11);
             this.panelShadow.TabIndex = 1;
             // 
             // panelDesktop
@@ -302,7 +302,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 70);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(980, 661);
+            this.panelDesktop.Size = new System.Drawing.Size(1251, 661);
             this.panelDesktop.TabIndex = 1;
             // 
             // mainPage
@@ -310,7 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1200, 731);
+            this.ClientSize = new System.Drawing.Size(1471, 731);
             this.ControlBox = false;
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelDesktop);

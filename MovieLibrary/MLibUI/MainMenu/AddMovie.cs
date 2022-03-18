@@ -237,6 +237,10 @@ namespace MLibUI.MainMenu
                 
             }
         }
+
+        /// <summary>
+        /// Opens window to create new Genre
+        /// </summary>
         private void comboBoxGenre_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxGenre.Text.Equals("Add New Genre"))

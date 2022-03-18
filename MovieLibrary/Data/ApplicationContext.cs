@@ -52,7 +52,7 @@ namespace Data
         {
             if (!optionsBuilder.IsConfigured) 
             {
-                var connString = @"Data Source=DESKTOP-RLES03U\SQL2019;Initial Catalog=MLibraryDB;Integrated Security=True;";
+                var connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MLibraryDB;Integrated Security=True;";
                 optionsBuilder.UseSqlServer(connString);
             }
         }

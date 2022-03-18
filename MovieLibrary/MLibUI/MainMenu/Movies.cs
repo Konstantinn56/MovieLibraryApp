@@ -26,6 +26,11 @@ namespace MLibUI.MainMenu
         /// </summary>
         AccountMoviesBusiness accountMoviesBusiness = new AccountMoviesBusiness();
 
+        /// <summary>
+        /// Genre Business
+        /// </summary>
+        GenreBusiness genreBusiness = new GenreBusiness();
+
         //Fields
         private Account CurrentAccount { get; set; }
         private List<Movie> MoviesList { get; set; }
@@ -33,6 +38,9 @@ namespace MLibUI.MainMenu
         private int LastPrintedMovieIndex { get; set; }
         private int currentPageMovies { get; set; }
         private Movie SelectedMovie { get; set; }
+
+        //False - Edit / True - Lock
+        private bool btnEditStatus { get; set; }
 
         public Movies()
         {
@@ -48,6 +56,7 @@ namespace MLibUI.MainMenu
             this.MoviesList = movieBusiness.GetAll();
             this.MoviesCount = this.MoviesList.Count;
             this.LastPrintedMovieIndex = 0;
+            this.btnEditStatus = false;
             FillThePage();
         }
 
@@ -172,6 +181,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle1.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -189,6 +199,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle2.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -206,6 +217,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle3.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -223,6 +235,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle4.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -240,6 +253,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle5.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -257,6 +271,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle6.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -274,6 +289,7 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle7.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
         }
 
@@ -291,176 +307,9 @@ namespace MLibUI.MainMenu
                 this.SelectedMovie = movieBusiness.GetByTitle(txtBoxTitle8.Text);
                 btnAddToFavourite.Enabled = true;
                 btnUpdate.Enabled = true;
+                FillMovieInfo(this.SelectedMovie);
             }
 
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox1_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox1))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle1.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox1_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox2_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox2))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle2.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox2_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox3_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox3))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle3.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox3_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox4_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox4))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle4.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox4_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox5_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox5))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle5.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox5_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox6_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox6))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle6.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox6_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox7_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox7))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle7.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox7_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
-        }
-
-        /// <summary>
-        /// Select the movie and gives information in the MovieInformationTextBox
-        /// </summary>
-        private void picBox8_MouseHover(object sender, EventArgs e)
-        {
-            if (!IsTheFieldEmpty(picBox8))
-            {
-                Movie markedMovie = movieBusiness.GetByTitle(txtBoxTitle8.Text);
-                ResetMovieInfoTextBox();
-                FillMovieInfo(markedMovie);
-            }
-        }
-
-        /// <summary>
-        /// Clear the MovieInformationTextBox and ReselectTheMovie
-        /// </summary>
-        private void picBox8_MouseLeave(object sender, EventArgs e)
-        {
-            ResetMovieInfoTextBox();
         }
 
         /// <summary>
@@ -468,18 +317,18 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void FillMovieInfo(Movie movie)
         {
-            string[] lines = txtBoxMovieInfo.Lines;
+            btnReset.Enabled = true;
+            //txt boxes
+            txtBoxTitle.Text = movie.Title;
+            comboBoxGenre.Text = movie.Genre;
+            txtBoxYear.Text = movie.YaerOfCreation.ToString();
+            txtBoxRate.Text = movie.Rate.ToString();
 
-            //Title
-            lines[2] += $" {movie.Title}";
-            //Genre
-            lines[3] += $" {movie.Genre}";
-            //Year
-            lines[4] += $" {movie.YaerOfCreation}";
-            //Rate
-            lines[5] += $" {movie.Rate:f1}";
-
-            txtBoxMovieInfo.Lines = lines;
+            //image
+            byte[] image = movie.Image;
+            var imageMemoryStream = new MemoryStream(image);
+            Image imgFromStream = Image.FromStream(imageMemoryStream);
+            picBoxMovieInfo.Image = imgFromStream;
 
         }
 
@@ -488,14 +337,13 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void ResetMovieInfoTextBox()
         {
-            string[] lines = txtBoxMovieInfo.Lines;
-            lines[0] = "Movie Information";
-            lines[1] = "";
-            lines[2] = "Title:";
-            lines[3] = "Genre:";
-            lines[4] = "Year:";
-            lines[5] = "Rate:";
-            txtBoxMovieInfo.Lines = lines;
+            txtBoxTitle.Text = "";
+            comboBoxGenre.Text = "";
+            txtBoxYear.Text = "";
+            txtBoxRate.Text = "";
+            picBoxMovieInfo.Image = null;
+            btnReset.Enabled = false;
+
         }
 
         /// <summary>
@@ -594,8 +442,6 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void ResetAllFields()
         {
-
-
             picBox1.Image = null;
             picBox2.Image = null;
             picBox3.Image = null;
@@ -649,18 +495,182 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if(this.SelectedMovie != null)
+            string exceptions = IsThereExceptionsInTheMovieInfoPanel();
+
+            if (exceptions == "")
             {
-                this.Hide();
-                //mainPage mp = new mainPage();
-                //UpdatePage up = new UpdatePage();
-                //up.SetCurrentMovie(this.SelectedMovie);
-                //mp.OpenChildForm(up);
+                Movie updatedMovie = this.SelectedMovie;
+                
+                if (!DoesTheMovieAlreadyExists(txtBoxTitle.Text))
+                {
+                    //Movie Image
+                    MemoryStream stream = new MemoryStream();
+                    picBoxMovieInfo.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    byte[] pic = stream.ToArray();
+
+                    updatedMovie.Title = txtBoxTitle.Text;
+                    updatedMovie.YaerOfCreation = int.Parse(txtBoxYear.Text);
+                    updatedMovie.Rate = double.Parse(txtBoxRate.Text);
+                    updatedMovie.Image = pic;
+
+                    movieBusiness.Update(updatedMovie);
+
+                    ResetMovieInfoTextBox();
+                    ResetSelection();
+                    FillThePage();
+                }
+                else
+                {
+                    MessageBox.Show("Movie with this Title already exist!");
+                }
+                
             }
             else
             {
-                MessageBox.Show("Please select a movie!");
+                MessageBox.Show(exceptions);
             }
         }
+
+        /// <summary>
+        /// Enables and Disables fields to allow movie update
+        /// </summary>
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            //if its false(Edit)
+            if(!this.btnEditStatus)
+            {
+                btnEdit.Text = "Lock";
+                this.btnEditStatus = true;
+
+                //Enable fields
+                btnBrowse.Enabled = true;
+                txtBoxTitle.ReadOnly = false;
+                comboBoxGenre.Enabled = true;
+                txtBoxYear.ReadOnly = false;
+                txtBoxRate.ReadOnly = false;
+
+                //ComboBoxGenreInfo
+
+            }
+            //If its true(Lock)
+            else
+            {
+                this.btnEditStatus = false;
+                btnEdit.Text = "Edit";
+
+                //Disable fields
+                btnBrowse.Enabled = false;
+                txtBoxTitle.ReadOnly = true;
+                comboBoxGenre.Enabled = false;
+                txtBoxYear.ReadOnly = true;
+                txtBoxRate.ReadOnly = true;
+            }
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            Stream myStream = null;
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image File(*.jpg; *.jpeg; *.bmp;) | *.jpg; *.jpeg; *.bmp";
+            if (ofd.ShowDialog(this) == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = ofd.OpenFile()) != null)
+                    {
+                        string FileName = ofd.FileName;
+                        if (myStream.Length > 512000)
+                        {
+                            MessageBox.Show("File Size limit exceeded");
+                        }
+                        else
+                        {
+                            picBoxMovieInfo.Load(FileName);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Resets the movie info field
+        /// </summary>
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            FillMovieInfo(this.SelectedMovie);
+        }
+
+        /// <summary>
+        /// Open new window to create new Genre
+        /// </summary>
+        private void comboBoxGenre_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGenre.Text.Equals("Add New Genre"))
+            {
+                AddNewGenre ang = new AddNewGenre();
+                ang.Show();
+            }
+        }
+
+        /// <summary>
+        /// Link Combobox with Database Genres values
+        /// </summary>
+        private void comboBoxGenre_MouseClick(object sender, MouseEventArgs e)
+        {
+            List<Genre> allGenres = genreBusiness.GetAllGenres();
+            comboBoxGenre.Items.Clear();
+            foreach (Genre genre in allGenres)
+            {
+                comboBoxGenre.Items.Add(genre.Name);
+            }
+        }
+
+        private string IsThereExceptionsInTheMovieInfoPanel()
+        {
+            string exception = "";
+
+            int year;
+            int currentYear = DateTime.Now.Year;
+            if (!int.TryParse(txtBoxYear.Text, out year) && int.Parse(txtBoxYear.Text) !<= currentYear)
+            {
+                return "Invalid Information!";
+            }
+            double rate;
+            if (!double.TryParse(txtBoxRate.Text, out rate))
+            {
+                return "Invalid Information!";
+            }
+            if (rate < 0 && rate > 10)
+            {
+                return "Invalid Information!";
+            }
+            if(picBoxMovieInfo.Image == null || txtBoxTitle.Text.Equals("") || txtBoxYear.Text.Equals("") || txtBoxRate.Equals(""))
+            {
+                return "The Fields must not be empty";
+            }
+            return exception;
+        }
+
+        /// <summary>
+        /// Check If the movie with this Title exists in the DataBase
+        /// </summary>
+        /// <returns>True/False</returns>
+        private bool DoesTheMovieAlreadyExists(string title)
+        {
+            try
+            {
+                Movie movie = movieBusiness.GetByTitle(title);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }
