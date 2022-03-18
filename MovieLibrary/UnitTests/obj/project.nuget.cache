@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ahxKxs4R9KpiqysPE41fGuEaSzdcw4zG6SAl9a4QNICGEVoo7mhbYSdnCpP8LnWUfxVQdKB14hOEAW6cOjR/sg==",
+  "dgSpecHash": "3IAXo9COs6oOKkivwIFPmbkjmG/EffUVPbBm24zNwM2FbVhFmuL3EtSWhQyzIjRmZ5PTOeeJ2Mxmo2QaY+6Axg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\UnitTests\\UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\UnitTests\\UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
