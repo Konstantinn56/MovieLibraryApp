@@ -94,8 +94,8 @@ namespace Data
                 entity.HasData
                 (
                     new Account {AId = 1, FirstName = "Konstatnin", LastName = "Balabanov", Username = "admin", Password = "admin", RecoveryKey = 100000 },
-                    new Account {AId = 2, FirstName = "Velina", LastName = "Yordanova", Username = "admin_2", Password = "admin_2", RecoveryKey = 200000 },
-                    new Account {AId = 3, FirstName = "Dimitar", LastName = "Stoyanov", Username = "dimSt", Password = "1234", RecoveryKey = 300000 }
+                    new Account {AId = 2, FirstName = "Velina", LastName = "Yordanova", Username = "admin_2", Password = "admin_2", RecoveryKey = 100001 },
+                    new Account {AId = 3, FirstName = "Dimitar", LastName = "Stoyanov", Username = "dimSt", Password = "1234", RecoveryKey = 100002 }
                 );
             });
 
@@ -162,7 +162,7 @@ namespace Data
                 entity.HasData
                 (
                     new Movie {MId = 1,Title = "Spider-Man No way Home", Genre = "Action", Image = null ,YaerOfCreation = 2021, Rate = 8.7},
-                    new Movie {MId = 10, Title = "Spirited away", Genre = "Anime", Image = null, YaerOfCreation = 2001, Rate = 8.6 }
+                    new Movie {MId = 2, Title = "Spirited away", Genre = "Anime", Image = null, YaerOfCreation = 2001, Rate = 8.6 }
                 );
             });
 
