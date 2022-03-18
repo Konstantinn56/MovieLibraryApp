@@ -329,6 +329,26 @@ namespace MLibUI.MainMenu
             comboBoxGenre3.Text = null;
 
             pictureBoxImage.Image = null;
+
+            //ComboBoxGenre1
+            comboBoxGenre.Enabled = true;
+            lblAddGenre2.Visible = true;
+
+            //ComboBoxGenre2
+            comboBoxGenre2.Text = null;
+            comboBoxGenre2.Visible = false;
+            comboBoxGenre2.Enabled = false;
+            lblGenre2.Visible = false;
+            lblCloseGenre2.Visible = false;
+            lblAddGenre3.Visible = false;
+
+            //ComboBoxGenre3
+            comboBoxGenre3.Text = null;
+            comboBoxGenre3.Visible = false;
+            comboBoxGenre3.Enabled = false;
+            lblGenre3.Visible = false;
+            lblCloseGenre3.Visible = false;
+
         }
         /// <summary>
         /// Link Combobox with Database Genres values
@@ -368,6 +388,8 @@ namespace MLibUI.MainMenu
                 comboBoxGenre2.Enabled = true;
                 lblGenre2.Visible = true;
                 lblCloseGenre2.Visible = true;
+
+                
             }
         }
 
@@ -382,7 +404,7 @@ namespace MLibUI.MainMenu
                 {
                     //ComboBoxGenre2
                     comboBoxGenre2.Enabled = false;
-                    lblAddGenre2.Visible = false;
+                    lblAddGenre3.Visible = false;
                     lblCloseGenre2.Visible = false;
 
                     //ComboBoxGenre3
@@ -442,7 +464,7 @@ namespace MLibUI.MainMenu
         {
             //ComboBoxGenre2
             comboBoxGenre2.Enabled = true;
-            lblAddGenre2.Visible = true;
+            lblAddGenre3.Visible = true;
             lblCloseGenre2.Visible = true;
 
             //ComboBoxGenre3
