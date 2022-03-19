@@ -11,14 +11,14 @@ using Data.Model;
 namespace Business
 
 {   /// <summary>
-    /// Business Logic of the Film
+    /// Business Logic of the Movie
     /// </summary>
     public class MovieBusiness
     {
         private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
-        /// Get a film from the database by Id
+        /// Get a Movie from the database by Id
         /// </summary>
         public Movie Get(int id)
         {
@@ -29,7 +29,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Get a film from the database by Title
+        /// Get a Movie from the database by Title
         /// </summary>
         public Movie GetByTitle(string title)
         {
@@ -48,7 +48,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Get all films from the database
+        /// Get all Movies from the database
         /// </summary>
         public List<Movie> GetAll()
         {
@@ -64,7 +64,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Add a film to the database
+        /// Add a Movie to the database
         /// </summary>
         public void Add(Movie movie)
         {
@@ -85,7 +85,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Update a film in the database by Id.
+        /// Update a Movie in the database by Id.
         /// </summary>
         public void Update(Movie movie)
         {
@@ -105,7 +105,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Deleate a film from the database by Id
+        /// Delete a Movie from the database by Id
         /// </summary>
         public void Delete(int id)
         {
