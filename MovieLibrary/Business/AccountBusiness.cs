@@ -11,7 +11,7 @@ namespace Business
         private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
-        /// Get single account from the database by Username
+        /// Get an Account from the database by Username
         /// </summary>
         public Account Get(string username)
         {
@@ -22,7 +22,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Add a account to the database
+        /// Add an Account to the database
         /// </summary>
         public void Add(Account account)
         {
@@ -43,7 +43,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Delete a Account from the Database By Id
+        /// Delete an Account from the Database by Id
         /// </summary>
         public void Delete(int id)
         {
@@ -63,7 +63,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Update a single account in the database
+        /// Update an Account in the Database
         /// </summary>
         public void Update(Account account)
         {
