@@ -57,7 +57,9 @@ namespace MLibUI.MainMenu
             this.MoviesCount = this.MoviesList.Count;
             this.LastPrintedMovieIndex = 0;
             this.btnEditStatus = false;
-            SetAllGenres();
+            SetAllGenres(comboBoxGenre);
+            SetAllGenres(comboBoxGenre2);
+            SetAllGenres(comboBoxGenre3);
             FillThePage();
         }
 
@@ -313,9 +315,16 @@ namespace MLibUI.MainMenu
             btnReset.Enabled = true;
             //txt boxes
             txtBoxTitle.Text = movie.Title;
-            comboBoxGenre.Text = movie.Genre;
             txtBoxYear.Text = movie.YaerOfCreation.ToString();
             txtBoxRate.Text = movie.Rate.ToString();
+
+            //Genres
+            SetAllGenres(comboBoxGenre);
+            SetAllGenres(comboBoxGenre2);
+            SetAllGenres(comboBoxGenre3);
+            comboBoxGenre.Text = movie.Genre;
+            comboBoxGenre2.Text = movie.Genre2;
+            comboBoxGenre3.Text = movie.Genre3;
 
             //image
             byte[] image = movie.Image;
@@ -332,6 +341,8 @@ namespace MLibUI.MainMenu
         {
             txtBoxTitle.Text = "";
             comboBoxGenre.Text = "";
+            comboBoxGenre2.Text = "";
+            comboBoxGenre3.Text = "";
             txtBoxYear.Text = "";
             txtBoxRate.Text = "";
             picBoxMovieInfo.Image = null;
@@ -544,7 +555,32 @@ namespace MLibUI.MainMenu
                     //Enable fields
                     btnBrowse.Enabled = true;
                     txtBoxTitle.ReadOnly = false;
+                    
+                    //combo box genres
                     comboBoxGenre.Enabled = true;
+                    if(comboBoxGenre2.Text != "")
+                    {
+                        comboBoxGenre2.Visible = true;
+                        lblGenre2.Visible = true;
+                        if (comboBoxGenre3.Text != "")
+                        {
+                            comboBoxGenre3.Visible = true;
+                            lblGenre3.Visible = true;
+                        }
+                        else
+                        {
+                            comboBoxGenre3.Visible = false;
+                            lblGenre3.Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        comboBoxGenre2.Visible = false;
+                        comboBoxGenre3.Visible = false;
+                        lblGenre2.Visible = false;
+                        lblGenre3.Visible = false;
+                    }
+
                     txtBoxYear.ReadOnly = false;
                     txtBoxRate.ReadOnly = false;
 
@@ -562,6 +598,10 @@ namespace MLibUI.MainMenu
                     btnBrowse.Enabled = false;
                     txtBoxTitle.ReadOnly = true;
                     comboBoxGenre.Enabled = false;
+                    comboBoxGenre2.Visible = true;
+                    comboBoxGenre3.Visible = true;
+                    lblGenre2.Visible = true;
+                    lblGenre3.Visible = true;
                     txtBoxYear.ReadOnly = true;
                     txtBoxRate.ReadOnly = true;
                 }
@@ -625,19 +665,33 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void comboBoxGenre_MouseClick(object sender, MouseEventArgs e)
         {
-            SetAllGenres();
+            SetAllGenres(comboBoxGenre);
+        }
+        /// <summary>
+        /// Use SetAllGenres method
+        /// </summary>
+        private void comboBoxGenre2_MouseClick(object sender, MouseEventArgs e)
+        {
+            SetAllGenres(comboBoxGenre2);
+        }
+        /// <summary>
+        /// Use SetAllGenres method
+        /// </summary>
+        private void comboBoxGenre3_MouseClick(object sender, MouseEventArgs e)
+        {
+            SetAllGenres(comboBoxGenre3);
         }
 
         /// <summary>
         /// Link Combobox with Database Genres values
         /// </summary>
-        private void SetAllGenres()
+        private void SetAllGenres(ComboBox genres)
         {
             List<Genre> allGenres = genreBusiness.GetAllGenres();
-            comboBoxGenre.Items.Clear();
+            genres.Items.Clear();
             foreach (Genre genre in allGenres)
             {
-                comboBoxGenre.Items.Add(genre.Name);
+                genres.Items.Add(genre.Name);
             }
         }
 
@@ -707,9 +761,5 @@ namespace MLibUI.MainMenu
             txtBoxRate.ReadOnly = true;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
