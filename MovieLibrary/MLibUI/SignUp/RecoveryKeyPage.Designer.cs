@@ -161,7 +161,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(41, 99);
+            this.label6.Location = new System.Drawing.Point(24, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(366, 34);
             this.label6.TabIndex = 51;
