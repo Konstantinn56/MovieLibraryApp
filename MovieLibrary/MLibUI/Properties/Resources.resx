@@ -127,6 +127,9 @@
   <data name="bfgbgn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bfgbgn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundmainPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundmainPage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LoginPageImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginPageImage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,14 +169,17 @@
   <data name="GreenTick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GreenTick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LogoYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LogoYellow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoYellow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="external-content5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\external-content.duckduckgo4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LogoYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginPagePhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPagePhoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ConfirmationPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ConfirmationPage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +193,8 @@
   <data name="SighnUpBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SighnUpBackGround.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginPagePhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginPagePhoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="info logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="external-content4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\external-content.duckduckgo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,6 +208,9 @@
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundmainPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundmainPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Searching" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Searching.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,7 +223,7 @@
   <data name="ConfirmationPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ConfirmationPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backgroundmainPage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundmainPage2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

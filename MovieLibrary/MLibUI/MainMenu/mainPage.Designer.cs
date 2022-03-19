@@ -45,10 +45,13 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTitleBarr.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -233,7 +236,7 @@
             this.panelTitleBarr.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBarr.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBarr.Name = "panelTitleBarr";
-            this.panelTitleBarr.Size = new System.Drawing.Size(1251, 70);
+            this.panelTitleBarr.Size = new System.Drawing.Size(1212, 70);
             this.panelTitleBarr.TabIndex = 0;
             this.panelTitleBarr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBarr_MouseDown);
             // 
@@ -247,7 +250,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(1161, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1122, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(26, 23);
             this.btnMinimize.TabIndex = 5;
@@ -264,7 +267,7 @@
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(1193, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(1154, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(26, 23);
             this.btnMaximize.TabIndex = 4;
@@ -281,7 +284,7 @@
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(1222, 0);
+            this.btnClose.Location = new System.Drawing.Point(1183, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 23);
             this.btnClose.TabIndex = 3;
@@ -319,24 +322,38 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 70);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1251, 11);
+            this.panelShadow.Size = new System.Drawing.Size(1212, 11);
             this.panelShadow.TabIndex = 1;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.DarkGray;
+            this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 70);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1251, 695);
+            this.panelDesktop.Size = new System.Drawing.Size(1212, 695);
             this.panelDesktop.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.pictureBox1.BackgroundImage = global::MLibUI.Properties.Resources.backgroundmainPage1;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::MLibUI.Properties.Resources.backgroundmainPage2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1212, 695);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1471, 765);
+            this.ClientSize = new System.Drawing.Size(1432, 765);
             this.ControlBox = false;
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelDesktop);
@@ -353,6 +370,8 @@
             this.panelTitleBarr.ResumeLayout(false);
             this.panelTitleBarr.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +395,6 @@
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnLogout;
+        private PictureBox pictureBox1;
     }
 }
