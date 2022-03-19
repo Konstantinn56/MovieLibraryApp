@@ -26,12 +26,12 @@ namespace Data.Model
         public string LastName { get; set; } = null!;
 
         /// <summary>
-        /// Account username
+        /// Account Username
         /// </summary>
         public string Username { get; set; } = null!;
 
         /// <summary>
-        /// Account password
+        /// Account Password
         /// </summary>
         public string Password { get; set; } = null!;
 
