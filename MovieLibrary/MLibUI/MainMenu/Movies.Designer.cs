@@ -313,6 +313,8 @@
             this.comboBoxGenre3.Name = "comboBoxGenre3";
             this.comboBoxGenre3.Size = new System.Drawing.Size(186, 25);
             this.comboBoxGenre3.TabIndex = 101;
+            this.comboBoxGenre3.TextChanged += new System.EventHandler(this.comboBoxGenre3_TextChanged);
+            this.comboBoxGenre3.Leave += new System.EventHandler(this.comboBoxGenre3_Leave);
             this.comboBoxGenre3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxGenre3_MouseClick);
             // 
             // lblGenre3
@@ -340,6 +342,8 @@
             this.comboBoxGenre2.Name = "comboBoxGenre2";
             this.comboBoxGenre2.Size = new System.Drawing.Size(186, 25);
             this.comboBoxGenre2.TabIndex = 99;
+            this.comboBoxGenre2.TextChanged += new System.EventHandler(this.comboBoxGenre2_TextChanged);
+            this.comboBoxGenre2.Leave += new System.EventHandler(this.comboBoxGenre2_Leave);
             this.comboBoxGenre2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxGenre2_MouseClick);
             // 
             // lblGenre2
@@ -744,6 +748,7 @@
             this.lblCloseGenre3.TabIndex = 105;
             this.lblCloseGenre3.Text = "X";
             this.lblCloseGenre3.Visible = false;
+            this.lblCloseGenre3.Click += new System.EventHandler(this.lblCloseGenre3_Click);
             // 
             // lblAddGenre3
             // 
@@ -758,6 +763,7 @@
             this.lblAddGenre3.TabIndex = 104;
             this.lblAddGenre3.Text = "Add Genre";
             this.lblAddGenre3.Visible = false;
+            this.lblAddGenre3.Click += new System.EventHandler(this.lblAddGenre3_Click);
             // 
             // lblCloseGenre2
             // 
@@ -771,6 +777,7 @@
             this.lblCloseGenre2.TabIndex = 103;
             this.lblCloseGenre2.Text = "X";
             this.lblCloseGenre2.Visible = false;
+            this.lblCloseGenre2.Click += new System.EventHandler(this.lblCloseGenre2_Click);
             // 
             // lblAddGenre2
             // 
@@ -785,6 +792,7 @@
             this.lblAddGenre2.TabIndex = 102;
             this.lblAddGenre2.Text = "Add Genre";
             this.lblAddGenre2.Visible = false;
+            this.lblAddGenre2.Click += new System.EventHandler(this.lblAddGenre2_Click);
             // 
             // Movies
             // 
