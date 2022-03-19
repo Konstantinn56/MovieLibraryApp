@@ -14,7 +14,7 @@ namespace Data
         /// </summary>
         public ApplicationContext()
         {
-            // Create the database automaticly
+            // Create the database automatically
             Database.EnsureCreated();
         }
 
@@ -58,6 +58,9 @@ namespace Data
             }
         }
 
+        /// <summary>
+        /// The structure and the information in the Tables
+        /// </summary>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>(entity =>
