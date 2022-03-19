@@ -27,13 +27,15 @@ namespace UnitTests
             ///Arrange
             Movie movie = new Movie()
             {
-                Title = "Encanto",
-                Genre = "Animation"
+                Title = "Idk",
+                Genre = "Crimi",
+                Genre2 = "",
+                Genre3 = ""
             };
 
             ///Act
             movieBusiness.Add(movie);
-            var movieDb = movieBusiness.Get(movie.MId);
+            Movie movieDb = movieBusiness.Get(movie.MId);
 
             ///Assert
             Assert.AreEqual(movie.MId, movieDb.MId);
@@ -48,7 +50,10 @@ namespace UnitTests
             ///Arrange
             Movie movie = new Movie()
             {
-                Title = "Spider-Man No way Home"
+                Title = "Gladiator",
+                Genre = "Action",
+                Genre2 = "",
+                Genre3 = ""
             };
 
             ///Act and Assert
@@ -65,7 +70,10 @@ namespace UnitTests
             Movie movie = new Movie()
             {
                 MId = 1,
-                Title = "Spider-Man No way Home"
+                Title = "Gladiator",
+                Genre = "Action",
+                Genre2 = "Adventure",
+                Genre3 = "Drama"
             };
 
             ///Act
@@ -105,7 +113,9 @@ namespace UnitTests
             {
                 MId = 2,
                 Title = "Encanto",
-                Genre = "Animation, Family"
+                Genre = "Animation",
+                Genre2 = "",
+                Genre3 = ""
             };
 
             ///Act
@@ -135,3 +145,4 @@ namespace UnitTests
         }
     }
 }
+
