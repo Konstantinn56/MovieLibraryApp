@@ -11,7 +11,7 @@ namespace Business
         private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
-        /// Add a genre to the database
+        /// Add a Genre to the database
         /// </summary>
         public void Add(Genre genre)
         {
@@ -32,7 +32,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Get single genre from the database by Name
+        /// Get a Genre from the database by Name
         /// </summary>
         public Genre Get(string name)
         {
@@ -43,7 +43,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Get all genres and return it into List
+        /// Get all Genres and return it into List
         /// </summary>
         public List<Genre> GetAllGenres()
         {

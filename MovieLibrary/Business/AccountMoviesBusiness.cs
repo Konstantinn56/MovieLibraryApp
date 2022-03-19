@@ -10,7 +10,7 @@ namespace Business
         private ApplicationContext applicationContext = new ApplicationContext();
 
         /// <summary>
-        /// Add a movie to the database by Account and Movie
+        /// Add a Movie to the database by Account and Movie
         /// </summary>
         public void Add(int aId, int mId)
         {
