@@ -46,7 +46,7 @@ namespace MLibUI.MainMenu
         {
             SqlConnection con = DataBase.GetConnection();
             con.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT image,title,genre,year,rate FROM Movies WHERE id_movie IN(SELECT movie_id FROM AccountsMovies WHERE account_id = {this.CurrentAccount.AId})", con);
+            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT image,title,genre,genre2,genre3,year,rate FROM Movies WHERE id_movie IN(SELECT movie_id FROM AccountsMovies WHERE account_id = {this.CurrentAccount.AId})", con);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             MyListDGV.DataSource = dt;
@@ -60,7 +60,7 @@ namespace MLibUI.MainMenu
         {
             SqlConnection con = DataBase.GetConnection();
             con.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT image,title,genre,year,rate FROM Movies WHERE id_movie = {movie.MId}", con);
+            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT image,title,genre,gemre2,genre3,year,rate FROM Movies WHERE id_movie = {movie.MId}", con);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             MyListDGV.DataSource = dt;

@@ -190,7 +190,32 @@ namespace Data
                     new Movie {MId = 17, Title = "Aladdin", Genre = "Animation", Genre2 = "Adventure", Genre3 = "Comedy", Image = Properties.Resources.Aladdin, YaerOfCreation = 1992, Rate = 8.1 },
                     new Movie {MId = 18, Title = "Beauty and the Beast", Genre = "Animation", Genre2 = "Family", Genre3 = "Fantasy", Image = Properties.Resources.Beauty_and_the_Beast, YaerOfCreation = 1991, Rate = 8.1 },
                     new Movie {MId = 19, Title = "Schindler's List", Genre = "Biography", Genre2 = "Drama", Genre3 = "History", Image = Properties.Resources.Schindler_s_List, YaerOfCreation =1993 , Rate = 9.0 },
-                    new Movie {MId = 20, Title = "Intouchables", Genre = "Biography", Genre2 = "Comedy", Genre3 = "Drama", Image = Properties.Resources.Intouchables, YaerOfCreation =2011 , Rate = 8.5 }
+                    new Movie {MId = 20, Title = "Intouchables", Genre = "Biography", Genre2 = "Comedy", Genre3 = "Drama", Image = Properties.Resources.Intouchables, YaerOfCreation =2011 , Rate = 8.5 },
+                    new Movie { MId = 21, Title = "Green Book", Genre = "Biography", Genre2 = "Comedy", Genre3 = "Drama", Image = Properties.Resources.Green_Book, YaerOfCreation = 2018, Rate =  8.2},
+                    new Movie { MId = 22, Title = "A Beautiful Mind", Genre = "Biography", Genre2 = "Drama", Genre3 = "", Image = Properties.Resources.A_Beautiful_Mind, YaerOfCreation = 2001, Rate = 8.1 },
+                    new Movie { MId = 23, Title = "Forest Gump", Genre = "Drama", Genre2 = "Romance", Genre3 = "", Image = Properties.Resources.Forrest_Gump, YaerOfCreation = 1994, Rate = 8.8 },
+                    new Movie { MId = 24, Title = "Titanic", Genre = "Drama", Genre2 = "Romance", Genre3 = "", Image = Properties.Resources.Titanic, YaerOfCreation = 1997, Rate = 7.9 },
+                    new Movie { MId = 25, Title = "The Notebook", Genre = "Drama", Genre2 = "Romance", Genre3 = "", Image = Properties.Resources.The_Notebook, YaerOfCreation = 2004, Rate = 7.8 },
+                    new Movie { MId = 26, Title = "The Green Mile", Genre = "Crime", Genre2 = "Drama", Genre3 = "Fantasy", Image = Properties.Resources.The_Green_Mile, YaerOfCreation = 1999, Rate = 8.6 },
+                    new Movie { MId = 27, Title = "La La Land", Genre = "Comedy", Genre2 = "Drama", Genre3 = "Music", Image = Properties.Resources.La_La_Land, YaerOfCreation = 2016, Rate = 8.0 },
+                    new Movie { MId = 28, Title = "The Pianist", Genre = "Biography", Genre2 = "Drama", Genre3 = "Music", Image = Properties.Resources.The_Pianist, YaerOfCreation = 2002, Rate =  8.6},
+                    new Movie { MId = 29, Title = "Whiplash", Genre = "Drama", Genre2 = "Music", Genre3 = "", Image = Properties.Resources.Whiplash, YaerOfCreation =2014 , Rate = 8.5 },
+                    new Movie { MId = 30, Title = "Alien", Genre = "Horror", Genre2 = "Sci-Fi", Genre3 = "", Image = Properties.Resources.Alien, YaerOfCreation = 1979, Rate = 8.5 },
+                    new Movie { MId = 31, Title = "Nosferatu", Genre = "Fantasy", Genre2 = "Horror", Genre3 = "", Image = Properties.Resources.Nosferatu, YaerOfCreation = 1922, Rate = 7.2 },
+                    new Movie { MId = 32, Title = "The Conjuring", Genre = "Horror", Genre2 = "Mystery", Genre3 = "Thriller", Image = Properties.Resources.The_Conjuring, YaerOfCreation =2013 , Rate =  7.5},
+                    new Movie { MId = 33, Title = "The Godfather", Genre = "Crime", Genre2 = "Drama", Genre3 = "", Image = Properties.Resources.The_Godfather, YaerOfCreation =1972 , Rate = 9.2 },
+                    new Movie { MId = 34, Title = "The Shawschank Redemption", Genre = "Drama", Genre2 = "", Genre3 = "", Image = Properties.Resources.The_Shawshank_Redemption, YaerOfCreation =2013 , Rate = 7.5 },
+                    new Movie { MId = 35, Title = "Pirates of the Caribbean: The Curse of the Black Pearl", Genre = "Action", Genre2 = "Adventure", Genre3 = "Fantasy", Image = Properties.Resources.Pirates_of_the_Caribbean_The_Curse_of_the_Black_Pearl, YaerOfCreation = 2003, Rate = 8.1 },
+                    new Movie { MId = 36, Title = "Encanto", Genre = "Animation", Genre2 = "Comedy", Genre3 = "Family", Image = Properties.Resources.Encanto, YaerOfCreation = 2021, Rate = 7.3 },
+                    new Movie { MId = 37, Title = "Taken", Genre = "Action", Genre2 = "Crime", Genre3 = "Triller", Image = Properties.Resources.Taken, YaerOfCreation = 2008 , Rate = 7.8 },
+                    new Movie { MId = 38, Title = "Rush Hour", Genre = "Action", Genre2 = "Comedy", Genre3 = "Crime", Image = Properties.Resources.Rush_Hour, YaerOfCreation = 1998, Rate = 7.0 },
+                    new Movie { MId = 39, Title = "Harry Potter and the Sorcerer's Stone", Genre = "Adventure", Genre2 = "Fantasy", Genre3 = "Family", Image = Properties.Resources.Harry_Potter_and_the_Sorcerer_s_Stone, YaerOfCreation = 2001, Rate = 7.6 },
+                    new Movie { MId = 40, Title = "Home Alone", Genre = "Comedy", Genre2 = "Family", Genre3 = "", Image = Properties.Resources.Home_Alone, YaerOfCreation = 1990, Rate = 7.7 },
+                    new Movie { MId = 41, Title = "Dumb and Dumber", Genre = "Comedy", Genre2 = "", Genre3 = "", Image = Properties.Resources.Dumb_and_Dumber, YaerOfCreation =1994 , Rate = 7.3 },
+                    new Movie { MId = 42, Title = "RED", Genre = "Action", Genre2 = "Comedy", Genre3 = "Crime", Image = Properties.Resources.RED, YaerOfCreation = 2010, Rate = 7.0 },
+                    new Movie { MId = 43, Title = "Ocean's Eleven", Genre = "Crime", Genre2 = "Thriller", Genre3 = "", Image = Properties.Resources.Ocean_s_Eleven, YaerOfCreation = 2001, Rate = 7.7 },
+                    new Movie { MId = 44, Title = "The Italian Job", Genre = "Action", Genre2 = "Crime", Genre3 = "Thriller", Image = Properties.Resources.The_Italian_Job, YaerOfCreation = 2003 , Rate = 7.0 },
+                    new Movie { MId = 45, Title = "National Treasure", Genre = "Action", Genre2 = "Adventure", Genre3 = "Mystery", Image = Properties.Resources.National_Treasure, YaerOfCreation = 2004 , Rate = 6.9 }
                 );
             });
 
