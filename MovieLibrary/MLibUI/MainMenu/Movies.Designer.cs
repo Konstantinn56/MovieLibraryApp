@@ -44,13 +44,16 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.txtBoxTitle = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCloseGenre3 = new System.Windows.Forms.Label();
+            this.lblAddGenre3 = new System.Windows.Forms.Label();
+            this.lblCloseGenre2 = new System.Windows.Forms.Label();
+            this.lblAddGenre2 = new System.Windows.Forms.Label();
             this.comboBoxGenre3 = new System.Windows.Forms.ComboBox();
             this.lblGenre3 = new System.Windows.Forms.Label();
             this.comboBoxGenre2 = new System.Windows.Forms.ComboBox();
             this.lblGenre2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxGenre = new System.Windows.Forms.ComboBox();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.picBoxMovieInfo = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,10 +79,6 @@
             this.picBox7 = new System.Windows.Forms.PictureBox();
             this.picBox6 = new System.Windows.Forms.PictureBox();
             this.picBox5 = new System.Windows.Forms.PictureBox();
-            this.lblCloseGenre3 = new System.Windows.Forms.Label();
-            this.lblAddGenre3 = new System.Windows.Forms.Label();
-            this.lblCloseGenre2 = new System.Windows.Forms.Label();
-            this.lblAddGenre2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -214,9 +213,9 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
             this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(135, 612);
+            this.btnUpdate.Location = new System.Drawing.Point(70, 557);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(126, 25);
+            this.btnUpdate.Size = new System.Drawing.Size(168, 25);
             this.btnUpdate.TabIndex = 68;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -279,7 +278,6 @@
             this.panel2.Controls.Add(this.lblGenre2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.comboBoxGenre);
-            this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnBrowse);
@@ -295,8 +293,66 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(953, 82);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(273, 649);
+            this.panel2.Size = new System.Drawing.Size(273, 594);
             this.panel2.TabIndex = 82;
+            // 
+            // lblCloseGenre3
+            // 
+            this.lblCloseGenre3.AutoSize = true;
+            this.lblCloseGenre3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCloseGenre3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCloseGenre3.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblCloseGenre3.Location = new System.Drawing.Point(256, 224);
+            this.lblCloseGenre3.Name = "lblCloseGenre3";
+            this.lblCloseGenre3.Size = new System.Drawing.Size(15, 17);
+            this.lblCloseGenre3.TabIndex = 105;
+            this.lblCloseGenre3.Text = "X";
+            this.lblCloseGenre3.Visible = false;
+            this.lblCloseGenre3.Click += new System.EventHandler(this.lblCloseGenre3_Click);
+            // 
+            // lblAddGenre3
+            // 
+            this.lblAddGenre3.AutoSize = true;
+            this.lblAddGenre3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddGenre3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAddGenre3.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddGenre3.ForeColor = System.Drawing.Color.Black;
+            this.lblAddGenre3.Location = new System.Drawing.Point(189, 203);
+            this.lblAddGenre3.Name = "lblAddGenre3";
+            this.lblAddGenre3.Size = new System.Drawing.Size(66, 15);
+            this.lblAddGenre3.TabIndex = 104;
+            this.lblAddGenre3.Text = "Add Genre";
+            this.lblAddGenre3.Visible = false;
+            this.lblAddGenre3.Click += new System.EventHandler(this.lblAddGenre3_Click);
+            // 
+            // lblCloseGenre2
+            // 
+            this.lblCloseGenre2.AutoSize = true;
+            this.lblCloseGenre2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCloseGenre2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCloseGenre2.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblCloseGenre2.Location = new System.Drawing.Point(256, 176);
+            this.lblCloseGenre2.Name = "lblCloseGenre2";
+            this.lblCloseGenre2.Size = new System.Drawing.Size(15, 17);
+            this.lblCloseGenre2.TabIndex = 103;
+            this.lblCloseGenre2.Text = "X";
+            this.lblCloseGenre2.Visible = false;
+            this.lblCloseGenre2.Click += new System.EventHandler(this.lblCloseGenre2_Click);
+            // 
+            // lblAddGenre2
+            // 
+            this.lblAddGenre2.AutoSize = true;
+            this.lblAddGenre2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddGenre2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAddGenre2.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddGenre2.ForeColor = System.Drawing.Color.Black;
+            this.lblAddGenre2.Location = new System.Drawing.Point(189, 152);
+            this.lblAddGenre2.Name = "lblAddGenre2";
+            this.lblAddGenre2.Size = new System.Drawing.Size(66, 15);
+            this.lblAddGenre2.TabIndex = 102;
+            this.lblAddGenre2.Text = "Add Genre";
+            this.lblAddGenre2.Visible = false;
+            this.lblAddGenre2.Click += new System.EventHandler(this.lblAddGenre2_Click);
             // 
             // comboBoxGenre3
             // 
@@ -384,28 +440,13 @@
             this.comboBoxGenre.TextChanged += new System.EventHandler(this.comboBoxGenre_TextChanged);
             this.comboBoxGenre.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxGenre_MouseClick);
             // 
-            // btnReset
-            // 
-            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReset.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnReset.Enabled = false;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.Location = new System.Drawing.Point(76, 612);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(55, 25);
-            this.btnReset.TabIndex = 93;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
             // btnBrowse
             // 
             this.btnBrowse.BackColor = System.Drawing.Color.Gray;
             this.btnBrowse.Enabled = false;
             this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowse.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBrowse.Location = new System.Drawing.Point(189, 567);
+            this.btnBrowse.Location = new System.Drawing.Point(202, 519);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(59, 22);
             this.btnBrowse.TabIndex = 91;
@@ -415,9 +456,9 @@
             // 
             // picBoxMovieInfo
             // 
-            this.picBoxMovieInfo.Location = new System.Drawing.Point(53, 378);
+            this.picBoxMovieInfo.Location = new System.Drawing.Point(69, 345);
             this.picBoxMovieInfo.Name = "picBoxMovieInfo";
-            this.picBoxMovieInfo.Size = new System.Drawing.Size(193, 183);
+            this.picBoxMovieInfo.Size = new System.Drawing.Size(193, 168);
             this.picBoxMovieInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxMovieInfo.TabIndex = 90;
             this.picBoxMovieInfo.TabStop = false;
@@ -736,70 +777,12 @@
             this.picBox5.TabStop = false;
             this.picBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBox5_MouseClick);
             // 
-            // lblCloseGenre3
-            // 
-            this.lblCloseGenre3.AutoSize = true;
-            this.lblCloseGenre3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCloseGenre3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCloseGenre3.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblCloseGenre3.Location = new System.Drawing.Point(256, 224);
-            this.lblCloseGenre3.Name = "lblCloseGenre3";
-            this.lblCloseGenre3.Size = new System.Drawing.Size(15, 17);
-            this.lblCloseGenre3.TabIndex = 105;
-            this.lblCloseGenre3.Text = "X";
-            this.lblCloseGenre3.Visible = false;
-            this.lblCloseGenre3.Click += new System.EventHandler(this.lblCloseGenre3_Click);
-            // 
-            // lblAddGenre3
-            // 
-            this.lblAddGenre3.AutoSize = true;
-            this.lblAddGenre3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAddGenre3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblAddGenre3.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblAddGenre3.ForeColor = System.Drawing.Color.Black;
-            this.lblAddGenre3.Location = new System.Drawing.Point(189, 203);
-            this.lblAddGenre3.Name = "lblAddGenre3";
-            this.lblAddGenre3.Size = new System.Drawing.Size(66, 15);
-            this.lblAddGenre3.TabIndex = 104;
-            this.lblAddGenre3.Text = "Add Genre";
-            this.lblAddGenre3.Visible = false;
-            this.lblAddGenre3.Click += new System.EventHandler(this.lblAddGenre3_Click);
-            // 
-            // lblCloseGenre2
-            // 
-            this.lblCloseGenre2.AutoSize = true;
-            this.lblCloseGenre2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCloseGenre2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCloseGenre2.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblCloseGenre2.Location = new System.Drawing.Point(256, 176);
-            this.lblCloseGenre2.Name = "lblCloseGenre2";
-            this.lblCloseGenre2.Size = new System.Drawing.Size(15, 17);
-            this.lblCloseGenre2.TabIndex = 103;
-            this.lblCloseGenre2.Text = "X";
-            this.lblCloseGenre2.Visible = false;
-            this.lblCloseGenre2.Click += new System.EventHandler(this.lblCloseGenre2_Click);
-            // 
-            // lblAddGenre2
-            // 
-            this.lblAddGenre2.AutoSize = true;
-            this.lblAddGenre2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAddGenre2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblAddGenre2.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblAddGenre2.ForeColor = System.Drawing.Color.Black;
-            this.lblAddGenre2.Location = new System.Drawing.Point(189, 152);
-            this.lblAddGenre2.Name = "lblAddGenre2";
-            this.lblAddGenre2.Size = new System.Drawing.Size(66, 15);
-            this.lblAddGenre2.TabIndex = 102;
-            this.lblAddGenre2.Text = "Add Genre";
-            this.lblAddGenre2.Visible = false;
-            this.lblAddGenre2.Click += new System.EventHandler(this.lblAddGenre2_Click);
-            // 
             // Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1226, 731);
+            this.ClientSize = new System.Drawing.Size(1226, 676);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -867,7 +850,6 @@
         private PictureBox picBox7;
         private PictureBox picBox6;
         private PictureBox picBox5;
-        private Button btnReset;
         private ComboBox comboBoxGenre;
         private Label label5;
         private ComboBox comboBoxGenre3;

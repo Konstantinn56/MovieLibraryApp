@@ -94,7 +94,8 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void txtBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            if(!txtBoxSearch.Text.Equals(""))
+            LockTheInfoField();
+            if (!txtBoxSearch.Text.Equals(""))
             {
                 btnSearch.Enabled = true;
             }
@@ -177,7 +178,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox1))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox1.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -194,7 +195,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox2))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox2.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -211,7 +212,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox3))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox3.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -228,7 +229,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox1))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox4.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -245,7 +246,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox5))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox5.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -262,7 +263,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox6))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox6.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -279,7 +280,7 @@ namespace MLibUI.MainMenu
         {
             if (!IsTheFieldEmpty(picBox7))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox7.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -294,9 +295,10 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void picBox8_MouseClick(object sender, MouseEventArgs e)
         {
+            
             if (!IsTheFieldEmpty(picBox8))
             {
-                ResetSelection();
+                LockTheInfoField();
                 picBox8.BorderStyle = BorderStyle.Fixed3D;
 
                 //Get the selected movie
@@ -312,7 +314,6 @@ namespace MLibUI.MainMenu
         /// </summary>
         private void FillMovieInfo(Movie movie)
         {
-            btnReset.Enabled = true;
             //txt boxes
             txtBoxTitle.Text = movie.Title;
             txtBoxYear.Text = movie.YaerOfCreation.ToString();
@@ -340,13 +341,12 @@ namespace MLibUI.MainMenu
         private void ResetMovieInfoTextBox()
         {
             txtBoxTitle.Text = "";
-            comboBoxGenre.Text = "";
-            comboBoxGenre2.Text = "";
-            comboBoxGenre3.Text = "";
+            SetAllGenres(comboBoxGenre);
+            SetAllGenres(comboBoxGenre2);
+            SetAllGenres(comboBoxGenre3);
             txtBoxYear.Text = "";
             txtBoxRate.Text = "";
             picBoxMovieInfo.Image = null;
-            btnReset.Enabled = false;
 
         }
 
@@ -515,13 +515,15 @@ namespace MLibUI.MainMenu
                     updatedMovie.YaerOfCreation = int.Parse(txtBoxYear.Text);
                     updatedMovie.Rate = double.Parse(txtBoxRate.Text);
                     updatedMovie.Image = pic;
+                    updatedMovie.Genre = comboBoxGenre.Text;
+                    updatedMovie.Genre2 = comboBoxGenre2.Text;
+                    updatedMovie.Genre3 = comboBoxGenre3.Text;
 
                     movieBusiness.Update(updatedMovie);
                     this.MoviesList = movieBusiness.GetAll();
 
-                    ResetMovieInfoTextBox();
                     ResetAllFields();
-                    ResetSelection();
+                    LockTheInfoField();
                     this.LastPrintedMovieIndex = 0;
                     FillThePage();
                     MessageBox.Show("Movie has been updated successfully!");
@@ -560,19 +562,28 @@ namespace MLibUI.MainMenu
                     comboBoxGenre.Enabled = true;
                     if (comboBoxGenre2.Text != "")
                     {
+                        comboBoxGenre.Enabled = false;
+                        comboBoxGenre2.Enabled = true;
                         comboBoxGenre2.Visible = true;
                         lblAddGenre2.Visible = false;
                         lblAddGenre3.Visible = true;
-                        
+                        lblCloseGenre2.Visible = true;
+
                         if (comboBoxGenre3.Text != "")
                         {
+                            comboBoxGenre2.Enabled = false;
+                            comboBoxGenre3.Enabled = true;
                             comboBoxGenre3.Visible = true;
-                            lblGenre3.Visible = false;
+                            lblAddGenre3.Visible = false;
+                            lblGenre3.Visible = true;
+                            lblCloseGenre2.Visible= false;
+                            lblCloseGenre3.Visible = true;
                         }
                         else
                         {
                             comboBoxGenre3.Visible = false;
                             lblAddGenre3.Visible = true;
+                            lblGenre3.Visible = false;
                         }
                     }
                     else
@@ -593,22 +604,37 @@ namespace MLibUI.MainMenu
                 //If its true(Lock)
                 else
                 {
-                    this.btnEditStatus = false;
-                    btnEdit.Text = "Edit";
-                    btnUpdate.Enabled = false;
-
-                    //Disable fields
-                    btnBrowse.Enabled = false;
-                    txtBoxTitle.ReadOnly = true;
-                    comboBoxGenre.Enabled = false;
-                    comboBoxGenre2.Visible = true;
-                    comboBoxGenre3.Visible = true;
-                    lblGenre2.Visible = true;
-                    lblGenre3.Visible = true;
-                    txtBoxYear.ReadOnly = true;
-                    txtBoxRate.ReadOnly = true;
+                    LockTheInfoField();
                 }
             }
+        }
+
+        private void LockTheInfoField()
+        {
+            this.btnEditStatus = false;
+            btnEdit.Text = "Edit";
+            btnUpdate.Enabled = false;
+
+            
+            ResetMovieInfoTextBox();
+            ResetSelection();
+
+            //Disable fields
+            btnBrowse.Enabled = false;
+            txtBoxTitle.ReadOnly = true;
+            comboBoxGenre.Enabled = false;
+            comboBoxGenre2.Enabled = false;
+            comboBoxGenre3.Enabled = false;
+            comboBoxGenre2.Visible = true;
+            comboBoxGenre3.Visible = true;
+            lblGenre2.Visible = true;
+            lblGenre3.Visible = true;
+            lblAddGenre2.Visible = false;
+            lblAddGenre3.Visible = false;
+            lblCloseGenre2.Visible = false;
+            lblCloseGenre3.Visible = false;
+            txtBoxYear.ReadOnly = true;
+            txtBoxRate.ReadOnly = true;
         }
 
         /// <summary>
@@ -641,14 +667,6 @@ namespace MLibUI.MainMenu
                     MessageBox.Show(ex.Message);
                 }
             }
-        }
-
-        /// <summary>
-        /// Resets the movie info field
-        /// </summary>
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            FillMovieInfo(this.SelectedMovie);
         }
 
         /// <summary>
