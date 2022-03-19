@@ -230,10 +230,11 @@
             // 
             // btnNext
             // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNext.BackColor = System.Drawing.Color.Goldenrod;
             this.btnNext.Enabled = false;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Location = new System.Drawing.Point(833, 489);
+            this.btnNext.Location = new System.Drawing.Point(833, 507);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(61, 24);
             this.btnNext.TabIndex = 69;
@@ -243,10 +244,11 @@
             // 
             // btnPrev
             // 
+            this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPrev.BackColor = System.Drawing.Color.Goldenrod;
             this.btnPrev.Enabled = false;
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.Location = new System.Drawing.Point(766, 489);
+            this.btnPrev.Location = new System.Drawing.Point(766, 507);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(61, 24);
             this.btnPrev.TabIndex = 70;
@@ -561,7 +563,7 @@
             this.txtBoxTitle4.Multiline = true;
             this.txtBoxTitle4.Name = "txtBoxTitle4";
             this.txtBoxTitle4.ReadOnly = true;
-            this.txtBoxTitle4.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle4.Size = new System.Drawing.Size(165, 74);
             this.txtBoxTitle4.TabIndex = 95;
             this.txtBoxTitle4.Text = "Title";
             this.txtBoxTitle4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -576,7 +578,7 @@
             this.txtBoxTitle3.Multiline = true;
             this.txtBoxTitle3.Name = "txtBoxTitle3";
             this.txtBoxTitle3.ReadOnly = true;
-            this.txtBoxTitle3.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle3.Size = new System.Drawing.Size(165, 74);
             this.txtBoxTitle3.TabIndex = 94;
             this.txtBoxTitle3.Text = "Title";
             this.txtBoxTitle3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -591,7 +593,7 @@
             this.txtBoxTitle2.Multiline = true;
             this.txtBoxTitle2.Name = "txtBoxTitle2";
             this.txtBoxTitle2.ReadOnly = true;
-            this.txtBoxTitle2.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle2.Size = new System.Drawing.Size(165, 74);
             this.txtBoxTitle2.TabIndex = 93;
             this.txtBoxTitle2.Text = "Title";
             this.txtBoxTitle2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -606,7 +608,7 @@
             this.txtBoxTitle1.Multiline = true;
             this.txtBoxTitle1.Name = "txtBoxTitle1";
             this.txtBoxTitle1.ReadOnly = true;
-            this.txtBoxTitle1.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle1.Size = new System.Drawing.Size(165, 74);
             this.txtBoxTitle1.TabIndex = 92;
             this.txtBoxTitle1.Text = "Title";
             this.txtBoxTitle1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -675,7 +677,7 @@
             this.txtBoxTitle8.Multiline = true;
             this.txtBoxTitle8.Name = "txtBoxTitle8";
             this.txtBoxTitle8.ReadOnly = true;
-            this.txtBoxTitle8.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle8.Size = new System.Drawing.Size(165, 73);
             this.txtBoxTitle8.TabIndex = 87;
             this.txtBoxTitle8.Text = "Title";
             this.txtBoxTitle8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -690,7 +692,7 @@
             this.txtBoxTitle7.Multiline = true;
             this.txtBoxTitle7.Name = "txtBoxTitle7";
             this.txtBoxTitle7.ReadOnly = true;
-            this.txtBoxTitle7.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle7.Size = new System.Drawing.Size(165, 73);
             this.txtBoxTitle7.TabIndex = 86;
             this.txtBoxTitle7.Text = "Title";
             this.txtBoxTitle7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -705,7 +707,7 @@
             this.txtBoxTitle6.Multiline = true;
             this.txtBoxTitle6.Name = "txtBoxTitle6";
             this.txtBoxTitle6.ReadOnly = true;
-            this.txtBoxTitle6.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle6.Size = new System.Drawing.Size(165, 73);
             this.txtBoxTitle6.TabIndex = 85;
             this.txtBoxTitle6.Text = "Title";
             this.txtBoxTitle6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -720,7 +722,7 @@
             this.txtBoxTitle5.Multiline = true;
             this.txtBoxTitle5.Name = "txtBoxTitle5";
             this.txtBoxTitle5.ReadOnly = true;
-            this.txtBoxTitle5.Size = new System.Drawing.Size(165, 42);
+            this.txtBoxTitle5.Size = new System.Drawing.Size(165, 73);
             this.txtBoxTitle5.TabIndex = 84;
             this.txtBoxTitle5.Text = "Title";
             this.txtBoxTitle5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

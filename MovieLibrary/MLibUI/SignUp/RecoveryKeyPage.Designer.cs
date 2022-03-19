@@ -75,6 +75,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1087, 21);
             this.panel5.TabIndex = 51;
+            this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             // 
             // panel7
             // 
@@ -290,6 +291,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // panel2
             // 

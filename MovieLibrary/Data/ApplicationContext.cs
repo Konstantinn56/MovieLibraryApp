@@ -171,8 +171,26 @@ namespace Data
 
                 entity.HasData
                 (
-                    new Movie {MId = 1,Title = "Gladiator", Genre = "Action",Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.Gladiator ,YaerOfCreation = 2000, Rate = 8.5}
-                    
+                    new Movie {MId = 1,Title = "Gladiator", Genre = "Action",Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.Gladiator ,YaerOfCreation = 2000, Rate = 8.5},
+                    new Movie {MId = 2, Title = "The Matrix", Genre = "Action", Genre2 = "Sci-Fi", Genre3 = "", Image = Properties.Resources.The_Matrix, YaerOfCreation = 1999, Rate = 8.7},
+                    new Movie {MId = 3, Title = "Inception", Genre = "Action", Genre2 = "Adventure", Genre3 = "Sci-Fi", Image = Properties.Resources.Inception, YaerOfCreation = 2010, Rate = 8.8},
+                    new Movie {MId = 4, Title = "The Silence of the Lambs", Genre = "Crime", Genre2 = "Drama", Genre3 = "Thriller", Image = Properties.Resources.The_Silence_of_the_Lambs, YaerOfCreation = 1991, Rate = 8.6 },
+                    new Movie {MId = 5, Title = "The Prestige", Genre = "Drama", Genre2 = "Mystery", Genre3 = "Thriller", Image = Properties.Resources.The_Prestige, YaerOfCreation = 2006, Rate =  8.6},
+                    new Movie {MId = 6, Title = "Joker", Genre = "Crime", Genre2 = "Drama", Genre3 = "Thriller", Image = Properties.Resources.Joker, YaerOfCreation = 2009, Rate =  8.4},
+                    new Movie {MId = 7, Title = "The Grand Budapest Hotel", Genre = "Adventure", Genre2 = "Comedy", Genre3 = "Crime", Image = Properties.Resources.The_Grand_Budapest_Hotel, YaerOfCreation = 2014, Rate =  8.1},
+                    new Movie {MId = 8, Title = "The Lord Of the Rings: The Fellowship of the Ring", Genre = "Action", Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.The_Lord_of_the_Rings_The_Fellowship_of_the_Ring, YaerOfCreation = 2001, Rate =  8.9},
+                    new Movie {MId = 9, Title = "The Lord Of the Rings: The Two Towers", Genre = "Action", Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.The_Lord_of_the_Rings_The_Two_Towers, YaerOfCreation = 2002, Rate =  8.8},
+                    new Movie {MId = 10, Title = "The Lord Of the Rings: The Return of the King", Genre = "Action", Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.The_Lord_of_the_Rings_The_Return_of_the_King, YaerOfCreation = 2003, Rate =  9},
+                    new Movie {MId = 11, Title = "Spirited away", Genre = "Anime", Genre2 = "Adventure", Genre3 = "Family", Image = Properties.Resources.Spirited_away, YaerOfCreation = 2001, Rate = 8.6 },
+                    new Movie {MId = 12, Title = "Your name", Genre = "Anime", Genre2 = "Drama", Genre3 = "Fantasy", Image = Properties.Resources.Your_name, YaerOfCreation =2016 , Rate = 8.4 },
+                    new Movie {MId = 13, Title = "Princess Mononoke", Genre = "Anime", Genre2 = "Action", Genre3 = "Adventure", Image = Properties.Resources.Princess_Mononoke, YaerOfCreation = 1997, Rate = 8.4 },
+                    new Movie {MId = 14, Title = "Demon Slayer Mugen Train", Genre = "Anime", Genre2 = "Action", Genre3 = "Adventure", Image = Properties.Resources.Demon_Slayer_Mugen_Train, YaerOfCreation = 2020, Rate = 8.3 },
+                    new Movie {MId = 15, Title = "Lion King", Genre = "Animation", Genre2 = "Adventure", Genre3 = "Drama", Image = Properties.Resources.Lion_King, YaerOfCreation = 1994, Rate = 8.5 },
+                    new Movie {MId = 16, Title = "Coco", Genre = "Animation", Genre2 = "Adventure", Genre3 = "Comedy", Image = Properties.Resources.Coco, YaerOfCreation = 2017, Rate = 8.4 },
+                    new Movie {MId = 17, Title = "Aladdin", Genre = "Animation", Genre2 = "Adventure", Genre3 = "Comedy", Image = Properties.Resources.Aladdin, YaerOfCreation = 1992, Rate = 8.1 },
+                    new Movie {MId = 18, Title = "Beauty and the Beast", Genre = "Animation", Genre2 = "Family", Genre3 = "Fantasy", Image = Properties.Resources.Beauty_and_the_Beast, YaerOfCreation = 1991, Rate = 8.1 },
+                    new Movie {MId = 19, Title = "Schindler's List", Genre = "Biography", Genre2 = "Drama", Genre3 = "History", Image = Properties.Resources.Schindler_s_List, YaerOfCreation =1993 , Rate = 9.0 },
+                    new Movie {MId = 20, Title = "Intouchables", Genre = "Biography", Genre2 = "Comedy", Genre3 = "Drama", Image = Properties.Resources.Intouchables, YaerOfCreation =2011 , Rate = 8.5 }
                 );
             });
 

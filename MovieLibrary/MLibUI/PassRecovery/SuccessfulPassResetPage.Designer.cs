@@ -133,6 +133,7 @@
             this.Name = "SuccessfulPassResetPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuccessfulPassResetPage";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SuccessfulPassResetPage_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

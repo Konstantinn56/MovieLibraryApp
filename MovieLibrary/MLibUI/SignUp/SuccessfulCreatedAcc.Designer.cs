@@ -134,6 +134,7 @@
             this.Name = "SuccessfulCreatedAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuccessfulCreatedAcc";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SuccessfulCreatedAcc_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
