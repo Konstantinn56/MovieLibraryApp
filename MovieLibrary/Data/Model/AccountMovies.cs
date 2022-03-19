@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Data.Model
 {
@@ -35,12 +30,12 @@ namespace Data.Model
         public string State { get; set; } = null!;
 
         /// <summary>
-        /// Information from class account
+        /// Information from class Account
         /// </summary>
         public virtual Account Account { get; set; } = null!;
 
         /// <summary>
-        /// information from class movie
+        /// Information from class movie
         /// </summary>
         public virtual Movie Movie { get; set; } = null!;
     }
