@@ -2358,11 +2358,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\MLibUI.csproj",
+      "projectUniqueName": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\MLibUI.csproj",
       "projectName": "MLibUI",
-      "projectPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\MLibUI.csproj",
+      "projectPath": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\MLibUI.csproj",
       "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\obj\\",
+      "outputPath": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2383,11 +2383,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj"
+            "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\Business\\Business.csproj"
             },
-            "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj"
+            "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\Data\\Data.csproj"
             }
           }
         }

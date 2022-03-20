@@ -44,3 +44,5 @@ C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Business\obj\Debug\net6.
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Business\obj\Debug\net6.0\Business.pdb
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Business\obj\Debug\net6.0\Business.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Business\obj\Debug\net6.0\ref\Business.dll
+C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Business\bin\Debug\net6.0\Data.xml
+C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\Business\obj\Debug\net6.0\Business.xml

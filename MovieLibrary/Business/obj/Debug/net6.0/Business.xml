@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Business</name>
+    </assembly>
+    <members>
+        <member name="T:Business.AccountBusiness">
+            <summary>
+            Business Logic of the Account
+            </summary>
+        </member>
+        <member name="M:Business.AccountBusiness.Get(System.String)">
+            <summary>
+            Get an Account from the database by Username
+            </summary>
+        </member>
+        <member name="M:Business.AccountBusiness.Add(Data.Model.Account)">
+            <summary>
+            Add an Account to the database
+            </summary>
+        </member>
+        <member name="M:Business.AccountBusiness.Delete(System.Int32)">
+            <summary>
+            Delete an Account from the Database by Id
+            </summary>
+        </member>
+        <member name="M:Business.AccountBusiness.Update(Data.Model.Account)">
+            <summary>
+            Update an Account in the Database
+            </summary>
+        </member>
+        <member name="M:Business.AccountBusiness.DoesThisRecoveryKeyAlreadyExists(System.Int32)">
+            <summary>
+            Check if this recoveryKey already exists in the Database
+            True - Already exists
+            False - Doesn't exists
+            </summary>
+        </member>
+        <member name="T:Business.AccountMoviesBusiness">
+            <summary>
+            Business Logic of the AccountMoviesBusiness
+            </summary>
+        </member>
+        <member name="M:Business.AccountMoviesBusiness.Add(System.Int32,System.Int32)">
+            <summary>
+            Add a Movie to the database by Account and Movie
+            </summary>
+        </member>
+        <member name="M:Business.AccountMoviesBusiness.Delete(System.Int32,System.Int32)">
+            <summary>
+            Delete a Movie from the Database By AccountId and MovieId
+            </summary>
+        </member>
+        <member name="T:Business.GenreBusiness">
+            <summary>
+            Business Logic of the Genre
+            </summary>
+        </member>
+        <member name="M:Business.GenreBusiness.Add(Data.Model.Genre)">
+            <summary>
+            Add a Genre to the database
+            </summary>
+        </member>
+        <member name="M:Business.GenreBusiness.Get(System.String)">
+            <summary>
+            Get a Genre from the database by Name
+            </summary>
+        </member>
+        <member name="M:Business.GenreBusiness.GetAllGenres">
+            <summary>
+            Get all Genres and return it into List
+            </summary>
+        </member>
+        <member name="T:Business.MovieBusiness">
+            <summary>
+            Business Logic of the Movie
+            </summary>
+        </member>
+        <member name="M:Business.MovieBusiness.Get(System.Int32)">
+            <summary>
+            Get a Movie from the database by Id
+            </summary>
+        </member>
+        <member name="M:Business.MovieBusiness.GetByTitle(System.String)">
+            <summary>
+            Get a Movie from the database by Title
+            </summary>
+        </member>
+        <member name="M:Business.MovieBusiness.GetAll">
+            <summary>
+            Get all Movies from the database
+            </summary>
+        </member>
+        <member name="M:Business.MovieBusiness.Add(Data.Model.Movie)">
+            <summary>
+            Add a Movie to the database
+            </summary>
+        </member>
+        <member name="M:Business.MovieBusiness.Update(Data.Model.Movie)">
+            <summary>
+            Update a Movie in the database by Id.
+            </summary>
+        </member>
+        <member name="M:Business.MovieBusiness.Delete(System.Int32)">
+            <summary>
+            Delete a Movie from the database by Id
+            </summary>
+        </member>
+    </members>
+</doc>

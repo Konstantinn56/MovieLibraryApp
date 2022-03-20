@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JJxa/MmZs01eMH+T6A8xW0k8FQJ2fq9cVwnF7qm0/6dlB2RKim/LlMaDjwyDcnAr1ZpKYVRjC8JUPuGh2gTV1g==",
+  "dgSpecHash": "SNAnkKLcXWGVEQJFbUz+TlMFv48wNSjxpYAZOTNdSzdiINIEZvhtWULBqjEKPpQ6UCS0HRimw1yDAHtfYJIueg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\acer\\Source\\Repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\MLibUI.csproj",
+  "projectFilePath": "C:\\Users\\acer\\source\\repos\\MovieLibraryApp\\MovieLibrary\\MLibUI\\MLibUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTests.AccountBusinessTests">
+            <summary>
+            Test for AccountBusiness
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnitTests.AccountBusinessTests.AddAccount_NotExistingAccount_ReturnsAccount" -->
+        <member name="M:UnitTests.AccountBusinessTests.AddAccount_ExistingAccount_ThrowArgumentException">
+            <summary>
+            Test for method Add when the account exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.AccountBusinessTests.DeleteAccount_ExistingAccount_RemovesAccount">
+            <summary>
+            Test for method Delete when the account exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.AccountBusinessTests.DeleteAccount_NotExistingAccount_ThrowArgumentException">
+            <summary>
+            Test for method Delete when the account doesn't exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.AccountBusinessTests.UpdateAccount_NotExistingAccount_ThrowArguentException">
+            <summary>
+            Test for method Update when the account doesn't exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.AccountBusinessTests.UpdateAccount_ExistingAccount_ReturnsUpdatedAccount">
+            <summary>
+            Test for method Update when the account exist
+            </summary>
+        </member>
+        <member name="T:UnitTests.GenreBusinessTests">
+            <summary>
+            Test for GenreBusiness
+            </summary>
+        </member>
+        <member name="M:UnitTests.GenreBusinessTests.AddGenre_NotExistingGenre_ReturnsGenre">
+            <summary>
+            Test for method Add when the genre doesn't existing
+            </summary>
+        </member>
+        <member name="M:UnitTests.GenreBusinessTests.AddGenre_ExistingGenre_ThrowArgumentException">
+            <summary>
+            Test for method Add when the genre exist
+            </summary>
+        </member>
+        <member name="T:UnitTests.MovieBusinessTests">
+            <summary>
+            Test for MovieBusiness
+            </summary>
+        </member>
+        <member name="M:UnitTests.MovieBusinessTests.AddMovie_NotExistingMovie_ReturnsMovie">
+            <summary>
+            Test for method Add when the movie doesn't existing
+            </summary>
+        </member>
+        <member name="M:UnitTests.MovieBusinessTests.AddMovie_ExistingMovie_ThrowArgumentException">
+            <summary>
+            Test for method Add when the movie exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.MovieBusinessTests.DeleteMovie_ExistingMovie_RemovesMovie">
+            <summary>
+            Test for method Delete when the Movie exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.MovieBusinessTests.DeleteMovie_NotExistingMovie_ThrowArgumentException">
+            <summary>
+            Test for method Delete when the movie doesn't exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.MovieBusinessTests.UpdateMovie_ExistingMovie_ReturnsUpdatedMovie">
+            <summary>
+            Test for method Update when the Movie exist
+            </summary>
+        </member>
+        <member name="M:UnitTests.MovieBusinessTests.UpdateMovie_NotExistingMovie_ThrowArgumentException">
+            <summary>
+            Test for method Update when the movie doesn't exist
+            </summary>
+        </member>
+    </members>
+</doc>
