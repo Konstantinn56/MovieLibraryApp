@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Data</name>
+    </assembly>
+    <members>
+        <member name="T:Data.ApplicationContext">
+            <summary>
+            Account Database Context
+            </summary>
+        </member>
+        <member name="M:Data.ApplicationContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Data.ApplicationContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Data.ApplicationContext})">
+            <summary>
+            Overloaded Constructor
+            </summary>
+        </member>
+        <member name="P:Data.ApplicationContext.Accounts">
+            <summary>
+            Accounts Table
+            </summary>
+        </member>
+        <member name="P:Data.ApplicationContext.Movies">
+            <summary>
+            Movies Table
+            </summary>
+        </member>
+        <member name="P:Data.ApplicationContext.Genres">
+            <summary>
+            Genres Table
+            </summary>
+        </member>
+        <member name="P:Data.ApplicationContext.AccountsMovies">
+            <summary>
+            Favourite Movies Table
+            </summary>
+        </member>
+        <member name="M:Data.ApplicationContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Connection string to Microsoft SQL Server
+            </summary>
+        </member>
+        <member name="M:Data.ApplicationContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            The structure and the information in the Tables
+            </summary>
+        </member>
+        <member name="T:Data.DataBase">
+            <summary>
+            Microsoft SQL Server DataBase Connection Class
+            </summary>
+        </member>
+        <member name="T:Data.Model.Account">
+            <summary>
+            Account Entity
+            </summary>
+        </member>
+        <member name="P:Data.Model.Account.AId">
+            <summary>
+            Account identication
+            </summary>
+        </member>
+        <member name="P:Data.Model.Account.FirstName">
+            <summary>
+            Person FirstName
+            </summary>
+        </member>
+        <member name="P:Data.Model.Account.LastName">
+            <summary>
+            Person LastName
+            </summary>
+        </member>
+        <member name="P:Data.Model.Account.Username">
+            <summary>
+            Account Username
+            </summary>
+        </member>
+        <member name="P:Data.Model.Account.Password">
+            <summary>
+            Account Password
+            </summary>
+        </member>
+        <member name="P:Data.Model.Account.RecoveryKey">
+            <summary>
+            Account Reset Key
+            </summary>
+        </member>
+        <member name="T:Data.Model.AccountMovies">
+            <summary>
+            class AccountMovies
+            </summary>
+        </member>
+        <member name="P:Data.Model.AccountMovies.Id">
+             <summary>
+             Id
+             </summary>
+            
+        </member>
+        <member name="P:Data.Model.AccountMovies.AccountId">
+            <summary>
+            The account id
+            </summary>
+        </member>
+        <member name="P:Data.Model.AccountMovies.MovieId">
+            <summary>
+            The Movie Id
+            </summary>
+        </member>
+        <member name="P:Data.Model.AccountMovies.State">
+            <summary>
+            The current status of the Movie
+            </summary>
+        </member>
+        <member name="P:Data.Model.AccountMovies.Account">
+            <summary>
+            Information from class Account
+            </summary>
+        </member>
+        <member name="P:Data.Model.AccountMovies.Movie">
+            <summary>
+            Information from class movie
+            </summary>
+        </member>
+        <member name="T:Data.Model.Genre">
+            <summary>
+            Genre Entity
+            </summary>
+        </member>
+        <member name="P:Data.Model.Genre.GId">
+            <summary>
+            The id of the Genre
+            </summary>
+        </member>
+        <member name="P:Data.Model.Genre.Name">
+            <summary>
+            The name of the Genre
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.MId">
+            <summary>
+            The id of the person who add/update/delete/get the movie
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.Image">
+            <summary>
+            Image of the Movie
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.Title">
+            <summary>
+            The name of the added film
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.Genre">
+            <summary>
+            The type of the Movie
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.Genre2">
+            <summary>
+            The type of the Movie
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.Genre3">
+            <summary>
+            The type of the Movie
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.YaerOfCreation">
+            <summary>
+            The year when the Movie comes out
+            </summary>
+        </member>
+        <member name="P:Data.Model.Movie.Rate">
+            <summary>
+            The rating of the Movie
+            </summary>
+        </member>
+        <member name="T:Data.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.A_Beautiful_Mind">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Aladdin">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Alien">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Beauty_and_the_Beast">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Coco">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Demon_Slayer_Mugen_Train">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Dumb_and_Dumber">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Encanto">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Forrest_Gump">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Gladiator">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Green_Book">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Harry_Potter_and_the_Sorcerer_s_Stone">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Home_Alone">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Inception">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Intouchables">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Joker">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.La_La_Land">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Lion_King">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.National_Treasure">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Nosferatu">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Ocean_s_Eleven">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Pirates_of_the_Caribbean_The_Curse_of_the_Black_Pearl">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Princess_Mononoke">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.RED">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Rush_Hour">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Schindler_s_List">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Spirited_away">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Taken">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Conjuring">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Godfather">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Grand_Budapest_Hotel">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Green_Mile">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Italian_Job">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Lord_of_the_Rings_The_Fellowship_of_the_Ring">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Lord_of_the_Rings_The_Return_of_the_King">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Lord_of_the_Rings_The_Two_Towers">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Matrix">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Notebook">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Pianist">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Prestige">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Shawshank_Redemption">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.The_Silence_of_the_Lambs">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Titanic">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Whiplash">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Data.Properties.Resources.Your_name">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+    </members>
+</doc>

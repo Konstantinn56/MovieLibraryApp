@@ -302,3 +302,5 @@ C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\UnitTests\obj\Debug\net6
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\UnitTests\obj\Debug\net6.0\UnitTests.pdb
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\UnitTests\obj\Debug\net6.0\UnitTests.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\UnitTests\obj\Debug\net6.0\ref\UnitTests.dll
+C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\UnitTests\bin\Debug\net6.0\Data.xml
+C:\Users\acer\Source\Repos\MovieLibraryApp\MovieLibrary\UnitTests\obj\Debug\net6.0\UnitTests.xml

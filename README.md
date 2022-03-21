@@ -5,4 +5,4 @@ PS: If there are any bugs, write to us and we will fix them!
 
 Developed on C# - Windows Application Forms.
 
-# Developers: Konstantin Balabanov and Velina Jordanova
+# Developers: Konstantin Balabanov and Velina Yordanova

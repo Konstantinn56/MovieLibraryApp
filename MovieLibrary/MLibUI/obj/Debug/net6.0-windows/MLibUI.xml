@@ -1,0 +1,1395 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MLibUI</name>
+    </assembly>
+    <members>
+        <member name="T:MLibUI.LoginPage">
+            <summary>
+            Login UI
+            </summary>
+        </member>
+        <member name="F:MLibUI.LoginPage.accountBusiness">
+            <summary>
+            Creates account business
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.txtBoxUsr_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.txtBoxUsr_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.txtBoxPass_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and change the ForeColor of the textBox and the color of the underline, and set systemPassChar
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.txtBoxPass_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark, and stop the SystemPassChar
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.lblEye_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Change eye color to Goldenrod
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.lblEye_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Change eye color to Black
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.lblEye_Click(System.Object,System.EventArgs)">
+            <summary>
+            Change the SystemPassChar to oposite on txtBoxPass
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.btnSignIn_Click(System.Object,System.EventArgs)">
+            <summary>
+            Identify the account, and login into application, throws MessageBow if the user or pass is incorrect
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.linkLblCreateAcc_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
+            <summary>
+            Close current Window, and open new SignUp Window
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.lblForgottenPass_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close current Window, and open new ForgottenPass page
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.btnExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close the application
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.btnMinimize_Click(System.Object,System.EventArgs)">
+            <summary>
+            Minimize the window
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.pictureBox4_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.LoginPage_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.panel11_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.panel4_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.LoginPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.LoginPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.LoginPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.AddMovie.movieBusiness">
+            <summary>
+            Movie Business
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.AddMovie.genreBusiness">
+            <summary>
+            Genre Business
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.DoesTheMovieAlreadyExists(System.String)">
+            <summary>
+            Check If the movie with this Title exists in the DataBase
+            </summary>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxTitle_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxTitle_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxTitle_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Check if the movie already exists
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxYear_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxYear_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxRate_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.txtBoxRate_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Opens window to create new Genre
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre2_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Opens window to create new Genre
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.btnReset_Click(System.Object,System.EventArgs)">
+            <summary>
+            Reset all fields
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.ResetFields">
+            <summary>
+            This will reset all fields
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Link Combobox with Database Genres values
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.FillGenresComboBoxes(System.Windows.Forms.ComboBox)">
+            <summary>
+            Link Combobox with Database Genres values
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.lblAddGenre2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Add new Genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.lblAddGenre3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Add new Genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre2_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Fill the genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre3_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Fill the genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.lblCloseGenre2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Disable current genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.lblCloseGenre3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Disable current genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre2_Leave(System.Object,System.EventArgs)">
+            <summary>
+            If the genres are euqal give exception
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.comboBoxGenre3_Leave(System.Object,System.EventArgs)">
+            <summary>
+            If the genres are euqal give exception
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.AddMovie.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddMovie.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Hide current window
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.btnAdd_Click(System.Object,System.EventArgs)">
+            <summary>
+            Create new genre and add it to the database
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.txtBoxGenre_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.txtBoxGenre_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.txtBoxGenre_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Change panelGenre color to black
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.panel1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.AddNewGenre.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.MainMenu.AddNewGenre.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:MLibUI.MainMenu.mainPage.currentAccount">
+            <summary>
+            Current account
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.mainPage.accountBusiness">
+            <summary>
+            Account business
+            </summary>
+        </member>
+        <member name="T:MLibUI.MainMenu.mainPage.RGBColors">
+            <summary>
+            Color structs
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.ActivateButton(System.Object,System.Drawing.Color)">
+            <summary>
+            Button activation method
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.DisableButton">
+            <summary>
+            Disable current button highlight
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.Reset">
+            <summary>
+            Reset
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnHome_Click(System.Object,System.EventArgs)">
+            <summary>
+            Activates the button and open
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnMovies_Click(System.Object,System.EventArgs)">
+            <summary>
+            Activates the button and open
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnMyList_Click(System.Object,System.EventArgs)">
+            <summary>
+            Activates the button and open
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnSettings_Click(System.Object,System.EventArgs)">
+            <summary>
+            Activates button and open
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.panelTitleBarr_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the windows draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.panelMenu_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the windows draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.mainPage_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the windows draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnUsrText_Click(System.Object,System.EventArgs)">
+            <summary>
+            Reset the windows info
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnMinimize_Click(System.Object,System.EventArgs)">
+            <summary>
+            Minimize the window
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnMaximize_Click(System.Object,System.EventArgs)">
+            <summary>
+            Maximize the window
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnClose_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close the application
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.btnLogout_Click(System.Object,System.EventArgs)">
+            <summary>
+            logout
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.mainPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.MainMenu.mainPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.Movies.movieBusiness">
+            <summary>
+            Movie Business
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.Movies.accountMoviesBusiness">
+            <summary>
+            AccountMovies business
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.Movies.genreBusiness">
+            <summary>
+            Genre Business
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.Movies_Load(System.Object,System.EventArgs)">
+            <summary>
+            Starting load
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.txtBoxSearch_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.txtBoxSearch_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.txtBoxSearch_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Enables and Disables button
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnNext_Click(System.Object,System.EventArgs)">
+            <summary>
+            Reset all Fields and print the next 8 movies
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnPrev_Click(System.Object,System.EventArgs)">
+            <summary>
+            Reset the fields and opens the first movies
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnSearch_Click(System.Object,System.EventArgs)">
+            <summary>
+            Search for movie by Title
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnAddToFavourite_Click(System.Object,System.EventArgs)">
+            <summary>
+            Add the selected Movie to Favourite
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox1_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox2_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox3_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox4_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox5_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox6_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox7_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.picBox8_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the movie in the current field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.FillMovieInfo(Data.Model.Movie)">
+            <summary>
+            Set the information from the marked movie to the txtBoxMovieInfo 
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.ResetMovieInfoTextBox">
+            <summary>
+            Sets the txtBoxMovieInfo to default values
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.ResetSelection">
+            <summary>
+            Reset the current selection
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.FillThePage">
+            <summary>
+            Fill all the fields with movies from database
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.ResetAllFields">
+            <summary>
+            Reset all fields in the current window
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.FillOneMovieField(Data.Model.Movie,System.Windows.Forms.PictureBox,System.Windows.Forms.TextBox)">
+            <summary>
+            Fill one movie Field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.IsTheFieldEmpty(System.Windows.Forms.PictureBox)">
+            <summary>
+            Check if the movie field is empty
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.SetCurrentAccount(Data.Model.Account)">
+            <summary>
+            Set the current account
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnUpdate_Click(System.Object,System.EventArgs)">
+            <summary>
+            Open updatePage and sets the value of the selected movie to the property
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnEdit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Enables and Disables fields to allow movie update
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.btnBrowse_Click(System.Object,System.EventArgs)">
+            <summary>
+            Opens browse window to navigate to the image
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Open new window to create new Genre
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre2_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Open new window to create new Genre
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre3_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Open new window to create new Genre
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Use SetAllGenres method
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre2_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Use SetAllGenres method
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre3_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Use SetAllGenres method
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.SetAllGenres(System.Windows.Forms.ComboBox)">
+            <summary>
+            Link Combobox with Database Genres values
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.IsThereExceptionsInTheMovieInfoPanel">
+            <summary>
+            Check for any exeptions in the movie info panel
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.DoesTheMovieAlreadyExists(System.String)">
+            <summary>
+            Check If the movie with this Title exists in the DataBase
+            </summary>
+            <returns>True/False</returns>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.txtBoxSearch_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Disables the editmode
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.lblAddGenre2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Add new Genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.lblAddGenre3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Add new Genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.lblCloseGenre2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Disable current genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.lblCloseGenre3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Disable current genre field
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre2_Leave(System.Object,System.EventArgs)">
+            <summary>
+            If the genres are euqal give exception
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.comboBoxGenre3_Leave(System.Object,System.EventArgs)">
+            <summary>
+            If the genres are euqal give exception
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.Movies.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.MainMenu.Movies.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.MyList.accountBusiness">
+            <summary>
+            Account Business
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.MyList.movieBusiness">
+            <summary>
+            Movie business
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.MyList.accountMoviesBusiness">
+            <summary>
+            AccountMoviesBusiness
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.FillDataGridView">
+            <summary>
+            It will set all values from database to the DGV
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.FillDataGirdViewWithSearchedMovie(Data.Model.Movie)">
+            <summary>
+            It will set the values of the movie from database to the DGV
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.SetCurrentAccount(Data.Model.Account)">
+            <summary>
+            Set the logged account into currentAccount
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.MyListDGV_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Set the selectedMovie property to current DGV Selection
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.MyListDGV_CellLeave(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Disables the button remove
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.txtBoxSearch_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.txtBoxSearch_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.txtBoxSearch_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Enables and Disables button
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.btnSearch_Click(System.Object,System.EventArgs)">
+            <summary>
+            Search for movie by Title
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.MyList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.MainMenu.MyList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.SuccessfulAddedMovie.btnClose_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close the current window
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.SuccessfulAddedMovie.SuccessfulAddedMovie_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.MainMenu.SuccessfulAddedMovie.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.MainMenu.SuccessfulAddedMovie.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.MainMenu.SuccessfulAddedMovie.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.lblBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close current window and opens Login page
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.lblExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close the application
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.btnResetPass_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close current window and opens Step1 of Password reseting
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.pictureBox1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.ForgottenPassPage_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.PassRecovery.ForgottenPassPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.PassRecovery.ForgottenPassPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.txtBoxUsr_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.txtBoxUsr_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.txtBoxResetKey_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.txtBoxResetKey_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.lblExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Exit the application
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.btnNext_Click(System.Object,System.EventArgs)">
+            <summary>
+            If there are no exepsions, close current page and opens step2
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.pictureBox1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.panel5_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.PassRecovery.PassRecoveryStep1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MLibUI.PassRecovery.PassRecoveryStep2.accountBusiness">
+            <summary>
+            Creating account business
+            </summary>
+        </member>
+        <member name="P:MLibUI.PassRecovery.PassRecoveryStep2.currentAccount">
+            <summary>
+            Current account
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.txtBoxNewPass_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.txtBoxNewPass_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            And set exception to the lblUsrExcpetion if username already exists
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.txtBoxReEnterNewPass_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.txtBoxReEnterNewPass_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.lblExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Closes the application
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.lblEye_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Change eye color to Goldenrod
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.lblEye_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Change eye color to Black
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.lblEye_Click(System.Object,System.EventArgs)">
+            <summary>
+            Change the SystemPassChar to oposite on txtBoxPass and txtBoxReEnterPass
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.btnConfirm_Click(System.Object,System.EventArgs)">
+            <summary>
+            If there is no exeptions it will change the password and will open Done page
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.txtBoxNewPass_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            If the text in the pass box is changed, clear reEnter password txtbox 
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.pictureBox1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.panel5_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.PassRecovery.PassRecoveryStep2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.PassRecovery.PassRecoveryStep2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.SuccessfulPassResetPage.btnDone_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Close this window, and opens new Login page
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.SuccessfulPassResetPage.SuccessfulPassResetPage_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.PassRecovery.SuccessfulPassResetPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.PassRecovery.SuccessfulPassResetPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.PassRecovery.SuccessfulPassResetPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:MLibUI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.backgroundmainPage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.backgroundmainPage1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.backgroundmainPage2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.bfgbgn">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.Border">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.ConfirmationPage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.ConfirmationPage1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.dfvgdf">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.dfvgdf1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content_duckduckgo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content3">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content4">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content5">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content6">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content7">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.external_content8">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.fgvbfvb">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.fgvbnnfg">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.fgvbnnfg1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.GreenTick">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.info_logo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.LoginPageImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.LoginPageImage1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.LoginPagePhoto">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.Logo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.LogoGray">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.LogoYellow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.LogoYellow1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.Searching">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.SighnUpBackGround">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.step2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.usrIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.whitebackground">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MLibUI.Properties.Resources.whitebackground1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:MLibUI.SignUp.RecoveryKeyPage.seconds">
+            <summary>
+            Timer seconds
+            </summary>
+        </member>
+        <member name="P:MLibUI.SignUp.RecoveryKeyPage.currentAccountRecoveryKey">
+            <summary>
+            Recovery key of the created Account
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.RecoveryKeyPage.RecoveryKeyPage_Load(System.Object,System.EventArgs)">
+            <summary>
+            Set the lblRecoveryKey to currentAccountRecoveryKey
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.RecoveryKeyPage.btnContinue_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close current Window and opens Successful Created Acc Window
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.RecoveryKeyPage.countdownTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Display the seconds on the buttonContinue
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.RecoveryKeyPage.pictureBox1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.SignUp.RecoveryKeyPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.RecoveryKeyPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.SignUp.RecoveryKeyPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxFirstName_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxFirstName_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxLastName_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxLastName_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.lblExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close the Application
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxUsr_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxUsr_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            And set exception to the lblUsrExcpetion if username already exists
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxPass_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxPass_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            And set exception to the lblUsrExcpetion if username already exists
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxReEnterPass_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Clears the text box and lblException and change the ForeColor of the textBox and the color of the underline
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxReEnterPass_Leave(System.Object,System.EventArgs)">
+            <summary>
+            It will change the color of the underline, and if there is no text, it will set the watermark
+            And set exception to the lblUsrExcpetion if username already exists
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.lblEye_Click(System.Object,System.EventArgs)">
+            <summary>
+            Change the SystemPassChar to oposite on txtBoxPass and txtBoxReEnterPass
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.lblEye_MouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Change eye color to Goldenrod
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.lblEye_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Change eye color to Black
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.linkLblLogin_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
+            <summary>
+            Close current window, and opens login page
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.btnSignUp_Click(System.Object,System.EventArgs)">
+            <summary>
+            If there are no Exception it will add the account into database, and will open RecoveryKeyPage
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.IsThereAEmptyTextBox">
+            <summary>
+            If there is empty text box it will change the panel color
+            </summary>
+            <returns>True(Yes)/False(No)</returns>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.checkBoxTerms_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            If there is no exception and the check box is checked enables the button Sign up
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.GenerateRandomKey">
+            <summary>
+            Generate Random Key [100001-999999]
+            </summary>
+            <returns>key</returns>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.txtBoxPass_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            If the text in the pass box is changed, clear reEnter password txtbox 
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.pictureBox1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.panel5_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.SignUp.SignUpPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.SignUp.SignUpPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SuccessfulCreatedAcc.btnGetStarted_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close current widnows, and opens new Login page
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SuccessfulCreatedAcc.SuccessfulCreatedAcc_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Make the window draggable
+            </summary>
+        </member>
+        <member name="F:MLibUI.SignUp.SuccessfulCreatedAcc.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MLibUI.SignUp.SuccessfulCreatedAcc.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MLibUI.SignUp.SuccessfulCreatedAcc.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MLibUI.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:MLibUI.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             Application.EnableVisualStyles();
+             Application.SetCompatibleTextRenderingDefault(false);
+             Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+    </members>
+</doc>
